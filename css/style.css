@@ -54,6 +54,14 @@
 	width: 100%;
 }
 
+.pages .subpages{
+	display: block;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	background: grey;
+}
 #production{
 	background: green;
 }
@@ -70,6 +78,14 @@
 	background: brown;
 }
 #divers{
+	background: red;
+}
+
+#production1{
+	background: pink;
+}
+
+#production2{
 	background: red;
 }
 
@@ -124,9 +140,10 @@
 	width:820px;
 	height:450px;
 	margin:100px auto;
+	position:relative;
 }
 #marche li.diagram{
-	width:60px;
+	width:0px;
 	height:20px;
 }
 #production_biere li.diagram{
@@ -148,50 +165,67 @@
 	float:right;
 }
 #production_biere{
-	float:right;
-	margin-right:200px;
+	position:absolute;
+	top:0px;
+	width:400px;
+	right:0px;
 }
 #production_vin{
-	float:left;
+	position:absolute;
+	width:400px;
+	top:0px;
 	text-align:right;
-	margin-left:200px;
 }
 /*--- IMPORT ---*/
 
-#import_export li{
+#import li, #export li{
 	clear:both;
 	font-family: 'NovecentowideLight';
 	font-size:16px;
 }
-#import_export li.left{
+#import li.left, #export li.left{
 	float:right;
 	border-top-left-radius: 7px;
 	border-bottom-left-radius: 7px;
 	background: url('../img/texture_vin.png') repeat;
 }
-#import_export li.diagram:not(.left){
+#import li.diagram:not(.left), #export li.diagram:not(.left){
 	border-top-right-radius: 7px;
 	border-bottom-right-radius: 7px;
 	background: url('../img/texture_biere.png') repeat;
 }
 #import,#export{
-	margin-top:50px;
-	
 	width:820px;
 	height:650px;
 	margin:100px auto;
+	position:relative;
 }
 #import li.diagram, #export li.diagram{
 	width:0px;
 	height:39px;
 	margin-bottom:8px;
+	overflow:hidden;
+	font-family: 'NovecentowideLight';
+	font-size:14px;
 }
 #vin_import,#vin_export{
-	float:left;
+	position:absolute;
+	width:400px;
+	top:0px;
 	text-align:right;
-	margin-left:200px;
 }
 #biere_import,#biere_export{
-	float:right;
-	margin-right:200px;
+	position:absolute;
+	top:0px;
+	width:400px;
+	right:0px;
+}
+/*------------------------------------*\
+	$PART 2 (cedric)
+\*------------------------------------*/
+/*--- PLUS CONSOMMÉ ---*/
+#holder {
+	height: 230px;
+    margin: -115px 0 0 -310px;
+    width: 620px;
 }
