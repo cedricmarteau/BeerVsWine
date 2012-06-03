@@ -78,12 +78,26 @@
 \*------------------------------------*/
 #production_mondial{
 	width:960px;
-	height:760px;
+	height:768px;
+	margin: 10px auto;
 }
 
-#vin_2,#biere_2,#graduation_2{
+#animation2{
+	margin-left:260px;
+	height:675px;
+	margin-top:27px;
+
+}
+
+
+#vin_2,#biere_2,#graduation_2,#bouteilles_2{
 	display: inline-block;
 }
+
+#bouteilles_2{
+	margin-top:30px;
+}
+
 
 #vin_2{
 	min-width:106px;
@@ -93,22 +107,36 @@
 	min-width:275px;
 }
 
+#graduation_2{
+	margin-top:10px;
+}
+
 #nbVin2, #nbBiere2{
 	font-size:37.5px;
-
 	font-family:'NovecentowideBold';
-
-	text-align:center;
+	color:#393939;
 }
 
 #nbVin2{
-
+	width:90px;
 	text-align:center;
 }
 
 #nbBiere2{
-
+	width:210px;
 	text-align:center;
+}
+
+#blocAnimation_2, #tiret21, #tiret21{
+	position: absolute;
+}
+
+#tiret21{
+	width:360px;
+	height:2px;
+	background: url("../img/2_tirets.png") repeat-x ;
+	margin-left:40px;
+	margin-top:532px;
 }
 
 /*------------------------------------*\

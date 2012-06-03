@@ -1,11 +1,18 @@
 
 //#production_mondial
 
+var hectolitreVin = 260 ;
+var hectolitreBiere = 1400;
+
+var hauteurBiere = 605;
+var hauteurVin = hauteurBiere*260/1400;
+
 $(document).ready(function(){
 
+	$('#biere_2 img').height(0);
 
-	$('#vin_2 img').height(0).animate({'height':'+=106px'}, 300, 'linear').function(){$('#vin_2 img').height(0).animate({'height':'+=106px'}, 300, 'linear');};
-	//$('#biere_2 img').height(0).animate({'height':'+=605px'}, 500, 'linear');
+	$('#vin_2 img').height(0).animate({'height':'+='+hauteurVin+'px'}, 1000, 'easeInOutExpo', function(){
+	$('#biere_2 img').animate({'height':'+='+hauteurBiere+'px'}, 2000,'easeInOutExpo');});
 
 
 });
