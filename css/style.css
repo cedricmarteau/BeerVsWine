@@ -17,7 +17,7 @@
     src: url('../fonts/novecentowide-bold/novecentowide-bold.eot?#iefix') format('embedded-opentype'),
          url('../fonts/novecentowide-bold/novecentowide-bold.woff') format('woff'),
          url('../fonts/novecentowide-bold/novecentowide-bold.ttf') format('truetype'),
-         url('../fonts/novecentowide-bold/novecentowide-bold.svg#NovecentowideBold') format('svg');
+         url('../fonts/novecentowide-bold/novecentowide-bold.svg#NovecentowideBookBold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -27,7 +27,7 @@
     src: url('../fonts/novecentowide-light/novecentowide-light.eot?#iefix') format('embedded-opentype'),
          url('../fonts/novecentowide-light/novecentowide-light.woff') format('woff'),
          url('../fonts/novecentowide-light/novecentowide-light.ttf') format('truetype'),
-         url('../fonts/novecentowide-light/novecentowide-light.svg#NovecentowideLight') format('svg');
+         url('../fonts/novecentowide-light/novecentowide-light.svg#NovecentowideLightRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
