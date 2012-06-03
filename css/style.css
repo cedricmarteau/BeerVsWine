@@ -31,8 +31,13 @@
 #production_mondial{
 	width:960px;
 	height:760px;
-	background: #DDD ;
 }
+#canevasProd{
+	width:960px;
+	height:710px;
+}
+
+
 #import_export{
 	
 }
