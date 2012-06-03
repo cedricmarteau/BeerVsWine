@@ -1,0 +1,26 @@
+/*------------------------------------*\
+	$MAIN
+\*------------------------------------*/
+
+#content{
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+
+.pages{
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+#production{
+	background: green;
+}
+#consommation{
+	background: yellow;
+}
