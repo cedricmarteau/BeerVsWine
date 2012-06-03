@@ -51,6 +51,7 @@
 }
 #divers{
 	background: red;
+}
 
 /*------------------------------------*\
 	$PART 1
@@ -59,12 +60,31 @@
 	width:960px;
 	height:760px;
 }
-#canevasProd{
-	width:960px;
-	height:710px;
+
+#vin_2,#biere_2,#graduation_2{
+	display: inline-block;
+}
+
+#nbVin2, #nbBiere2{
+	font-size:37.5px;
+	font-weight:bold;
+	text-align:center;
 }
 
 
+#vin_2{
+	width:105px;
+}
+
+#vin_2 img{
+	margin-left:25px;
+}
+
+#nbVin2{
+	text-align:center;
+}
+
+/*-----------------------------*/
 #import_export{
 	width:820px;
 	margin:100px auto;
