@@ -290,8 +290,9 @@
 	$PART 2 (cedric)
 \*------------------------------------*/
 /*--- PLUS CONSOMMÉ ---*/
-#holder {
-	height: 230px;
-    margin: -115px 0 0 -310px;
-    width: 620px;
+#plus_consom{
+	width:600px;
+	height:400px;
+	margin:100px auto;
+	position:relative;
 }
