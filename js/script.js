@@ -7,12 +7,21 @@ var hectolitreBiere = 1400;
 var hauteurBiere = 605;
 var hauteurVin = hauteurBiere*260/1400;
 
+var hauteurAnimation2 = 675;
+var placementTirets21 = hauteurAnimation2 - hauteurVin - 30;
+var placementTirets22 = hauteurAnimation2 - hauteurBiere - 30;
+
 $(document).ready(function(){
 
 	$('#biere_2 img').height(0);
+	$('#tiret21').css({"marginTop":""+hauteurAnimation2+"px"});
+	$('#tiret22').css({"marginTop":""+(hauteurAnimation2-25)+"px"});
 
-	$('#vin_2 img').height(0).animate({'height':'+='+hauteurVin+'px'}, 1000, 'easeInOutExpo', function(){
-	$('#biere_2 img').animate({'height':'+='+hauteurBiere+'px'}, 2000,'easeInOutExpo');});
+	$('#tiret21').animate({"marginTop": ""+placementTirets21+"px"},2000,'easeInOutExpo');
+	$('#vin_2 img').height(0).animate({'height':'+='+hauteurVin+'px'}, 2000, 'easeInOutExpo', function(){
+		$('#biere_2 img').animate({'height':'+='+hauteurBiere+'px'}, 3000,'easeInOutExpo');
+		$('#tiret22').animate({"marginTop": ""+placementTirets22+"px"},3000,'easeInOutExpo');
+	});
 
 
 	data_production();
