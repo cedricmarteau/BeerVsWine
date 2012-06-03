@@ -10,7 +10,7 @@ $(document).ready(function(){
 	setZindex();
 	setSubZindex();
 	
-	setTimeout(animateMenu, 1000);
+	setTimeout(animateMenu, 400);
 });
 
 
@@ -119,8 +119,9 @@ $(document).keydown(function(event){
 		if(subPages.length>indexSubCurrent+1 && !animating){
 			animating=true;
 			subPages.eq(indexSubCurrent+1).css("z-index","29");
+			animateSubMenu();
 			
-			current.delay(800).find(".subCurrent").animate({"left":-windowWidth}, 1000,"easeInQuint",function(){
+			current.delay(400).find(".subCurrent").animate({"left":-windowWidth}, 1000,"easeInQuint",function(){
 				animating=false;
 				subCurrent.removeClass("subCurrent");
 				subPages.eq(indexSubCurrent+1).addClass("subCurrent");
@@ -139,8 +140,9 @@ $(document).keydown(function(event){
 		if(indexSubCurrent>0 && !animating){
 			animating=true;
 			subPages.eq(indexSubCurrent-1).css("z-index","29");
+			animateSubMenu();
 			
-			current.delay(800).find(".subCurrent").animate({"left":+windowWidth}, 1000,"easeInQuint",function(){
+			current.delay(400).find(".subCurrent").animate({"left":+windowWidth}, 1000,"easeInQuint",function(){
 			animating=false;
 			subCurrent.removeClass("subCurrent");
 			subPages.eq(indexSubCurrent-1).addClass("subCurrent");
@@ -165,7 +167,7 @@ function animateMenu(){
 		
 		var currentItem = $("#menu").find(".current-item");
 		
-		currentItem.animate({"width":"200px"}, 400,function(){
+		currentItem.animate({"width":"280px"}, 400,function(){
 			currentItem.find("h2").animate({"top":"0"},400);
 			currentItem.find("h3").animate({"top":"0"},400);
 		});
@@ -174,6 +176,16 @@ function animateMenu(){
 	
 }
 
+function animateSubMenu(){
+	//animating=true;
+	
+	var currentItem = $("#menu").find(".current-item");
+	currentItem.find("h3").animate({"top":"-17px"}, 400,function(){
+		var value = $(".subCurrent").find("h2").html();
+		
+		$(this).html(value).delay(1000).animate({"top":"0px"}, 400);
+	});	
+}
 
 
 
