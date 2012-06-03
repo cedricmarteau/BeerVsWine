@@ -52,7 +52,7 @@ $(document).keydown(function(event){
 		if(pages.length>indexCurrent+1 && !animating){
 			animating=true;
 			pages.eq(indexCurrent+1).css('z-index',"29");
-			current.animate({"top":-windowHeight}, 800,"easeInBack",function(){
+			current.animate({"top":-windowHeight}, 1000,"easeInQuint",function(){
 				animating=false;
 				current.removeClass("current");
 				pages.eq(indexCurrent+1).addClass("current");
@@ -66,7 +66,7 @@ $(document).keydown(function(event){
 		if(indexCurrent>0 && !animating){
 			animating=true;
 			pages.eq(indexCurrent-1).css('z-index',"29");
-			current.animate({"top":windowHeight}, 800,"easeInBack",function(){
+			current.animate({"top":windowHeight}, 1000,"easeInQuint",function(){
 				animating=false;
 				current.removeClass("current");
 				pages.eq(indexCurrent-1).addClass("current");
