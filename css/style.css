@@ -65,22 +65,22 @@
 	display: inline-block;
 }
 
+#vin_2{
+	min-width:106px;
+}
+
 #nbVin2, #nbBiere2{
 	font-size:37.5px;
 	font-weight:bold;
 	text-align:center;
 }
 
-
-#vin_2{
-	width:105px;
-}
-
-#vin_2 img{
-	margin-left:25px;
-}
-
 #nbVin2{
+	text-align:center;
+}
+
+#nbBiere2{
+	width:205px;
 	text-align:center;
 }
 
