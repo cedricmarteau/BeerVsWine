@@ -13,11 +13,11 @@
 }
 @font-face {
     font-family: 'NovecentowideBold';
-    src: url('../fonts/novecentowide-bold/novecentowide-book.eot');
-    src: url('../fonts/novecentowide-bold/novecentowide-book.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/novecentowide-bold/novecentowide-book.woff') format('woff'),
-         url('../fonts/novecentowide-bold/novecentowide-book.ttf') format('truetype'),
-         url('../fonts/novecentowide-bold/novecentowide-book.svg#NovecentowideBold') format('svg');
+    src: url('../fonts/novecentowide-bold/novecentowide-bold.eot');
+    src: url('../fonts/novecentowide-bold/novecentowide-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/novecentowide-bold/novecentowide-bold.woff') format('woff'),
+         url('../fonts/novecentowide-bold/novecentowide-bold.ttf') format('truetype'),
+         url('../fonts/novecentowide-bold/novecentowide-bold.svg#NovecentowideBookBold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -27,7 +27,7 @@
     src: url('../fonts/novecentowide-light/novecentowide-light.eot?#iefix') format('embedded-opentype'),
          url('../fonts/novecentowide-light/novecentowide-light.woff') format('woff'),
          url('../fonts/novecentowide-light/novecentowide-light.ttf') format('truetype'),
-         url('../fonts/novecentowide-light/novecentowide-light.svg#NovecentowideLight') format('svg');
+         url('../fonts/novecentowide-light/novecentowide-light.svg#NovecentowideLightRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -95,7 +95,9 @@
 
 #nbVin2, #nbBiere2{
 	font-size:37.5px;
+
 	font-family:'NovecentowideBold';
+
 	text-align:center;
 }
 
