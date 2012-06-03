@@ -1,6 +1,22 @@
 /*------------------------------------*\
 	$MAIN
 \*------------------------------------*/
+@font-face {
+    font-family: 'NovecentowideBookRegular';
+    src: url('../fonts/novecentowide-book/novecentowide-book.eot');
+    src: url('../fonts/novecentowide-book/novecentowide-book.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/novecentowide-book/novecentowide-book.woff') format('woff'),
+         url('../fonts/novecentowide-book/novecentowide-book.ttf') format('truetype'),
+         url('../fonts/novecentowide-book/novecentowide-book.svg#NovecentowideBookRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#page{
+	font-family: 'NovecentowideBookRegular';
+	font-size:20px;
+	color:#C5C5C5;
+}
 
 #content{
 	height: 100%;
@@ -24,6 +40,7 @@
 #consommation{
 	background: yellow;
 }
+<<<<<<< HEAD
 #sante{
 	background: pink;
 }
@@ -35,4 +52,30 @@
 }
 #divers{
 	background: red;
+=======
+
+/*------------------------------------*\
+	$PART 1
+\*------------------------------------*/
+#production_mondial{
+	width:960px;
+	height:760px;
+	background: #DDD ;
+}
+#import_export{
+	width:820px;
+	margin:100px auto;
+}
+#biere_import{
+	float:left;
+	text-align:right;
+	margin-left:200px;
+}
+#vin_import{
+	float:right;
+	margin-right:200px;
+}
+#production_pays{
+	
+>>>>>>> 5196571556e4c4ec7fb44b932a2ef4dc5e100d15
 }

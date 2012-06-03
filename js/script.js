@@ -27,6 +27,7 @@ function resizeContent(){
 	content.css({'width' : windowWidth, 'height' : windowHeight}).find(".pages").css({'width' : windowWidth, 'height' : windowHeight});
 }
 
+<<<<<<< HEAD
 function setZindex(){
 	var pages = $("#content").find('.pages');
 	pages.each(function(index){
@@ -78,3 +79,24 @@ $(document).keydown(function(event){
 	}
 	
 });
+=======
+//#production_mondial
+var canevasProd = new Raphael(document.getElementById('canevasProd'),400,710);
+var biere = canevasProd.image("2_biere_03.png", 0, 0, 0, 0);
+biere.attrs = {cx: 0, cy: 605};
+biere.animate({width: 275, height:605},1000);
+
+
+
+
+//#import_export
+
+
+
+
+
+//#production_pays
+
+
+
+>>>>>>> 5196571556e4c4ec7fb44b932a2ef4dc5e100d15
