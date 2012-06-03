@@ -142,39 +142,79 @@
 /*------------------------------------*\
 	$PART 1 (cedric)
 \*------------------------------------*/
-#import_export{
+/*--- PRODUCTION ---*/
+#marche{
 	width:820px;
+	height:450px;
 	margin:100px auto;
 }
-#import_export li.diagram{
+#marche li.diagram{
 	width:60px;
 	height:20px;
 }
-#biere_import li.diagram{
+#production_biere li.diagram{
 	background: url('../img/4_biere.png') repeat;
+	margin-bottom:8px;
 }
-#vin_import li.diagram{
+#production_vin li.diagram{
 	background: url('../img/4_vin.png') repeat right;
+	margin-bottom:8px;
 }
-#import_export li{
+#marche li{
 	clear:both;
 }
-#import_export span{
+#marche span{
+	font-family: 'NovecentowideLight';
+	font-size:16px;
+}
+#marche li.left{
+	float:right;
+}
+#production_biere{
+	float:right;
+	margin-right:200px;
+}
+#production_vin{
+	float:left;
+	text-align:right;
+	margin-left:200px;
+}
+/*--- IMPORT ---*/
+
+#import_export li{
+	clear:both;
 	font-family: 'NovecentowideLight';
 	font-size:16px;
 }
 #import_export li.left{
 	float:right;
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+	background: url('../img/texture_vin.png') repeat;
 }
-#biere_import{
-	float:right;
-	margin-right:200px;
+#import_export li.diagram:not(.left){
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+	background: url('../img/texture_biere.png') repeat;
 }
-#vin_import{
+#import,#export{
+	margin-top:50px;
+	
+	width:820px;
+	height:650px;
+	margin:100px auto;
+}
+#import li.diagram, #export li.diagram{
+	width:0px;
+	height:39px;
+	margin-bottom:8px;
+}
+#vin_import,#vin_export{
 	float:left;
 	text-align:right;
 	margin-left:200px;
 }
-#production_pays{
-	
+#biere_import,#biere_export{
+	float:right;
+	margin-right:200px;
 }
