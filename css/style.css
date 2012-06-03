@@ -89,18 +89,23 @@
 	min-width:106px;
 }
 
+#biere_2{
+	min-width:275px;
+}
+
 #nbVin2, #nbBiere2{
 	font-size:37.5px;
-	font-weight:bold;
+	font-family:'NovecentowideBold';
 	text-align:center;
 }
 
 #nbVin2{
+
 	text-align:center;
 }
 
 #nbBiere2{
-	width:205px;
+
 	text-align:center;
 }
 
