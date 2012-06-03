@@ -34,7 +34,17 @@
 	background: #DDD ;
 }
 #import_export{
-	
+	width:820px;
+	margin:0 auto;
+}
+#biere_import{
+	float:left;
+	text-align:right;
+	margin-left:200px;
+}
+#vin_import{
+	float:right;
+	margin-right:200px;
 }
 #production_pays{
 	
