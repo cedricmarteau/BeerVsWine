@@ -74,7 +74,7 @@
 }
 
 /*------------------------------------*\
-	$PART 1
+	$PART 1 (greg)
 \*------------------------------------*/
 #production_mondial{
 	width:960px;
@@ -104,7 +104,9 @@
 	text-align:center;
 }
 
-/*-----------------------------*/
+/*------------------------------------*\
+	$PART 1 (cedric)
+\*------------------------------------*/
 #import_export{
 	width:820px;
 	margin:100px auto;
@@ -121,6 +123,10 @@
 }
 #import_export li{
 	clear:both;
+}
+#import_export span{
+	font-family: 'NovecentowideLight';
+	font-size:16px;
 }
 #import_export li.left{
 	float:right;
