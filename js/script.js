@@ -26,7 +26,7 @@ function data_production(){
 	for (var i=0;i<10;i++){
 		$("#production_vin li.diagram").eq(i).animate({
 			width: data_production_wine[i]*2+"px"
-		}, 500, 'easeInOutQuint');
+		}, 1500, 'easeInOutQuint');
 	}
 }
 function import_export(){
