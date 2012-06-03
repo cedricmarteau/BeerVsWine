@@ -1,7 +1,7 @@
 
 var windowWidth;			
 var windowHeight;
-var animating=true;
+var animating=false;
 
 var indexItem=0;
 
@@ -79,7 +79,7 @@ $(document).keydown(function(event){
 			animateMenu();
 			animating=true;
 			pages.eq(indexCurrent+1).css('z-index',"29");
-			current.animate({"top":-windowHeight}, 1000,"easeInQuint",function(){
+			current.delay(800).animate({"top":-windowHeight}, 1000,"easeInQuint",function(){
 				animating=false;
 				current.removeClass("current");
 				pages.eq(indexCurrent+1).addClass("current");
@@ -99,7 +99,7 @@ $(document).keydown(function(event){
 			animateMenu();
 			animating=true;
 			pages.eq(indexCurrent-1).css('z-index',"29");
-			current.animate({"top":windowHeight}, 1000,"easeInQuint",function(){
+			current.delay(800).animate({"top":windowHeight}, 1000,"easeInQuint",function(){
 				animating=false;
 				current.removeClass("current");
 				pages.eq(indexCurrent-1).addClass("current");
@@ -120,7 +120,7 @@ $(document).keydown(function(event){
 			animating=true;
 			subPages.eq(indexSubCurrent+1).css("z-index","29");
 			
-			current.find(".subCurrent").animate({"left":-windowWidth}, 1000,"easeInQuint",function(){
+			current.delay(800).find(".subCurrent").animate({"left":-windowWidth}, 1000,"easeInQuint",function(){
 				animating=false;
 				subCurrent.removeClass("subCurrent");
 				subPages.eq(indexSubCurrent+1).addClass("subCurrent");
@@ -140,7 +140,7 @@ $(document).keydown(function(event){
 			animating=true;
 			subPages.eq(indexSubCurrent-1).css("z-index","29");
 			
-			current.find(".subCurrent").animate({"left":+windowWidth}, 1000,"easeInQuint",function(){
+			current.delay(800).find(".subCurrent").animate({"left":+windowWidth}, 1000,"easeInQuint",function(){
 			animating=false;
 			subCurrent.removeClass("subCurrent");
 			subPages.eq(indexSubCurrent-1).addClass("subCurrent");
@@ -153,7 +153,7 @@ $(document).keydown(function(event){
 });
 
 function animateMenu(){
-	animating=true;
+	//animating=true;
 	
 	var currentItem = $("#menu").find(".current-item");
 	currentItem.find("h2").css({"top":"17px"});
@@ -168,7 +168,6 @@ function animateMenu(){
 		currentItem.animate({"width":"200px"}, 400,function(){
 			currentItem.find("h2").animate({"top":"0"},400);
 			currentItem.find("h3").animate({"top":"0"},400);
-			animating=false;
 		});
 		
 	});
