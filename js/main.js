@@ -1,12 +1,16 @@
 
 var windowWidth;			
 var windowHeight;
-var animating=false;
+var animating=true;
+
+var indexItem=0;
 
 $(document).ready(function(){
 	resizeContent();
 	setZindex();
 	setSubZindex();
+	
+	setTimeout(animateMenu, 1000);
 });
 
 
@@ -71,6 +75,8 @@ $(document).keydown(function(event){
 			var indexCurrent=current.index();
 			
 		if(pages.length>indexCurrent+1 && !animating){
+			indexItem+=1;
+			animateMenu();
 			animating=true;
 			pages.eq(indexCurrent+1).css('z-index',"29");
 			current.animate({"top":-windowHeight}, 1000,"easeInQuint",function(){
@@ -89,6 +95,8 @@ $(document).keydown(function(event){
 		var indexCurrent=current.index();
 		
 		if(indexCurrent>0 && !animating){
+			indexItem-=1;
+			animateMenu();
 			animating=true;
 			pages.eq(indexCurrent-1).css('z-index',"29");
 			current.animate({"top":windowHeight}, 1000,"easeInQuint",function(){
@@ -142,6 +150,31 @@ $(document).keydown(function(event){
 			});
 		}
 	}
-	
-	
 });
+
+function animateMenu(){
+	animating=true;
+	
+	var currentItem = $("#menu").find(".current-item");
+	currentItem.find("h2").css({"top":"17px"});
+	currentItem.find("h3").css({"top":"-17px"});
+	currentItem.animate({"width":"70px"}, 400,function(){
+	
+		$(this).removeClass("current-item");
+		$("#menu").find(".item-mask").eq(indexItem).addClass("current-item");
+		
+		var currentItem = $("#menu").find(".current-item");
+		
+		currentItem.animate({"width":"200px"}, 400,function(){
+			currentItem.find("h2").animate({"top":"0"},400);
+			currentItem.find("h3").animate({"top":"0"},400);
+			animating=false;
+		});
+		
+	});
+	
+}
+
+
+
+
