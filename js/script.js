@@ -33,14 +33,13 @@ $(document).ready(function(){
 	$('#vin_2 img').height(0).animate({'height':'+='+hauteurVin+'px'}, 2000, 'easeInOutExpo', function(){
 		$('#biere_2 img').animate({'height':'+='+hauteurBiere+'px'}, 3000,'easeInOutExpo');
 		$('#tiret22').animate({"marginTop": ""+placementTirets22+"px"},3000,'easeInOutExpo',function(){
-			$('#nbBiere2').text(hectolitreCalcule2);
+			$('#nbBiere2').text(hectolitreBiere);
 		});
 
 		var t2 =setInterval(function(){
 				hectolitreCalcule2+=3;
                   $('#nbBiere2').text(hectolitreCalcule2);
                   if(hectolitreCalcule2>hectolitreBiere-3){
-                  		
                   		hectolitreCalcule2 = hectolitreBiere;
 	                  	clearInterval(t2);
                   		}
