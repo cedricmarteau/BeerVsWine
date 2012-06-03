@@ -106,18 +106,19 @@
 #bouteilles_2{margin-top:30px;}
 #vin_2{	min-width:106px;}
 #biere_2{min-width:275px;}
-#graduation_2{margin-top:10px;}
+#graduation_2{margin-top:10px; height:675px;}
+#graduation_2 img{margin-top:10px;}
 #nbVin2, #nbBiere2{
 	font-size:37.5px;
 	font-family:'NovecentowideBold';
 	color:#393939;
 }
 #nbVin2{
-	width:90px;
+	width:94px;
 	text-align:center;
 }
 #nbBiere2{
-	width:210px;
+	width:212px;
 	text-align:center;
 }
 #blocAnimation_2, #tiret21, #tiret22{position: absolute;}

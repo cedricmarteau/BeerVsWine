@@ -4,6 +4,9 @@
 var hectolitreVin = 260 ;
 var hectolitreBiere = 1400;
 
+var hectolitreCalcule1 = 0 ;
+var hectolitreCalcule2 = 0 ;
+
 var hauteurBiere = 605;
 var hauteurVin = hauteurBiere*260/1400;
 
@@ -13,16 +16,36 @@ var placementTirets22 = hauteurAnimation2 - hauteurBiere - 30;
 
 $(document).ready(function(){
 
+	 $('#nbBiere2').text(0);
+	var t1 =setInterval(function(){
+				hectolitreCalcule1+=2;
+                 $('#nbVin2').text(hectolitreCalcule1);
+                 if(hectolitreCalcule1==hectolitreVin){
+	                 clearInterval(t1);
+                  	hectolitreCalcule1 = hectolitreVin;}
+				}, 1);
+
 	$('#biere_2 img').height(0);
-	$('#tiret21').css({"marginTop":""+hauteurAnimation2+"px"});
+	$('#tiret21').css({"marginTop":""+(hauteurAnimation2-25)+"px"});
 	$('#tiret22').css({"marginTop":""+(hauteurAnimation2-25)+"px"});
 
 	$('#tiret21').animate({"marginTop": ""+placementTirets21+"px"},2000,'easeInOutExpo');
 	$('#vin_2 img').height(0).animate({'height':'+='+hauteurVin+'px'}, 2000, 'easeInOutExpo', function(){
 		$('#biere_2 img').animate({'height':'+='+hauteurBiere+'px'}, 3000,'easeInOutExpo');
-		$('#tiret22').animate({"marginTop": ""+placementTirets22+"px"},3000,'easeInOutExpo');
-	});
+		$('#tiret22').animate({"marginTop": ""+placementTirets22+"px"},3000,'easeInOutExpo',function(){
+			$('#nbBiere2').text(hectolitreCalcule2);
+		});
 
+		var t2 =setInterval(function(){
+				hectolitreCalcule2+=3;
+                  $('#nbBiere2').text(hectolitreCalcule2);
+                  if(hectolitreCalcule2>hectolitreBiere-3){
+                  		
+                  		hectolitreCalcule2 = hectolitreBiere;
+	                  	clearInterval(t2);
+                  		}
+				}, 1);
+	});
 
 	data_production();
 	import_export();
