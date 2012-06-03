@@ -12,9 +12,14 @@ $(document).ready(function(){
 
 
 //#import_export
-
-
-
+function data_production(){
+	var data_production_wine= new Array(50.50,47.12,36.45,23.00,15.50,14.50,10.50,9.62,8.33,8.28);
+	for (var i=0;i<10;i++){
+		$("#vin_import li.diagram").eq(i).animate({
+			width: data_production_wine[i]*2+"px"
+		}, 500, 'swing');
+	}
+}
 
 
 //#production_pays
