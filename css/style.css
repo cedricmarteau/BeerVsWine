@@ -89,6 +89,17 @@
 	width:820px;
 	margin:100px auto;
 }
+#import_export li.diagram{
+	width:60px;
+	height:20px;
+	background-color:red;
+}
+#import_export li{
+	clear:both;
+}
+#import_export li.left{
+	float:right;
+}
 #biere_import{
 	float:left;
 	text-align:right;
