@@ -19,3 +19,20 @@ function resizeContent(){
 	content.css({'width' : windowWidth, 'height' : windowHeight}).find(".pages").css({'width' : windowWidth, 'height' : windowHeight});
 	
 }
+
+//#production_mondial
+
+
+
+
+
+//#import_export
+
+
+
+
+
+//#production_pays
+
+
+
