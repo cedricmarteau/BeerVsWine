@@ -84,13 +84,13 @@ function import_export(){
 }
 
 function more_consume(){
-	var data_beer_more_consum = new Array(45,42,46,42,39,40,40,36);
+	/*var data_beer_more_consum = new Array(45,42,46,42,39,40,40,36);
 	var data_wine_more_consum = new Array(32,34,31,33,36,34,34,35);
 	var data_liqueur_more_consum = new Array(18,19,18,22,21,22,21,23);
 	// Creates canvas 320 × 200 at 10, 50
 	var paper_width = 500;
 	var paper_height = 700;
-	var paper = Raphael("plus_consom", paper_width, paper_height);
+	var paper = Raphael(document.getElementById("plus_consom"), paper_width, paper_height);
 	var line_beer = "";
 	var letter;
 	for (var i=0;i<=7;i++){
@@ -98,7 +98,7 @@ function more_consume(){
 		line_beer += letter+i*70+" "+(500-((data_beer_more_consum[i]*500)/50));
 		console.log(line_beer);
 	}
-	var c = paper.path(line_beer);
+	var c = paper.path(line_beer);*/
 	// Creates circle at x = 50, y = 40, with radius 10
 	//var circle = paper.circle(50, 40, 10);
 	// Sets the fill attribute of the circle to red (#f00)
