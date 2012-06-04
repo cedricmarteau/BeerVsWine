@@ -49,7 +49,7 @@ $(document).ready(function(){
 	data_production();
 	import_export();
 	more_consume();
-	creerStats();
+	//creerStats();
 	nuage_tag();
 });
 
@@ -57,7 +57,7 @@ $(document).ready(function(){
 
 //#consomation par..
 
-function creerStats(){
+/*function creerStats(){
 
 	var largeurCanvas = 339;
 	var hauteurCanvas = 332;
