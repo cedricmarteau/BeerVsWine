@@ -46,6 +46,15 @@
 	position: relative;
 }
 
+#content h2{
+	font-family: NovecentowideBold;
+	font-size: 38px;
+	color: #a2d4dd;
+	margin-left: 10px;
+	margin-top: 5px;
+	width: 310px;
+}
+
 .pages{
 	height: 100%;
 	overflow: hidden;
@@ -74,16 +83,18 @@
 }
 
 #menu .menu-item{
-	width: 280px;
+	width: 300px;
 	float: left;
 }
 #menu .menu-item .menu-thumb{
-	background: url('../img/menu_sprite.png') no-repeat;
+		background: url('../img/menu_sprite.png') no-repeat;
+		background-color: #393939;
 		width: 61px;
 		height: 62px;
 		display: block;
 		margin-bottom: 10px;
 		float: left;
+		border-radius: 30px;
 }
 
 #menu .menu-item .thumb1{
@@ -102,7 +113,7 @@
 	background-position: -2px -253px;
 }
 #menu .menu-item .thumb6{
-	background-position: 0 -65px;
+	background-position: 0 -319px;
 }
 
 
