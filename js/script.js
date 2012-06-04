@@ -49,11 +49,8 @@ $(document).ready(function(){
 	data_production();
 	import_export();
 	more_consume();
-<<<<<<< HEAD
 	best_consom();
-=======
 	//creerStats();
->>>>>>> 6090a0e02703547efce74639145cf3053d234d03
 	nuage_tag();
 });
 
