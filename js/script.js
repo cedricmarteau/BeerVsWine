@@ -33,14 +33,13 @@ $(document).ready(function(){
 	$('#vin_2 img').height(0).animate({'height':'+='+hauteurVin+'px'}, 2000, 'easeInOutExpo', function(){
 		$('#biere_2 img').animate({'height':'+='+hauteurBiere+'px'}, 3000,'easeInOutExpo');
 		$('#tiret22').animate({"marginTop": ""+placementTirets22+"px"},3000,'easeInOutExpo',function(){
-			$('#nbBiere2').text(hectolitreCalcule2);
+			$('#nbBiere2').text(hectolitreBiere);
 		});
 
 		var t2 =setInterval(function(){
 				hectolitreCalcule2+=3;
                   $('#nbBiere2').text(hectolitreCalcule2);
                   if(hectolitreCalcule2>hectolitreBiere-3){
-                  		
                   		hectolitreCalcule2 = hectolitreBiere;
 	                  	clearInterval(t2);
                   		}
@@ -50,9 +49,60 @@ $(document).ready(function(){
 	data_production();
 	import_export();
 	more_consume();
+	best_consom();
+	//creerStats();
 	nuage_tag();
 	litre_eau();
 });
+
+
+
+//#consomation par..
+
+/*function creerStats(){
+
+	var largeurCanvas = 339;
+	var hauteurCanvas = 332;
+
+	var hauteurOffset = 35;
+	var hauteurHomme = 238;
+	var consommationHommeVin = 20;
+	var consommationHommeBiere = 48;
+
+	var consommationFemmeVin = 51;
+	var consommationFemmeBiere = 22;
+
+	var hauteurHommeVin = 238*20/100;
+	var hauteurHommeBiere = 238*48/100;
+	var hauteurHommeAutres = 238-hauteurHommeVin-hauteurHommeBiere;
+
+	var hauteurFemmeVin = 238*51/100;
+	var hauteurFemmeBiere = 238*22/100;
+	var hauteurFemmeAutres = 238 - hauteurFemmeVin - hauteurFemmeAutres;
+
+	var statsParSexe = new Raphael(document.getElementById('statsParSexe'),339,332);
+	
+	var rectangleHommeVin = statsParSexe.rect(0,0,115,hauteurHommeVin);
+
+	rectangleHommeVin.attr({
+		'fill': "url(img/texture_vin.png)" ,
+		stroke: "none",
+		y: hauteurOffset + hauteurHomme
+	});
+
+	rectangleHommeVin.animate({y:hauteurOffset + hauteurHomme - hauteurHommeVin}, 1500,function(){
+		var rectangleHommeBiere = statsParSexe.rect(0,0,115,hauteurHommeVin);
+
+	});
+}
+
+/*
+	});*/
+
+
+
+
+
 
 
 //#import_export
@@ -173,63 +223,23 @@ function more_consume(){
 function best_consom(){
 	var data_beer_best_consum = new Array(161.5,157,141.2,110.6,101.6,101.5,96.2,96.2,91.5,88.4),
 	data_wine_best_consum = new Array(62.2,60.13,55.85,52.70,48.16,46.67,43.77,42.27,39.87,34.66),
-	angle=360/10;
-	
-	Raphael.fn.pieChart = function (cx, cy, r, values, labels, stroke) {
-			    var paper = this,
-			        rad = Math.PI / 180,
-			        chart = this.set();
-			    function sector(cx, cy, r, startAngle, endAngle, params) {
-			        var x1 = cx + r * Math.cos(-startAngle * rad),
-			            x2 = cx + r * Math.cos(-endAngle * rad),
-			            y1 = cy + r * Math.sin(-startAngle * rad),
-			            y2 = cy + r * Math.sin(-endAngle * rad);
-			        return paper.path(["M", cx, cy, "L", x1, y1, "A", r, r, 0, +(endAngle - startAngle > 180), 0, x2, y2, "z"]).attr(params);
-			    }
-			    var angle = 0,
-			        total = 0,
-			        start = 0,
-			        process = function (j) {
-			            var value = values[j],
-			                angleplus = 360 * value / total,
-			                popangle = angle + (angleplus / 2),
-			                color = Raphael.hsb(start, .75, 1),
-			                ms = 500,
-			                delta = 30,
-			                bcolor = Raphael.hsb(start, 1, 1),
-			                p = sector(cx, cy, r, angle, angle + angleplus, {fill: "90-" + bcolor + "-" + color, stroke: stroke, "stroke-width": 3}),
-			                txt = paper.text(cx + (r + delta + 55) * Math.cos(-popangle * rad), cy + (r + delta + 25) * Math.sin(-popangle * rad), labels[j]).attr({fill: bcolor, stroke: "none", opacity: 0, "font-size": 20});
-			            p.mouseover(function () {
-			                p.stop().animate({transform: "s1.1 1.1 " + cx + " " + cy}, ms, "elastic");
-			                txt.stop().animate({opacity: 1}, ms, "elastic");
-			            }).mouseout(function () {
-			                p.stop().animate({transform: ""}, ms, "elastic");
-			                txt.stop().animate({opacity: 0}, ms);
-			            });
-			            angle += angleplus;
-			            chart.push(p);
-			            chart.push(txt);
-			            start += .1;
-			        };
-			    for (var i = 0, ii = values.length; i < ii; i++) {
-			        total += values[i];
-			    }
-			    for (i = 0; i < ii; i++) {
-			        process(i);
-			    }
-			    return chart;
-			};
-		
-			$(function () {
-			    var values = [],
-			        labels = [];
-			    $("tr").each(function () {
-			        values.push(parseInt($("td", this).text(), 10));
-			        labels.push($("th", this).text());
-			    });
-			    $("table").hide();
-			    Raphael("holder", 700, 700).pieChart(350, 350, 200, values, labels, "#fff");
-			});
+	angle = 360/10,
+	paper_best_consom_width = 500,
+	paper_best_consom_height = 500,
+	paper_best_consom = Raphael(document.getElementById("best_consom"), paper_best_consom_width, paper_best_consom_height),
+	centre_fromage = "M250 250",
+	rayon = 200,
+	L_cote_oppose_big = (Math.sin(angle/2*Math.PI/180)*rayon)*2,
+	L_cote_oppose_little = Math.sin(angle/2*Math.PI/180)*rayon,
+	L_cote_little = Math.sqrt((L_cote_oppose_big*L_cote_oppose_big)-(L_cote_oppose_little*L_cote_oppose_little));
+	console.log("cote_oppose_big "+L_cote_oppose_big)
+	console.log("cote_oppose_little "+L_cote_oppose_little)
+	console.log("cote_little "+L_cote_little)
+	for (var i=0;i<1;i++){
+		var paper_best_consom_path = paper_best_consom.path(centre_fromage+"l"+(200)+" "+250+"l"+(-93)+" "+61+"L250 250");
+		console.log(paper_best_consom_path)
+	}
+
 }
 
 //#sante

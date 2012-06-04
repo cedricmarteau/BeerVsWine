@@ -210,6 +210,29 @@
 #tiret21{margin-top:532px;}
 #tiret22{margin-top:42px;}
 
+/*------------------------------------------------------------------Alcool préféré par ...------------------*/
+
+
+#parSexe{
+	width:339px;
+	height:332px;
+}
+
+#masqueParSexe{
+	z-index:2;
+	position: absolute;
+	width:339px;
+	height:332px;
+	background:url(../img/6_sexe.png) no-repeat;
+}
+
+#statsParSexe{
+	z-index:1;
+	position: absolute;
+	width:339px;
+	height:332px;
+}
+
 /*------------------------------------*\
 	$PART 1 (cedric)
 \*------------------------------------*/
@@ -308,12 +331,12 @@
 	margin:100px auto;
 	position:relative;
 }
-/*--- PLUS GROS CONSOMMATEURS ---*/
 #best_consom{
 	width:600px;
 	height:400px;
-	margin:100px auto;
+	margin:300px auto;
 	position:relative;
+<<<<<<< HEAD
 }
 
 
@@ -482,3 +505,6 @@
 	background-size: 95px;
 	cursor: default;
 }
+=======
+}
+>>>>>>> 326c402a2c3dedd0b67134c2c5e6988173da5511
