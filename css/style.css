@@ -198,6 +198,29 @@
 #tiret21{margin-top:532px;}
 #tiret22{margin-top:42px;}
 
+/*------------------------------------------------------------------Alcool préféré par ...------------------*/
+
+
+#parSexe{
+	width:339px;
+	height:332px;
+}
+
+#masqueParSexe{
+	z-index:2;
+	position: absolute;
+	width:339px;
+	height:332px;
+	background:url(../img/6_sexe.png) no-repeat;
+}
+
+#statsParSexe{
+	z-index:1;
+	position: absolute;
+	width:339px;
+	height:332px;
+}
+
 /*------------------------------------*\
 	$PART 1 (cedric)
 \*------------------------------------*/
