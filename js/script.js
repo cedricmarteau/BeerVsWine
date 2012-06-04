@@ -137,7 +137,7 @@ function import_export(){
 //les plus consommés
 
 function more_consume(){
-	var data_beer_more_consum = new Array(45,42,46,42,36,40,40,36),
+	/*var data_beer_more_consum = new Array(45,42,46,42,36,40,40,36),
 	data_wine_more_consum = new Array(32,34,31,33,39,34,34,35),
 	data_liqueur_more_consum = new Array(18,19,18,22,21,22,21,23),
 	paper_width = 700,
@@ -220,19 +220,25 @@ function more_consume(){
 
 //les plus gros consommateur
 function best_consom(){
-	// var data_beer_best_consum = new Array(161.5,157,141.2,110.6,101.6,101.5,96.2,96.2,91.5,88.4),
-	// 	data_wine_best_consum = new Array(62.2,60.13,55.85,52.70,48.16,46.67,43.77,42.27,39.87,34.66),
-	// 	angle = 360/10,
-	// 	paper_best_consom_width = 500,
-	// 	paper_best_consom_height = 500,
-	// 	paper_best_consom = Raphael(document.getElementById("best_consom"), paper_best_consom_width, paper_best_consom_height),
-	// 	centre_fromage = "M250 250",
-	// 	rayon = 200,
-	// 	L_cote_oppose = (Math.sin(angle/2*Math.PI/180)*rayon)*2;
-	// 	//console.log("cote_oppose "+L_cote_oppose)
-	// 	for (var i=0;i<10;i++){
-	// 		paper_best_consom.path(centre_fromage+"L"+(i*angle)+" "+(250+rayon*100)/data_beer_best_consum[i]);
-	// 	}
+	var data_beer_best_consum = new Array(161.5,157,141.2,110.6,101.6,101.5,96.2,96.2,91.5,88.4),
+	data_wine_best_consum = new Array(62.2,60.13,55.85,52.70,48.16,46.67,43.77,42.27,39.87,34.66),
+	angle = 360/10,
+	paper_best_consom_width = 500,
+	paper_best_consom_height = 500,
+	paper_best_consom = Raphael(document.getElementById("best_consom"), paper_best_consom_width, paper_best_consom_height),
+	centre_fromage = "M250 250",
+	rayon = 200,
+	L_cote_oppose_big = (Math.sin(angle/2*Math.PI/180)*rayon)*2,
+	L_cote_oppose_little = Math.sin(angle/2*Math.PI/180)*rayon,
+	L_cote_little = Math.sqrt((L_cote_oppose_big*L_cote_oppose_big)-(L_cote_oppose_little*L_cote_oppose_little));
+	console.log("cote_oppose_big "+L_cote_oppose_big)
+	console.log("cote_oppose_little "+L_cote_oppose_little)
+	console.log("cote_little "+L_cote_little)
+	for (var i=0;i<1;i++){
+		var paper_best_consom_path = paper_best_consom.path(centre_fromage+"l"+(200)+" "+250+"l"+(-93)+" "+61+"L250 250");
+		console.log(paper_best_consom_path)
+	}
+
 }
 
 //#sante
