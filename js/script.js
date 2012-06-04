@@ -382,7 +382,84 @@ function best_consom(){
 
 //risques de mort
 function risk_of_death(){
-		// var paper_risk_death = Raphael(document.getElementById("death"), paper_best_consom_width, paper_best_consom_height);
+	var paper_risk_death_width = 500,
+	paper_risk_death_height = 240, 
+	paper_risk_death = Raphael(document.getElementById("death"), paper_risk_death_width, paper_risk_death_height),
+	beer_risk_all = new Array(1,0.9,1,1.3),
+	beer_risk_chd = new Array(1,0.8,0.6,0.8),
+	beer_risk_cancer = new Array(1,1.1,1.3,1.5),
+	wine_risk_all = new Array(1,0.8,0.7,0.9),
+	wine_risk_chd = new Array(1,0.7,0.6,0.8),
+	wine_risk_cancer = new Array(1,0.9,0.8,0.9);
+	for (var i=1;i<=10;i++){
+		var abscisse = paper_risk_death.path("M45"+" "+(200-i*20)+"L"+paper_risk_death_width*i+" "+(200-i*20));
+		console.log(abscisse);
+		abscisse.attr({
+			"stroke":"1px"
+		});
+		//x y width height
+		var beer_rect_all = paper_risk_death.rect(90, 100, 35, 100, 5),
+		wine_rect_all = paper_risk_death.rect(130, 100, 35, 100, 5),
+		beer_rect_chd = paper_risk_death.rect(240, 100, 35, 100, 5),
+		wine_rect_chd = paper_risk_death.rect(280, 100, 35, 100, 5),
+		beer_rect_cancer = paper_risk_death.rect(390, 100, 35, 100, 5),
+		wine_rect_cancer = paper_risk_death.rect(430, 100, 35, 100, 5);
+		wine_rect_all.attr({
+			"stroke":"none",
+			"fill":"#8F0F0B"
+		});
+		beer_rect_all.attr({
+			"stroke":"none",
+			"fill":"#FCD014"
+		});
+		wine_rect_chd.attr({
+			"stroke":"none",
+			"fill":"#8F0F0B"
+		});
+		beer_rect_chd.attr({
+			"stroke":"none",
+			"fill":"#FCD014"
+		});
+		wine_rect_cancer.attr({
+			"stroke":"none",
+			"fill":"#8F0F0B"
+		});
+		beer_rect_cancer.attr({
+			"stroke":"none",
+			"fill":"#FCD014"
+		});
+	}
+	var max_ordonnee = paper_risk_death.text(15, 10, "1,8*");
+	var middle_ordonnee = paper_risk_death.text(15, 90, "1*");
+	var min_ordonnee = paper_risk_death.text(15, 190, "0,2*");
+	max_ordonnee.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	middle_ordonnee.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	min_ordonnee.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	var all = paper_risk_death.text(126, 225, "Causes diverses");
+	var chd = paper_risk_death.text(280, 225, "Problème cardiaque");
+	var cancer = paper_risk_death.text(430, 225, "Cancer");
+	all.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	chd.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	cancer.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	
 }
 
 //#sante
