@@ -211,14 +211,21 @@
 #tiret22{margin-top:42px;}
 
 /*------------------------------------------------------------------Alcool préféré par ...------------------*/
+#consommationPar{
+	width:960px;
+	margin:0 auto;
+}
+
 
 
 #parSexe{
+	display: inline-block;
 	width:339px;
 	height:332px;
+	border-right:#ebebeb solid 2px;
 }
 
-#masqueParSexe{
+#parSexe #masqueParSexe{
 	z-index:2;
 	position: absolute;
 	width:339px;
@@ -226,11 +233,105 @@
 	background:url(../img/6_sexe.png) no-repeat;
 }
 
-#statsParSexe{
+#parSexe #statsParSexe{
 	z-index:1;
 	position: absolute;
 	width:339px;
 	height:332px;
+}
+
+/*-----------------------------------âge-----------------*/
+#age{
+	height:332px;
+	display: inline-block;
+	margin-left:114px;
+}
+
+#age #jeune {
+	margin-top:22px;
+}
+
+#age>div{
+	width:232px;
+	height:85px;
+}
+
+.biereAge,.VinAge,#age img{
+	width:90px;
+	height:85px;
+	display: block;
+	float: left;
+}
+
+.VinAge p{
+	padding-top: 45px;
+	text-align:right;
+}
+
+.biereAge p{
+	padding-top: 45px;
+}
+
+#age img{
+	width:50px;
+}
+
+.pourcentageAge{
+	
+	height:13px;
+	background-color: red;
+}
+.biereAge .pourcentageAge{
+	background : url(../img/texture_biere.png);
+}
+
+.VinAge .pourcentageAge{
+	background : url(../img/texture_vin.png);
+	float: right;
+}
+
+
+/*-----------------------------------revenus-----------------*/
+
+#revenus{
+	border-top:#ebebeb solid 2px;
+	width:600px;
+	height:224px;
+}
+
+#revenus #pauvres{
+	margin-left:120px;
+}
+
+#revenus>div{
+	display: inline-block;
+	height:224px;
+	width:140px;
+	color: #393939;
+	font-size:16px;
+}
+
+#revenus .bierreRevenus, #revenus .vinRevenus{
+	height:94px;
+	position: relative;
+}
+
+#revenus p{
+	height:36px;
+}
+
+#revenus .jaugeRevenus{
+	width: 140px;
+	height:0px;
+}
+
+#revenus .bierreRevenus .jaugeRevenus{
+	background:url(../img/6_revenusBiere.png);
+	position:absolute; bottom:0;
+}
+
+#revenus .vinRevenus .jaugeRevenus{
+	background:url(../img/6_revenusVin.png);
 }
 
 /*------------------------------------*\
@@ -332,6 +433,12 @@
 	position:relative;
 }
 #best_consom{
+	width:700px;
+	height:700px;
+	margin:300px auto;
+	position:relative;
+}
+#death{
 	width:700px;
 	height:700px;
 	margin:300px auto;

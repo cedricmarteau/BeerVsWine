@@ -50,7 +50,13 @@ $(document).ready(function(){
 	import_export();
 	more_consume();
 	best_consom();
-	//creerStats();
+
+	//creerStatsParSexe();
+	creerStatsParAge();
+	creerStatsParRevenus();
+	nuage_tag();
+
+
 	nuage_tag();
 	litre_eau();
 	risk_of_death();
@@ -61,7 +67,9 @@ $(document).ready(function(){
 
 //#consomation par..
 
-/*function creerStats(){
+
+
+/*function creerStatsParSexe(){
 
 	var largeurCanvas = 339;
 	var hauteurCanvas = 332;
@@ -80,30 +88,131 @@ $(document).ready(function(){
 
 	var hauteurFemmeVin = 238*51/100;
 	var hauteurFemmeBiere = 238*22/100;
-	var hauteurFemmeAutres = 238 - hauteurFemmeVin - hauteurFemmeAutres;
+	var hauteurFemmeAutres = 238 - hauteurFemmeVin - hauteurFemmeBiere;
 
 	var statsParSexe = new Raphael(document.getElementById('statsParSexe'),339,332);
 	
-	var rectangleHommeVin = statsParSexe.rect(0,0,115,hauteurHommeVin);
 
+	//Rectangle homme vin
+	var rectangleHommeVin = statsParSexe.rect(2,0,115,hauteurHommeVin);
 	rectangleHommeVin.attr({
 		'fill': "url(img/texture_vin.png)" ,
 		stroke: "none",
 		y: hauteurOffset + hauteurHomme
 	});
 
-	rectangleHommeVin.animate({y:hauteurOffset + hauteurHomme - hauteurHommeVin}, 1500,function(){
-		var rectangleHommeBiere = statsParSexe.rect(0,0,115,hauteurHommeVin);
-
+	rectangleHommeVin.animate({y:hauteurOffset + hauteurHomme - hauteurHommeVin}, 1000,function(){
+		var rectangleHommeBiere = statsParSexe.rect(2,0,115,hauteurHommeBiere);
+		rectangleHommeBiere.toBack();
+		rectangleHommeBiere.attr({
+			'fill': "url(img/texture_biere.png)" ,
+			stroke: "none",
+			y: hauteurOffset + hauteurHomme-hauteurHommeVin
+		});
+		rectangleHommeBiere.animate({y:hauteurOffset + hauteurHomme - hauteurHommeVin - hauteurHommeBiere}, 1000, function(){
+			var rectangleHommAutres = statsParSexe.rect(2,0,115,hauteurHommeAutres);
+			rectangleHommAutres.toBack();
+			rectangleHommAutres.attr({
+				'fill': "#d2d2d2" ,
+				stroke: "none",
+				y: hauteurOffset + hauteurHomme - hauteurHommeVin - hauteurHommeBiere
+			});
+			rectangleHommAutres.animate({y:hauteurOffset + hauteurHomme - hauteurHommeVin - hauteurHommeBiere - hauteurHommeAutres}, 1000);
+		});
 	});
+
+	var rectangleFemmeVin = statsParSexe.rect(116,0,115,hauteurFemmeVin);
+	rectangleFemmeVin.attr({
+		'fill': "url(img/texture_vin.png)" ,
+		stroke: "none",
+		y: hauteurOffset + hauteurHomme
+	});
+	rectangleFemmeVin.animate({y:hauteurOffset + hauteurHomme - hauteurFemmeVin}, 1000, function(){
+		var rectangleFemmeBiere = statsParSexe.rect(114,0,115,hauteurFemmeBiere);
+		rectangleFemmeBiere.toBack();
+		rectangleFemmeBiere.attr({
+			'fill': "url(img/texture_biere.png)" ,
+			stroke: "none",
+			y: hauteurOffset + hauteurHomme-hauteurFemmeVin
+		});
+		rectangleFemmeBiere.animate({y:hauteurOffset + hauteurHomme - hauteurFemmeVin - hauteurFemmeBiere},1000, function(){
+			var rectangleFemmeAutres = statsParSexe.rect(114,0,115,hauteurFemmeAutres);
+			rectangleFemmeAutres.toBack();
+				rectangleFemmeAutres.attr({
+				'fill': "#d2d2d2" ,
+				stroke: "none",
+				y: hauteurOffset + hauteurHomme - hauteurFemmeVin - hauteurFemmeBiere
+			});
+			rectangleFemmeAutres.animate({y:hauteurOffset + hauteurHomme - hauteurFemmeVin - hauteurFemmeBiere - hauteurFemmeAutres},1000);
+
+		});
+	});
+}*/
+
+function creerStatsParAge(){
+
+	var statsAge=[25/47*90,39/47*90,31/47*90,41/47*90,47/47*90,27/47*90];
+	var largeureMax = 90;
+
+	var vinJeune = $("#jeune .VinAge .pourcentageAge");
+	var biereJeune = $("#jeune .biereAge .pourcentageAge");
+
+	var vinAdulte = $("#adulte .VinAge .pourcentageAge");
+	var biereAdulte = $("#adulte .biereAge .pourcentageAge");
+
+	var vinVieux = $("#vieux .VinAge .pourcentageAge");
+	var biereVieux = $("#vieux .biereAge .pourcentageAge");
+
+	vinJeune.css({"width":0+"px"});
+	biereJeune.css({"width":0+"px"});
+	vinAdulte.css({"width":0+"px"});
+	biereAdulte.css({"width":0+"px"});
+	vinVieux.css({"width":0+"px"});
+	biereVieux.css({"width":0+"px"});
+
+
+	vinJeune.animate({'width':statsAge[0]+'px'}, 1000);
+	biereJeune.animate({'width':statsAge[1]+'px'}, 1000,function(){
+		vinAdulte.animate({'width':statsAge[2]+'px'}, 1000);
+		biereAdulte.animate({'width':statsAge[3]+'px'}, 1000,function(){
+			vinVieux.animate({'width':statsAge[4]+'px'}, 1000);
+			biereVieux.animate({'width':statsAge[5]+'px'}, 1000);
+		});
+	});
+
 }
 
-/*
-	});*/
+function creerStatsParRevenus(){
 
+	var hauteurMaxRevenus = 78;
+	var statsRevenus=[51/51*78,16/51*78,33/51*78,38/51*78,30/51*78,43/51*78,];
 
+	var jaugePauvresBiere = $("#pauvres .bierreRevenus .jaugeRevenus");
+	var jaugePauvresVin = $("#pauvres .vinRevenus .jaugeRevenus");
+	var jaugemoyensBiere = $("#moyens .bierreRevenus .jaugeRevenus");
+	var jaugemoyensVin= $("#moyens .vinRevenus .jaugeRevenus");
+	var jaugerichesBiere = $("#riches .bierreRevenus .jaugeRevenus");
+	var jaugerichesVin = $("#riches .vinRevenus .jaugeRevenus");
 
+	jaugePauvresBiere.animate({'height':statsRevenus[0]+'px'}, 3000);
+	jaugePauvresVin.animate({'height':statsRevenus[1]+'px'}, 3000);
+	jaugemoyensBiere.animate({'height':statsRevenus[2]+'px'}, 3000);
+	jaugemoyensVin.animate({'height':statsRevenus[3]+'px'}, 3000);
+	jaugerichesBiere.animate({'height':statsRevenus[4]+'px'}, 3000);
+	jaugerichesVin.animate({'height':statsRevenus[5]+'px'}, 3000);
 
+}
+
+/*,function(){
+						var rectangleFemmeAutres = statsParSexe.rect(0,0,115,hauteurFemmeAutres);
+						rectangleFemmeAutres.toBack();
+						rectangleFemmeAutres.attr({
+							'fill': "#d2d2d2" ,
+							stroke: "none",
+							y: hauteurOffset + hauteurHomme - hauteurFemmeVin - hauteurFemmeBiere
+						});
+						rectangleFemmeAutres.animate({y:hauteurOffset + hauteurHomme - hauteurFemmeVin - hauteurFemmeBiere - hauteurFemmeAutres}, 1000);
+					}*/
 
 
 
@@ -273,7 +382,84 @@ function best_consom(){
 
 //risques de mort
 function risk_of_death(){
-		// var paper_risk_death = Raphael(document.getElementById("death"), paper_best_consom_width, paper_best_consom_height);
+	var paper_risk_death_width = 500,
+	paper_risk_death_height = 240, 
+	paper_risk_death = Raphael(document.getElementById("death"), paper_risk_death_width, paper_risk_death_height),
+	beer_risk_all = new Array(1,0.9,1,1.3),
+	beer_risk_chd = new Array(1,0.8,0.6,0.8),
+	beer_risk_cancer = new Array(1,1.1,1.3,1.5),
+	wine_risk_all = new Array(1,0.8,0.7,0.9),
+	wine_risk_chd = new Array(1,0.7,0.6,0.8),
+	wine_risk_cancer = new Array(1,0.9,0.8,0.9);
+	for (var i=1;i<=10;i++){
+		var abscisse = paper_risk_death.path("M45"+" "+(200-i*20)+"L"+paper_risk_death_width*i+" "+(200-i*20));
+		console.log(abscisse);
+		abscisse.attr({
+			"stroke":"1px"
+		});
+		//x y width height
+		var beer_rect_all = paper_risk_death.rect(90, 100, 35, 100, 5),
+		wine_rect_all = paper_risk_death.rect(130, 100, 35, 100, 5),
+		beer_rect_chd = paper_risk_death.rect(240, 100, 35, 100, 5),
+		wine_rect_chd = paper_risk_death.rect(280, 100, 35, 100, 5),
+		beer_rect_cancer = paper_risk_death.rect(390, 100, 35, 100, 5),
+		wine_rect_cancer = paper_risk_death.rect(430, 100, 35, 100, 5);
+		wine_rect_all.attr({
+			"stroke":"none",
+			"fill":"#8F0F0B"
+		});
+		beer_rect_all.attr({
+			"stroke":"none",
+			"fill":"#FCD014"
+		});
+		wine_rect_chd.attr({
+			"stroke":"none",
+			"fill":"#8F0F0B"
+		});
+		beer_rect_chd.attr({
+			"stroke":"none",
+			"fill":"#FCD014"
+		});
+		wine_rect_cancer.attr({
+			"stroke":"none",
+			"fill":"#8F0F0B"
+		});
+		beer_rect_cancer.attr({
+			"stroke":"none",
+			"fill":"#FCD014"
+		});
+	}
+	var max_ordonnee = paper_risk_death.text(15, 10, "1,8*");
+	var middle_ordonnee = paper_risk_death.text(15, 90, "1*");
+	var min_ordonnee = paper_risk_death.text(15, 190, "0,2*");
+	max_ordonnee.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	middle_ordonnee.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	min_ordonnee.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	var all = paper_risk_death.text(126, 225, "Causes diverses");
+	var chd = paper_risk_death.text(280, 225, "Problème cardiaque");
+	var cancer = paper_risk_death.text(430, 225, "Cancer");
+	all.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	chd.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	cancer.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	
 }
 
 //#sante
