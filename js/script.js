@@ -50,6 +50,7 @@ $(document).ready(function(){
 	data_production();
 	import_export();
 	more_consume();
+	nuage_tag();
 });
 
 
