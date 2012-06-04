@@ -54,6 +54,7 @@ $(document).ready(function(){
 	nuage_tag();
 	litre_eau();
 	risk_of_death();
+	internet();
 });
 
 
@@ -337,4 +338,107 @@ function litre_eau(){
 		$(this).animate({'background-size':18});
 	});
 }
+function internet(){
+	$('#internet').animate({'background-size':'960'}, 1000, 'easeOutExpo');
+	
+	var twitterVin = 137 ;
+	var twitterBiere = 106;
+	
+	var googleVin = 442 ;
+	var googleBiere = 27;
+	
+	var facebookLikeVin = 1137000 ;
+	var facebookSpeakVin = 16000;
+	
+	var facebookLikeBiere = 2254000 ;
+	var facebookSpeakBiere = 44000;
 
+	var twitterVinOrigin = 0 ;
+	var twitterBiereOrigin = 0 ;
+	var googleVinOrigin = 0 ;
+	var googleBiereOrigin = 0 ;
+	var facebookLikeVinOrigin = 0 ;
+	var facebookSpeakVinOrigin = 0;
+	var facebookLikeBiereOrigin = 0 ;
+	var facebookSpeakBiereOrigin = 0;
+	
+	$('#internet #twitter .vin p span').text(0);
+	var timerInternet =setInterval(function(){
+		twitterVinOrigin+=1;
+        $('#internet #twitter .vin p span').text(twitterVinOrigin);
+       	if(twitterVinOrigin==twitterVin){
+	    	clearInterval(timerInternet);
+        	twitterVinOrigin = twitterVin;
+        }
+	}, 1);
+	
+	$('#internet #twitter .biere p span').text(0);
+	var timerInternet2 =setInterval(function(){
+		twitterBiereOrigin+=1;
+        $('#internet #twitter .biere p span').text(twitterBiereOrigin);
+       	if(twitterBiereOrigin==twitterBiere){
+	    	clearInterval(timerInternet2);
+        	twitterBiereOrigin = twitterBiere;
+        }
+	}, 1);
+	
+	$('#google .vin p span').text(0);
+	var timerInternet3 =setInterval(function(){
+		googleVinOrigin+=1;
+        $('#google .vin p span').text(googleVinOrigin);
+       	if(googleVinOrigin==googleVin){
+	    	clearInterval(timerInternet3);
+        	googleVinOrigin = googleVin;
+        }
+	}, 1);
+	
+	$('#google .biere p span').text(0);
+	var timerInternet4 =setInterval(function(){
+		googleBiereOrigin+=1;
+        $('#google .biere p span').text(googleBiereOrigin);
+       	if(googleBiereOrigin==googleBiere){
+	    	clearInterval(timerInternet4);
+        	googleBiereOrigin = googleBiere;
+        }
+	}, 1);
+	
+	$('#facebook .vin p .likeCount').text(0);
+	var timerInternet5 =setInterval(function(){
+		facebookLikeVinOrigin+=1000;
+        $('#facebook .vin p .likeCount').text(facebookLikeVinOrigin);
+       	if(facebookLikeVinOrigin==facebookLikeVin){
+	    	clearInterval(timerInternet5);
+        	facebookLikeVinOrigin = facebookLikeVin;
+        }
+	}, 1);
+	
+	$('#facebook .vin p .speakCount').text(0);
+	var timerInternet6 =setInterval(function(){
+		facebookSpeakVinOrigin+=100;
+        $('#facebook .vin p .speakCount').text(facebookSpeakVinOrigin);
+       	if(facebookSpeakVinOrigin==facebookSpeakVin){
+	    	clearInterval(timerInternet6);
+        	facebookSpeakVinOrigin = facebookSpeakVin;
+        }
+	}, 1);
+	
+	$('#facebook .biere p .likeCount').text(0);
+	var timerInternet7 =setInterval(function(){
+		facebookLikeBiereOrigin+=1000;
+        $('#facebook .biere p .likeCount').text(facebookLikeBiereOrigin);
+       	if(facebookLikeBiereOrigin==facebookLikeBiere){
+	    	clearInterval(timerInternet7);
+        	facebookLikeBiereOrigin = facebookLikeBiere;
+        }
+	}, 1);
+	
+	$('#facebook .biere p .speakCount').text(0);
+	var timerInternet8 =setInterval(function(){
+		facebookSpeakBiereOrigin+=100;
+        $('#facebook .biere p .speakCount').text(facebookSpeakBiereOrigin);
+       	if(facebookSpeakBiereOrigin==facebookSpeakBiere){
+	    	clearInterval(timerInternet8);
+        	facebookSpeakBiereOrigin = facebookSpeakBiere;
+        }
+	}, 1);
+}
