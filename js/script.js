@@ -220,11 +220,12 @@ function more_consume(){
 
 //les plus gros consommateur
 function best_consom(){
-	/* ORDRE DÉCROISSANT */
+	/*
+	//ORDRE DÉCROISSANT
 	var data_beer_best_consum = new Array(161.5,157,141.2,110.6,101.6,101.5,96.2,96.2,91.5,88.4),
 	data_wine_best_consum = new Array(62.2,60.13,55.85,52.70,48.16,46.67,43.77,42.27,39.87,34.66),
 	
-	/* MELANGÉ */
+	//MELANGÉ
 	// var data_beer_best_consum = new Array(161.5,110.6,157,88.4,141.2,96.2,101.6,91.5,101.5,96.2),
 	// data_wine_best_consum = new Array(62.2,39.87,60.13,48.16,55.85,46.67,34.66,43.77,52.70,42.27),
 	angle = 360/10,
@@ -265,14 +266,13 @@ function best_consom(){
 		var deg=i*35.8;
 		tab_fromage_beer[i].animate({transform:"r"+deg+" 200 200"},1500, 'easeInCirc');
 		tab_fromage_wine[i].animate({transform:"r"+deg+" 550 200"},1500, 'easeInCirc');
-	}
+	}*/
 }
 
 
 //risques de mort
 function risk_of_death(){
-		var paper_risk_death = Raphael(document.getElementById("death"), paper_best_consom_width, paper_best_consom_height),
-		;
+		// var paper_risk_death = Raphael(document.getElementById("death"), paper_best_consom_width, paper_best_consom_height);
 }
 
 //#sante
