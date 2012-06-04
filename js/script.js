@@ -51,7 +51,7 @@ $(document).ready(function(){
 	more_consume();
 	best_consom();
 
-	creerStatsParSexe();
+	//creerStatsParSexe();
 	creerStatsParAge();
 	creerStatsParRevenus();
 	nuage_tag();
@@ -69,7 +69,7 @@ $(document).ready(function(){
 
 
 
-function creerStatsParSexe(){
+/*function creerStatsParSexe(){
 
 	var largeurCanvas = 339;
 	var hauteurCanvas = 332;
@@ -147,7 +147,7 @@ function creerStatsParSexe(){
 
 		});
 	});
-}
+}*/
 
 function creerStatsParAge(){
 
