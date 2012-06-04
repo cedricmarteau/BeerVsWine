@@ -84,67 +84,68 @@ function import_export(){
 }
 
 function more_consume(){
-	// var data_beer_more_consum = new Array(45,42,46,42,36,40,40,36),
-	// 	data_wine_more_consum = new Array(32,34,31,33,39,34,34,35),
-	// 	data_liqueur_more_consum = new Array(18,19,18,22,21,22,21,23),
-	// 	paper_width = 700,
-	// 	paper_height = 500,
-	// 	paper = Raphael(document.getElementById("plus_consom"), paper_width, paper_height),
-	// 	line_beer = "",
-	// 	line_wine = "",
-	// 	line_liqueur = "",
-	// 	letter,
-	// 	abscisse,
-	// 	ordonnee = paper.path("M0"+" "+paper_height+"L0 0"),
-	// 	abscisse = paper.path("M0"+" "+paper_height+"L"+paper_width+" "+paper_height),
-	// 	ordonnee_50 = paper.path("M0 1L5 1"),
-	// 	ordonnee_25 = paper.path("M0 "+paper_height/2+"L5 "+paper_height/2),
-	// 	abscisse_1999 = paper.path("M"+((paper_width/8)*1)+" "+paper_height+"L"+((paper_width/8)*1)+" "+(paper_height-5)),
-	// 	abscisse_2001 = paper.path("M"+((paper_width/8)*2)+" "+paper_height+"L"+((paper_width/8)*2)+" "+(paper_height-5)),
-	// 	abscisse_2003 = paper.path("M"+((paper_width/8)*3)+" "+paper_height+"L"+((paper_width/8)*3)+" "+(paper_height-5)),
-	// 	abscisse_2005 = paper.path("M"+((paper_width/8)*4)+" "+paper_height+"L"+((paper_width/8)*4)+" "+(paper_height-5)),
-	// 	abscisse_2007 = paper.path("M"+((paper_width/8)*5)+" "+paper_height+"L"+((paper_width/8)*5)+" "+(paper_height-5)),
-	// 	abscisse_2009 = paper.path("M"+((paper_width/8)*6)+" "+paper_height+"L"+((paper_width/8)*6)+" "+(paper_height-5)),	
-	// 	abscisse_2011 = paper.path("M"+((paper_width/8)*7)+" "+paper_height+"L"+((paper_width/8)*7)+" "+(paper_height-5));
-	// 	for (var i=1;i<=7;i++){
-	// 		//M : point d'origine, L : point d'arrivée en absolute
-	// 		if (i==1){letter="M"}else{letter="L"};
-	// 		//Courbes
-	// 		line_beer += letter+i*(paper_width/8)+" "+(paper_width-((data_beer_more_consum[i]*paper_width)/50));
-	// 		line_wine += letter+i*(paper_width/8)+" "+(paper_width-((data_wine_more_consum[i]*paper_width)/50));
-	// 		line_liqueur += letter+i*(paper_width/8)+" "+(paper_width-((data_liqueur_more_consum[i]*paper_width)/50));
-	// 		//Cercles
-	// 		var circle_beer = paper.circle(i*(paper_width/8), paper_width-((data_beer_more_consum[i]*paper_width)/50), 5);
-	// 		circle_beer.attr({
-	// 			"stroke":"#FCD014",
-	// 			"fill":"#FCD014"
-	// 		});
-	// 		var circle_wine = paper.circle(i*(paper_width/8), paper_width-((data_wine_more_consum[i]*paper_width)/50), 5);
-	// 		circle_wine.attr({
-	// 			"stroke":"#8F0F0B",
-	// 			"fill":"#8F0F0B"	
-	// 		});
-	// 		var circle_liqueur = paper.circle(i*(paper_width/8), paper_width-((data_liqueur_more_consum[i]*paper_width)/50), 5);
-	// 		circle_liqueur.attr({
-	// 			"stroke":"#A2D4DD",
-	// 			"fill":"#A2D4DD"	
-	// 		});
-	// 	}
-	// 	var beer_path = paper.path(line_beer);
-	// 	beer_path.attr({
-	// 		"stroke":"#FCD014",
-	// 		"stroke-width":"5"	
-	// 	});
-	// 	var wine_path = paper.path(line_wine);
-	// 	wine_path.attr({
-	// 		"stroke":"#8F0F0B",
-	// 		"stroke-width":"5"	
-	// 	});
-	// 	var liqueur_path = paper.path(line_liqueur);
-	// 	liqueur_path.attr({
-	// 		"stroke":"#A2D4DD",
-	// 		"stroke-width":"5"	
-	// 	});
+	/*var data_beer_more_consum = new Array(45,42,46,42,36,40,40,36),
+	data_wine_more_consum = new Array(32,34,31,33,39,34,34,35),
+	data_liqueur_more_consum = new Array(18,19,18,22,21,22,21,23),
+	paper_width = 700,
+	paper_height = 500,
+	paper = Raphael(document.getElementById("plus_consom"), paper_width, paper_height),
+	line_beer = "",
+	line_wine = "",
+	line_liqueur = "",
+	letter,
+	abscisse,
+	ordonnee = paper.path("M0"+" "+paper_height+"L0 0"),
+	abscisse = paper.path("M0"+" "+paper_height+"L"+paper_width+" "+paper_height),
+	ordonnee_50 = paper.path("M0 1L5 1"),
+	ordonnee_25 = paper.path("M0 "+paper_height/2+"L5 "+paper_height/2);
+	for (var i=1;i<=7;i++){
+		if (i==1){letter="M"}else{letter="L"};
+		var abscisse = paper.path("M"+((paper_width/8)*i)+" "+paper_height+"L"+((paper_width/8)*i)+" "+(paper_height-5)),
+		circle_beer = paper.circle(i*(paper_width/8), paper_width-((45*paper_width)/50), 5),
+		circle_wine = paper.circle(i*(paper_width/8), paper_width-((32*paper_width)/50), 5);
+		circle_beer.attr({
+			"stroke":"#FCD014",
+			"fill":"#FCD014"
+		});
+		circle_wine.attr({
+			"stroke":"#8F0F0B",
+			"fill":"#8F0F0B"	
+		});
+		line_beer += letter+i*(paper_width/8)+" "+(paper_width-((45*paper_width)/50));
+		line_wine += letter+i*(paper_width/8)+" "+(paper_width-((32*paper_width)/50));
+	}
+	for (var i=1;i<=7;i++){
+		//M : point d'origine, L : point d'arrivée en absolute
+		if (i==1){letter="M"}else{letter="L"};
+		//Courbes
+		line_beer += letter+i*(paper_width/8)+" "+(paper_width-((data_beer_more_consum[i]*paper_width)/50));
+		line_wine += letter+i*(paper_width/8)+" "+(paper_width-((data_wine_more_consum[i]*paper_width)/50));
+		line_liqueur += letter+i*(paper_width/8)+" "+(paper_width-((data_liqueur_more_consum[i]*paper_width)/50));
+		//Cercles
+		circle_beer = paper.circle(i*(paper_width/8), paper_width-((data_beer_more_consum[i]*paper_width)/50), 5);
+		circle_wine = paper.circle(i*(paper_width/8), paper_width-((data_wine_more_consum[i]*paper_width)/50), 5);
+		circle_liqueur = paper.circle(i*(paper_width/8), paper_width-((data_liqueur_more_consum[i]*paper_width)/50), 5);
+		circle_liqueur.attr({
+			"stroke":"#A2D4DD",
+			"fill":"#A2D4DD"	
+		});
+	}
+	var beer_path = paper.path(line_beer);
+	beer_path.attr({
+		"stroke":"#FCD014",
+		"stroke-width":"5"	
+	});
+	var wine_path = paper.path(line_wine);
+	wine_path.attr({
+		"stroke":"#8F0F0B",
+		"stroke-width":"5"	
+	});
+	var liqueur_path = paper.path(line_liqueur);
+	liqueur_path.attr({
+		"stroke":"#A2D4DD",
+		"stroke-width":"5"	
+	});*/
 }
 
 //#production_pays
