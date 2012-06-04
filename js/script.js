@@ -165,6 +165,18 @@ function more_consume(){
 	//liqueur_path.animate({path:line_liqueur_anim},1000);*/
 }
 
-//#production_pays
+//#sante
+function nuage_tag(){
+        var nuageText1='Texte1';
 
+        $('#nuageDeTag p#nuageLine1').animate({marginLeft:11}, 500);
+        $('#nuageDeTag p#nuageLine2').animate({marginLeft:0}, 500);
+        $('#nuageDeTag p#nuageLine3').animate({marginLeft:12}, 500);
+        $('#nuageDeTag p#nuageLine4').animate({marginLeft:-40}, 500);
+        $('#nuageDeTag p#nuageLine5').animate({marginLeft:32}, 500);
+        
+        $('#nuageDeTag p a').click(function(){
+            alert($(this).attr('name'));
+        });
+}
 
