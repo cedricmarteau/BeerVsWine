@@ -307,3 +307,93 @@
 	margin:100px auto;
 	position:relative;
 }
+
+
+
+/*------------------------------------*\
+	$PART 3 (hugo)
+\*------------------------------------*/
+
+#nuageDeTag {
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	top: 50%;
+	margin-top: -170px;
+}
+#nuageDeTag p {
+	width: 100%;
+	text-align: center;
+	line-height: 24px;
+	/*width: 665px;
+	text-align: center;*/
+}
+#nuageDeTag p a {
+	font-size: 16px;
+	text-decoration: none;
+}
+#nuageDeTag p a.nuageBiere:hover, #nuageDeTag p a.nuageVin:hover {
+	color: #878787;
+}
+#nuageDeTag p a.nuageBold {
+	font-family: 'NovecentowideBold';
+}
+#nuageDeTag p a.nuageBook {
+	font-family: 'NovecentowideBookRegular';
+}
+#nuageDeTag p a.nuageVin {
+	color: #8e0f0a;
+}
+#nuageDeTag p a.nuageBiere {
+	color: #fbcf0d;
+}
+#nuageDeTag p#nuageLine1 {
+	margin-left: -4061px;
+}
+#nuageDeTag p#nuageLine2 {
+	margin-left: 4012px;
+}
+#nuageDeTag p#nuageLine3 {
+	margin-left: -4022px;
+}
+#nuageDeTag p#nuageLine4 {
+	margin-left: 4000px;
+}
+#nuageDeTag p#nuageLine5 {
+	margin-left: -4042px;
+}
+#nuageDetails {
+	height: 70px;
+	width: 528px;
+	margin: 0 auto;
+	position: relative;
+	top: 60%;
+}
+#nuageDetails #nuageTexte {
+	width: 445px;
+	height: 100%;
+	background: #f0f0f0;
+	margin: 0 auto;
+	position: relative;
+	z-index: 3;
+}
+#nuageDetails #nuageIconVin {
+	height: 57px;
+	width: 57px;
+	background: url('../img/8_iconVin.png') no-repeat;
+	position: absolute;
+	top: 50%;
+	margin-top: -28px;
+	left: 0;
+	z-index: 2;
+}
+#nuageDetails #nuageIconBiere {
+	height: 57px;
+	width: 57px;
+	background: url('../img/8_iconbiere.png') no-repeat;
+	position: absolute;
+	top: 50%;
+	margin-top: -28px;
+	right: 0;
+	z-index: 2;
+}
