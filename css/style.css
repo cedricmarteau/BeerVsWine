@@ -52,7 +52,8 @@
 	color: #a2d4dd;
 	margin-left: 10px;
 	margin-top: 5px;
-	width: 310px;
+	width: 410px;
+	position: absolute;
 }
 
 .pages{
@@ -319,13 +320,13 @@
 /*------------------------------------*\
 	$PART 3 (hugo)
 \*------------------------------------*/
-
+/*---Nuage de TAG écologie--*/
 #nuageDeTag {
 	width: 100%;
 	position: relative;
 	margin: 0 auto;
 	top: 50%;
-	margin-top: -170px;
+	margin-top: -70px;
 }
 #nuageDeTag p {
 	width: 100%;
@@ -410,4 +411,74 @@
 	margin-top: -28px;
 	right: 45px;
 	z-index: 2;
+}
+
+/*------------------------------------*\
+	$PART 4 (hugo)
+\*------------------------------------*/
+/*---litre d'eau pour la production--*/
+
+#litreEau {
+	height: 386px;
+	width: 569px;
+	position: relative;
+	top: 50%;
+	margin: 0 auto;
+	margin-top: -193px;
+}
+#litreEau #raisin {
+	width: 317px;
+	height: 100%;
+	background: url('../img/12_raisin.png') no-repeat left bottom;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: -3000px;
+}
+#litreEau #cereales {
+	width: 194px;
+	height: 100%;
+	background: url('../img/12_cereales.png') no-repeat right bottom;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: 3000px;
+}
+#litreEau #raisin ul {
+	width: 96px;
+	position: absolute;
+	bottom: -3000px;
+	right: 10px;
+}
+#litreEau #cereales ul {
+	width: 96px;
+	position: absolute;
+	bottom: 3000px;
+	left: 50px;
+}
+#litreEau li {
+	height: 30px;
+	width: 18px;
+	background: url('../img/12_goutte.png') no-repeat center center;
+	background-size: 18px;
+	float: left;
+	cursor: pointer;
+	margin-left: 1px;
+}
+#litreEau li.hugoclr {
+	clear: both;
+}
+#litreEau #raisin li.litreTxt {
+	background: url('../img/12_raisinTxt.png') no-repeat left bottom;
+	height: 92px;
+	width: 95px;
+	background-size: 95px;
+	cursor: default;
+}
+#litreEau #cereales li.litreTxt {
+	background: url('../img/12_cerealesTxt.png') no-repeat left bottom;
+	height: 87px;
+	width: 95px;
+	background-size: 95px;
+	cursor: default;
 }

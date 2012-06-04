@@ -51,6 +51,7 @@ $(document).ready(function(){
 	import_export();
 	more_consume();
 	nuage_tag();
+	litre_eau();
 });
 
 
@@ -281,5 +282,17 @@ function nuage_tag(){
  			$('#nuageTexte').html(nuageTextVal[nuageText-1]);
  			return false;
          });
+}
+function litre_eau(){
+	$('#litreEau #raisin, #litreEau #cereales').animate({marginTop:0}, 500,function(){
+		$('#litreEau ul').animate({bottom:0});
+	});
+	
+	$('#litreEau li').not('.litreTxt').hover(function(){
+		$(this).animate({'background-size':5});
+	}, function(){
+		$(this).animate({'background-size':18});
+	});
+	
 }
 
