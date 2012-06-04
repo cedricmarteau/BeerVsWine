@@ -53,6 +53,7 @@ $(document).ready(function(){
 	//creerStats();
 	nuage_tag();
 	litre_eau();
+	risk_of_death();
 });
 
 
@@ -169,12 +170,10 @@ function more_consume(){
 		tab_circle_beer.push(circle_beer);
 		tab_circle_wine.push(circle_wine);
 		circle_beer.attr({
-			"value":i,
 			"stroke":"#FCD014",
 			"fill":"#FCD014"
 		});
 		circle_wine.attr({
-			"value":i,
 			"stroke":"#8F0F0B",
 			"fill":"#8F0F0B"	
 		});
@@ -221,25 +220,59 @@ function more_consume(){
 
 //les plus gros consommateur
 function best_consom(){
+	/* ORDRE DÉCROISSANT */
 	var data_beer_best_consum = new Array(161.5,157,141.2,110.6,101.6,101.5,96.2,96.2,91.5,88.4),
 	data_wine_best_consum = new Array(62.2,60.13,55.85,52.70,48.16,46.67,43.77,42.27,39.87,34.66),
+	
+	/* MELANGÉ */
+	// var data_beer_best_consum = new Array(161.5,110.6,157,88.4,141.2,96.2,101.6,91.5,101.5,96.2),
+	// data_wine_best_consum = new Array(62.2,39.87,60.13,48.16,55.85,46.67,34.66,43.77,52.70,42.27),
 	angle = 360/10,
-	paper_best_consom_width = 500,
-	paper_best_consom_height = 500,
+	paper_best_consom_width = 700,
+	paper_best_consom_height = 700,
 	paper_best_consom = Raphael(document.getElementById("best_consom"), paper_best_consom_width, paper_best_consom_height),
-	centre_fromage = "M250 250",
-	rayon = 200,
+	tab_fromage_beer = new Array(),
+	tab_fromage_wine = new Array(),
+	centre_fromage_beer = "200 200",
+	centre_fromage_wine = "550 200",
+	rayon = 100,
+	size_beer = 150,
+	size_wine = 45,
 	L_cote_oppose_big = (Math.sin(angle/2*Math.PI/180)*rayon)*2,
 	L_cote_oppose_little = Math.sin(angle/2*Math.PI/180)*rayon,
 	L_cote_little = Math.sqrt((L_cote_oppose_big*L_cote_oppose_big)-(L_cote_oppose_little*L_cote_oppose_little));
 	console.log("cote_oppose_big "+L_cote_oppose_big)
 	console.log("cote_oppose_little "+L_cote_oppose_little)
 	console.log("cote_little "+L_cote_little)
-	for (var i=0;i<1;i++){
-		var paper_best_consom_path = paper_best_consom.path(centre_fromage+"l"+(200)+" "+250+"l"+(-93)+" "+61+"L250 250");
-		console.log(paper_best_consom_path)
+	for (var i=0;i<10;i++){
+		var paper_best_consom_beer_path = paper_best_consom.path("M"+centre_fromage_beer+"l"+(rayon*size_beer)/data_beer_best_consum[i]+" "+(L_cote_oppose_little*size_beer)/data_beer_best_consum[i]+"l"+0+" "+(-L_cote_oppose_big*size_beer)/data_beer_best_consum[i]+"L"+centre_fromage_beer);
+		var paper_best_consom_wine_path = paper_best_consom.path("M"+centre_fromage_wine+"l"+(rayon*size_wine)/data_wine_best_consum[i]+" "+(L_cote_oppose_little*size_wine)/data_wine_best_consum[i]+"l"+0+" "+(-L_cote_oppose_big*size_wine)/data_wine_best_consum[i]+"L"+centre_fromage_wine);
+		console.log(paper_best_consom_beer_path)
+		tab_fromage_beer.push(paper_best_consom_beer_path);
+		tab_fromage_wine.push(paper_best_consom_wine_path);
+		paper_best_consom_beer_path.attr({
+			"stroke":"white",
+			"stroke-width":"4px",
+			"fill":"#FCD014"
+		});
+		paper_best_consom_wine_path.attr({
+			"stroke":"white",
+			"stroke-width":"3px",
+			"fill":"#8F0F0B"
+		});
 	}
+	for (var i=0;i<10;i++){
+		var deg=i*35.8;
+		tab_fromage_beer[i].animate({transform:"r"+deg+" 200 200"},1500, 'easeInCirc');
+		tab_fromage_wine[i].animate({transform:"r"+deg+" 550 200"},1500, 'easeInCirc');
+	}
+}
 
+
+//risques de mort
+function risk_of_death(){
+		var paper_risk_death = Raphael(document.getElementById("death"), paper_best_consom_width, paper_best_consom_height),
+		;
 }
 
 //#sante
