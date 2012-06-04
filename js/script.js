@@ -303,6 +303,5 @@ function litre_eau(){
 	}, function(){
 		$(this).animate({'background-size':18});
 	});
-	
 }
 
