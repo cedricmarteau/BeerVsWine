@@ -84,6 +84,8 @@ function import_export(){
 	}
 }
 
+//les plus consommés
+
 function more_consume(){
 	/*var data_beer_more_consum = new Array(45,42,46,42,36,40,40,36),
 	data_wine_more_consum = new Array(32,34,31,33,39,34,34,35),
@@ -164,6 +166,18 @@ function more_consume(){
 	beer_path.animate({path:line_beer_anim},1000);
 	wine_path.animate({path:line_wine_anim},1000);
 	//liqueur_path.animate({path:line_liqueur_anim},1000);*/
+}
+
+//les plus gros consommateur
+function best_consom(){
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
 //#sante
