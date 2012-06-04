@@ -119,15 +119,19 @@ $(document).keydown(function(event){
 		if(subPages.length>indexSubCurrent+1 && !animating){
 			animating=true;
 			subPages.eq(indexSubCurrent+1).css("z-index","29");
-			animateSubMenu();
 			
-			current.delay(400).find(".subCurrent").animate({"left":-windowWidth}, 1000,"easeInQuint",function(){
-				animating=false;
-				subCurrent.removeClass("subCurrent");
-				subPages.eq(indexSubCurrent+1).addClass("subCurrent");
-				setSubZindex();
-				setSubPagePos();
+			$("#menu").find(".current-item h3").animate({"top":"-17px"}, 400,function() {
+			
+				current.find(".subCurrent").animate({"left":-windowWidth}, 1000,"easeInQuint",function(){
+					animating=false;					
+					subCurrent.removeClass("subCurrent");
+					subPages.eq(indexSubCurrent+1).addClass("subCurrent");
+					setSubZindex();
+					setSubPagePos();
+					animateSubMenu();
+				});
 			});
+			
 		}
 	}
 	if(event.which=="37"){
@@ -140,15 +144,18 @@ $(document).keydown(function(event){
 		if(indexSubCurrent>0 && !animating){
 			animating=true;
 			subPages.eq(indexSubCurrent-1).css("z-index","29");
-			animateSubMenu();
+
+			$("#menu").find(".current-item h3").animate({"top":"-17px"}, 400,function() {
 			
-			current.delay(400).find(".subCurrent").animate({"left":+windowWidth}, 1000,"easeInQuint",function(){
-			animating=false;
-			subCurrent.removeClass("subCurrent");
-			subPages.eq(indexSubCurrent-1).addClass("subCurrent");
-			
-			setSubZindex();
-			setSubPagePos();
+				current.delay(400).find(".subCurrent").animate({"left":+windowWidth}, 1000,"easeInQuint",function(){
+					animating=false;
+					subCurrent.removeClass("subCurrent");
+					subPages.eq(indexSubCurrent-1).addClass("subCurrent");
+					
+					setSubZindex();
+					setSubPagePos();
+					animateSubMenu();
+				});
 			});
 		}
 	}
@@ -167,7 +174,7 @@ function animateMenu(){
 		
 		var currentItem = $("#menu").find(".current-item");
 		
-		currentItem.animate({"width":"280px"}, 400,function(){
+		currentItem.animate({"width":"300px"}, 400,function(){
 			currentItem.find("h2").animate({"top":"0"},400);
 			currentItem.find("h3").animate({"top":"0"},400);
 		});
@@ -180,11 +187,9 @@ function animateSubMenu(){
 	//animating=true;
 	
 	var currentItem = $("#menu").find(".current-item");
-	currentItem.find("h3").animate({"top":"-17px"}, 400,function(){
-		var value = $(".subCurrent").find("h2").html();
+	var value = $(".current").find(".subCurrent").find("h2").html();
 		
-		$(this).html(value).delay(1000).animate({"top":"0px"}, 400);
-	});	
+	currentItem.find("h3").html(value).delay(100).animate({"top":"0px"}, 400);
 }
 
 
