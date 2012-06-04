@@ -182,7 +182,30 @@ function best_consom(){
 
 //#sante
 function nuage_tag(){
-        var nuageText1='Texte1';
+        var nuageTextVal= new Array(
+ 			'Texte1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte7 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte8 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte9 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte10 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte11 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte12 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte13 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte14 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte15 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte16 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte17 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte18 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
+ 			'Texte19 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.'
+ 		);
+		var nuageName;
+		var nuageText;
+		var nuageType;
 
         $('#nuageDeTag p#nuageLine1').animate({marginLeft:11}, 500);
         $('#nuageDeTag p#nuageLine2').animate({marginLeft:0}, 500);
@@ -191,7 +214,21 @@ function nuage_tag(){
         $('#nuageDeTag p#nuageLine5').animate({marginLeft:32}, 500);
         
         $('#nuageDeTag p a').click(function(){
-            alert($(this).attr('name'));
-        });
+ 			nuageName=$(this).attr('name');
+ 			nuageText=nuageName.substring(9,11);
+ 			nuageType=nuageName.substring(12,15);
+ 			
+ 			if (nuageType=='vin') {
+ 				$('#nuageIconVin').animate({left:0});
+ 				$('#nuageIconBiere').animate({right:45});
+ 				$('#nuageTexte').animate({'border-color':'#8e0f0a'});
+ 			} else {
+ 				$('#nuageIconVin').animate({left:45});
+ 				$('#nuageIconBiere').animate({right:0});
+ 				$('#nuageTexte').animate({'border-color':'#fad947'});
+ 			}
+ 			$('#nuageTexte').html(nuageTextVal[nuageText-1]);
+ 			return false;
+         });
 }
 
