@@ -119,7 +119,7 @@ $(document).keydown(function(event){
 		if(subPages.length>indexSubCurrent+1 && !animating){
 			animating=true;
 			subPages.eq(indexSubCurrent+1).css("z-index","29");
-			
+						
 			$("#menu").find(".current-item h3").animate({"top":"-17px"}, 400,function() {
 			
 				current.find(".subCurrent").animate({"left":-windowWidth}, 1000,"easeInQuint",function(){
@@ -167,12 +167,15 @@ function animateMenu(){
 	var currentItem = $("#menu").find(".current-item");
 	currentItem.find("h2").css({"top":"17px"});
 	currentItem.find("h3").css({"top":"-17px"});
+	currentItem.find('.menu-thumb').animate({ backgroundColor: "#393939" }, 800);
+	
 	currentItem.animate({"width":"70px"}, 400,function(){
 	
 		$(this).removeClass("current-item");
 		$("#menu").find(".item-mask").eq(indexItem).addClass("current-item");
 		
 		var currentItem = $("#menu").find(".current-item");
+		currentItem.find('.menu-thumb').animate({ backgroundColor: "#a2d4dd" }, 800);
 		
 		currentItem.animate({"width":"300px"}, 400,function(){
 			currentItem.find("h2").animate({"top":"0"},400);
