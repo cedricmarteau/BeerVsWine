@@ -307,7 +307,13 @@
 	margin:100px auto;
 	position:relative;
 }
-
+/*--- PLUS GROS CONSOMMATEURS ---*/
+#best_consom{
+	width:600px;
+	height:400px;
+	margin:100px auto;
+	position:relative;
+}
 
 
 /*------------------------------------*\
