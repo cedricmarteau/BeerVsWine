@@ -49,7 +49,57 @@ $(document).ready(function(){
 	data_production();
 	import_export();
 	more_consume();
+	creerStats();
 });
+
+
+
+//#consomation par..
+
+function creerStats(){
+
+	var largeurCanvas = 339;
+	var hauteurCanvas = 332;
+
+	var hauteurOffset = 35;
+	var hauteurHomme = 238;
+	var consommationHommeVin = 20;
+	var consommationHommeBiere = 48;
+
+	var consommationFemmeVin = 51;
+	var consommationFemmeBiere = 22;
+
+	var hauteurHommeVin = 238*20/100;
+	var hauteurHommeBiere = 238*48/100;
+	var hauteurHommeAutres = 238-hauteurHommeVin-hauteurHommeBiere;
+
+	var hauteurFemmeVin = 238*51/100;
+	var hauteurFemmeBiere = 238*22/100;
+	var hauteurFemmeAutres = 238 - hauteurFemmeVin - hauteurFemmeAutres;
+
+	var statsParSexe = new Raphael(document.getElementById('statsParSexe'),339,332);
+	
+	var rectangleHommeVin = statsParSexe.rect(0,0,115,hauteurHommeVin);
+
+	rectangleHommeVin.attr({
+		'fill': "url(img/texture_vin.png)" ,
+		stroke: "none",
+		y: hauteurOffset + hauteurHomme
+	});
+
+	rectangleHommeVin.animate({y:hauteurOffset + hauteurHomme - hauteurHommeVin}, 1500,function(){
+		var rectangleHommeBiere = statsParSexe.rect(0,0,115,hauteurHommeVin);
+
+	});
+}
+
+/*
+	});*/
+
+
+
+
+
 
 
 //#import_export
@@ -83,7 +133,7 @@ function import_export(){
 }
 
 function more_consume(){
-	/*var data_beer_more_consum = new Array(45,42,46,42,36,40,40,36),
+	var data_beer_more_consum = new Array(45,42,46,42,36,40,40,36),
 	data_wine_more_consum = new Array(32,34,31,33,39,34,34,35),
 	data_liqueur_more_consum = new Array(18,19,18,22,21,22,21,23),
 	paper_width = 700,
