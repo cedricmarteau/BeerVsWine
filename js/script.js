@@ -478,10 +478,10 @@ function risk_of_death(){
 		"font-family":"NovecentowideBookRegular",
 		"font-size" : '12px'
 	});
-	var cursor_nbverre_0 = paper_risk_death.circle(5, paper_risk_death_height-10, 5),
-	cursor_nbverre_1 = paper_risk_death.circle((paper_risk_death_width/3), paper_risk_death_height-10, 5),
-	cursor_nbverre_8 = paper_risk_death.circle((paper_risk_death_width/3)*2, paper_risk_death_height-10, 5),
-	cursor_nbverre_21 = paper_risk_death.circle((paper_risk_death_width-5), paper_risk_death_height-10, 5),
+	var cursor_nbverre_0 = paper_risk_death.circle(10, paper_risk_death_height-10, 10),
+	cursor_nbverre_1 = paper_risk_death.circle((paper_risk_death_width/3), paper_risk_death_height-10, 10),
+	cursor_nbverre_8 = paper_risk_death.circle((paper_risk_death_width/3)*2, paper_risk_death_height-10, 10),
+	cursor_nbverre_21 = paper_risk_death.circle((paper_risk_death_width-10), paper_risk_death_height-10, 10),
 	cursor_nbverre = paper_risk_death.circle(10, paper_risk_death_height-10, 10);
 	cursor_nbverre.attr({
 		"stroke":"none",
