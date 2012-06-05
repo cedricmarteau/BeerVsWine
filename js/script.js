@@ -1,5 +1,6 @@
 
 //#production_mondial
+function production_mondiale(){
 
 var hectolitreVin = 260 ;
 var hectolitreBiere = 1400;
@@ -13,8 +14,6 @@ var hauteurVin = hauteurBiere*260/1400;
 var hauteurAnimation2 = 675;
 var placementTirets21 = hauteurAnimation2 - hauteurVin - 30;
 var placementTirets22 = hauteurAnimation2 - hauteurBiere - 30;
-
-$(document).ready(function(){
 
 	 $('#nbBiere2').text(0);
 	var t1 =setInterval(function(){
@@ -45,23 +44,7 @@ $(document).ready(function(){
                   		}
 				}, 1);
 	});
-
-	data_production();
-	import_export();
-	more_consume();
-	best_consom();
-
-	//creerStatsParSexe();
-	creerStatsParAge();
-	creerStatsParRevenus();
-	nuage_tag();
-
-
-	nuage_tag();
-	litre_eau();
-	risk_of_death();
-	internet();
-});
+}
 
 
 
@@ -69,7 +52,7 @@ $(document).ready(function(){
 
 
 
-/*function creerStatsParSexe(){
+function creerStatsParSexe(){
 
 	var largeurCanvas = 339;
 	var hauteurCanvas = 332;
@@ -147,7 +130,7 @@ $(document).ready(function(){
 
 		});
 	});
-}*/
+}
 
 function creerStatsParAge(){
 
@@ -203,19 +186,6 @@ function creerStatsParRevenus(){
 
 }
 
-/*,function(){
-						var rectangleFemmeAutres = statsParSexe.rect(0,0,115,hauteurFemmeAutres);
-						rectangleFemmeAutres.toBack();
-						rectangleFemmeAutres.attr({
-							'fill': "#d2d2d2" ,
-							stroke: "none",
-							y: hauteurOffset + hauteurHomme - hauteurFemmeVin - hauteurFemmeBiere
-						});
-						rectangleFemmeAutres.animate({y:hauteurOffset + hauteurHomme - hauteurFemmeVin - hauteurFemmeBiere - hauteurFemmeAutres}, 1000);
-					}*/
-
-
-
 //#import_export
 function data_production(){
 	var data_production_wine= new Array(50.50,47.12,36.45,23.00,15.50,14.50,10.50,9.62,8.33,8.28);
@@ -249,12 +219,12 @@ function import_export(){
 //les plus consommés
 
 function more_consume(){
-	/*var data_beer_more_consum = new Array(45,42,46,42,36,40,40,36),
+	var data_beer_more_consum = new Array(45,42,46,42,36,40,40,36),
 	data_wine_more_consum = new Array(32,34,31,33,39,34,34,35),
 	data_liqueur_more_consum = new Array(18,19,18,22,21,22,21,23),
 	paper_width = 700,
 	paper_height = 500,
-	paper = Raphael(document.getElementById("plus_consom"), paper_width, paper_height),
+	paper = new Raphael(document.getElementById("plus_consom"), paper_width, paper_height),
 	line_beer = "",
 	line_beer_anim = "",
 	line_wine = "",
@@ -325,12 +295,11 @@ function more_consume(){
 	}
 	beer_path.animate({path:line_beer_anim},1000);
 	wine_path.animate({path:line_wine_anim},1000);
-	//liqueur_path.animate({path:line_liqueur_anim},1000);*/
+	//liqueur_path.animate({path:line_liqueur_anim},1000);
 }
 
 //les plus gros consommateur
 function best_consom(){
-	/*
 	//ORDRE DÉCROISSANT
 	var data_beer_best_consum = new Array(161.5,157,141.2,110.6,101.6,101.5,96.2,96.2,91.5,88.4),
 	data_wine_best_consum = new Array(62.2,60.13,55.85,52.70,48.16,46.67,43.77,42.27,39.87,34.66),
@@ -341,7 +310,7 @@ function best_consom(){
 	angle = 360/10,
 	paper_best_consom_width = 700,
 	paper_best_consom_height = 700,
-	paper_best_consom = Raphael(document.getElementById("best_consom"), paper_best_consom_width, paper_best_consom_height),
+	paper_best_consom = new Raphael(document.getElementById("best_consom"), paper_best_consom_width, paper_best_consom_height),
 	tab_fromage_beer = new Array(),
 	tab_fromage_wine = new Array(),
 	centre_fromage_beer = "200 200",
@@ -376,15 +345,15 @@ function best_consom(){
 		var deg=i*35.8;
 		tab_fromage_beer[i].animate({transform:"r"+deg+" 200 200"},1500, 'easeInCirc');
 		tab_fromage_wine[i].animate({transform:"r"+deg+" 550 200"},1500, 'easeInCirc');
-	}*/
+	}
 }
 
 
 //risques de mort
 function risk_of_death(){
-	/*var paper_risk_death_width = 550,
+	var paper_risk_death_width = 550,
 	paper_risk_death_height = 350, 
-	paper_risk_death = Raphael(document.getElementById("death"), paper_risk_death_width, paper_risk_death_height),
+	paper_risk_death = new Raphael(document.getElementById("death"), paper_risk_death_width, paper_risk_death_height),
 	beer_risk_all = new Array(1,0.9,1,1.3),
 	beer_risk_chd = new Array(1,0.8,0.6,0.8),
 	beer_risk_cancer = new Array(1,1.1,1.3,1.5),
@@ -636,7 +605,7 @@ function risk_of_death(){
 			"y": 200-wine_risk_cancer[3]*100
 		},400);
 	}
-	cursor_nbverre_21.click(click_nbverre_21);*/
+	cursor_nbverre_21.click(click_nbverre_21);
 }
 
 //#sante
