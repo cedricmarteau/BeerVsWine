@@ -382,261 +382,261 @@ function best_consom(){
 
 //risques de mort
 function risk_of_death(){
-	// var paper_risk_death_width = 550,
-	// 	paper_risk_death_height = 350, 
-	// 	paper_risk_death = Raphael(document.getElementById("death"), paper_risk_death_width, paper_risk_death_height),
-	// 	beer_risk_all = new Array(1,0.9,1,1.3),
-	// 	beer_risk_chd = new Array(1,0.8,0.6,0.8),
-	// 	beer_risk_cancer = new Array(1,1.1,1.3,1.5),
-	// 	wine_risk_all = new Array(1,0.8,0.7,0.9),
-	// 	wine_risk_chd = new Array(1,0.7,0.6,0.8),
-	// 	wine_risk_cancer = new Array(1,0.9,0.8,0.9);
-	// 	for (var i=1;i<=10;i++){
-	// 		var abscisse = paper_risk_death.path("M45"+" "+(200-i*20)+"L"+(paper_risk_death_width-45)+" "+(200-i*20));
-	// 		abscisse.attr({
-	// 			"stroke":"1px"
-	// 		});
-	// 	}
-	// 	//x y width height
-	// 	var beer_rect_all = paper_risk_death.rect(90, 100, 35, 100, 5),
-	// 	wine_rect_all = paper_risk_death.rect(130, 100, 35, 100, 5),
-	// 	beer_rect_chd = paper_risk_death.rect(240, 100, 35, 100, 5),
-	// 	wine_rect_chd = paper_risk_death.rect(280, 100, 35, 100, 5),
-	// 	beer_rect_cancer = paper_risk_death.rect(390, 100, 35, 100, 5),
-	// 	wine_rect_cancer = paper_risk_death.rect(430, 100, 35, 100, 5);
-	// 	wine_rect_all.attr({
-	// 		"stroke":"none",
-	// 		"fill":"#8F0F0B"
-	// 	});
-	// 	beer_rect_all.attr({
-	// 		"stroke":"none",
-	// 		"fill":"#FCD014"
-	// 	});
-	// 	wine_rect_chd.attr({
-	// 		"stroke":"none",
-	// 		"fill":"#8F0F0B"
-	// 	});
-	// 	beer_rect_chd.attr({
-	// 		"stroke":"none",
-	// 		"fill":"#FCD014"
-	// 	});
-	// 	wine_rect_cancer.attr({
-	// 		"stroke":"none",
-	// 		"fill":"#8F0F0B"
-	// 	});
-	// 	beer_rect_cancer.attr({
-	// 		"stroke":"none",
-	// 		"fill":"#FCD014"
-	// 	});
-	// 	var max_ordonnee = paper_risk_death.text(15, 5, "1,8*");
-	// 	var middle_ordonnee = paper_risk_death.text(15, 100, "1*");
-	// 	var min_ordonnee = paper_risk_death.text(15, 195, "0,2*");
-	// 	max_ordonnee.attr({
-	// 		"font-family":'NovecentowideBold',
-	// 		"font-size" : '12px'
-	// 	});
-	// 	middle_ordonnee.attr({
-	// 		"font-family":'NovecentowideBold',
-	// 		"font-size" : '12px'
-	// 	});
-	// 	min_ordonnee.attr({
-	// 		"font-family":'NovecentowideBold',
-	// 		"font-size" : '12px'
-	// 	});
-	// 	var all = paper_risk_death.text(126, 225, "Causes diverses"),
-	// 	chd = paper_risk_death.text(280, 225, "Problème cardiaque"),
-	// 	cancer = paper_risk_death.text(430, 225, "Cancer");
-	// 	all.attr({
-	// 		"font-family":'NovecentowideBold',
-	// 		"font-size" : '12px'
-	// 	});
-	// 	chd.attr({
-	// 		"font-family":'NovecentowideBold',
-	// 		"font-size" : '12px'
-	// 	});
-	// 	cancer.attr({
-	// 		"font-family":'NovecentowideBold',
-	// 		"font-size" : '12px'
-	// 	});
-	// 	var toolbar = paper_risk_death.path("M0"+" "+(paper_risk_death_height-10)+"L"+paper_risk_death_width+" "+(paper_risk_death_height-10));
-	// 	nbverre_0 = paper_risk_death.text(10, paper_risk_death_height-30, "0"),
-	// 	nbverre_1 = paper_risk_death.text((paper_risk_death_width/3), paper_risk_death_height-30, "1-7"),
-	// 	nbverre_8 = paper_risk_death.text((paper_risk_death_width/3)*2, paper_risk_death_height-30, "8-21"),
-	// 	nbverre_21 = paper_risk_death.text(paper_risk_death_width-10, paper_risk_death_height-30, ">21"),
-	// 	legend_nbverre = paper_risk_death.text(270, paper_risk_death_height-55, "Nombre de verres par semaine");
-	// 	nbverre_0.attr({
-	// 		"font-family":"NovecentowideBookRegular",
-	// 		"font-size" : '12px'
-	// 	});
-	// 	nbverre_1.attr({
-	// 		"font-family":"NovecentowideBookRegular",
-	// 		"font-size" : '12px'
-	// 	});
-	// 	nbverre_8.attr({
-	// 		"font-family":"NovecentowideBookRegular",
-	// 		"font-size" : '12px'
-	// 	});
-	// 	nbverre_21.attr({
-	// 		"font-family":"NovecentowideBookRegular",
-	// 		"font-size" : '12px'
-	// 	});
-	// 	legend_nbverre.attr({
-	// 		"font-family":"NovecentowideBookRegular",
-	// 		"font-size" : '12px'
-	// 	});
-	// 	var cursor_nbverre_0 = paper_risk_death.circle(5, paper_risk_death_height-10, 5),
-	// 	cursor_nbverre_1 = paper_risk_death.circle((paper_risk_death_width/3), paper_risk_death_height-10, 5),
-	// 	cursor_nbverre_8 = paper_risk_death.circle((paper_risk_death_width/3)*2, paper_risk_death_height-10, 5),
-	// 	cursor_nbverre_21 = paper_risk_death.circle((paper_risk_death_width-5), paper_risk_death_height-10, 5),
-	// 	cursor_nbverre = paper_risk_death.circle(10, paper_risk_death_height-10, 10);
-	// 	cursor_nbverre.attr({
-	// 		"stroke":"none",
-	// 		"fill":"black"
-	// 	});
-	// 	cursor_nbverre_0.attr({
-	// 		"stroke":"none",
-	// 		"fill":"#A2D4DD"
-	// 	});
-	// 	cursor_nbverre_1.attr({
-	// 		"stroke":"none",
-	// 		"fill":"#A2D4DD"
-	// 	});
-	// 	cursor_nbverre_8.attr({
-	// 		"stroke":"none",
-	// 		"fill":"#A2D4DD"
-	// 	});
-	// 	cursor_nbverre_21.attr({
-	// 		"stroke":"none",
-	// 		"fill":"#A2D4DD"
-	// 	});
-	// 	var click_nbverre_0 = function(){
-	// 		cursor_nbverre.animate({
-	// 			"cx":10,
-	// 			"cy":paper_risk_death_height-10
-	// 		},400);
-	// 		beer_rect_all.animate({
-	// 			"height": beer_risk_all[0]*100,
-	// 			"y": beer_risk_all[0]*100
-	// 		},400);
-	// 		wine_rect_all.animate({
-	// 			"height": wine_risk_all[0]*100,
-	// 			"y": wine_risk_all[0]*100
-	// 		},400);
-	// 		beer_rect_chd.animate({
-	// 			"height": beer_risk_chd[0]*100,
-	// 			"y": beer_risk_chd[0]*100
-	// 		},400);
-	// 		wine_rect_chd.animate({
-	// 			"height": wine_risk_chd[0]*100,
-	// 			"y": wine_risk_chd[0]*100
-	// 		},400);
-	// 		beer_rect_cancer.animate({
-	// 			"height": beer_risk_cancer[0]*100,
-	// 			"y": beer_risk_cancer[0]*100
-	// 		},400);
-	// 		wine_rect_cancer.animate({
-	// 			"height": wine_risk_cancer[0]*100,
-	// 			"y": wine_risk_cancer[0]*100
-	// 		},400);
-	// 		
-	// 	}
-	// 	cursor_nbverre_0.click(click_nbverre_0);
-	// 	var click_nbverre_1 = function(){
-	// 		cursor_nbverre.animate({
-	// 			"cx":paper_risk_death_width/3,
-	// 			"cy":paper_risk_death_height-10
-	// 		},400);
-	// 		beer_rect_all.animate({
-	// 			"height": beer_risk_all[1]*100,
-	// 			"y": 200-beer_risk_all[1]*100
-	// 		},400);
-	// 		
-	// 		wine_rect_all.animate({
-	// 			"height": wine_risk_all[1]*100,
-	// 			"y": 200-wine_risk_all[1]*100
-	// 		},400);
-	// 		beer_rect_chd.animate({
-	// 			"height": beer_risk_chd[1]*100,
-	// 			"y": 200-beer_risk_chd[1]*100
-	// 		},400);
-	// 		wine_rect_chd.animate({
-	// 			"height": wine_risk_chd[1]*100,
-	// 			"y": 200-wine_risk_chd[1]*100
-	// 		},400);
-	// 		beer_rect_cancer.animate({
-	// 			"height": beer_risk_cancer[1]*100,
-	// 			"y": 200-beer_risk_cancer[1]*100
-	// 		},400);
-	// 		wine_rect_cancer.animate({
-	// 			"height": wine_risk_cancer[1]*100,
-	// 			"y": 200-wine_risk_cancer[1]*100
-	// 		},400);
-	// 	}
-	// 	cursor_nbverre_1.click(click_nbverre_1);
-	// 	var click_nbverre_8 = function(){
-	// 		cursor_nbverre.animate({
-	// 			"cx":(paper_risk_death_width/3)*2,
-	// 			"cy":paper_risk_death_height-10
-	// 		},400);
-	// 		beer_rect_all.animate({
-	// 			"height": beer_risk_all[2]*100,
-	// 			"y": 200-beer_risk_all[2]*100
-	// 		},400);
-	// 		
-	// 		wine_rect_all.animate({
-	// 			"height": wine_risk_all[2]*100,
-	// 			"y": 200-wine_risk_all[2]*100
-	// 		},400);
-	// 		beer_rect_chd.animate({
-	// 			"height": beer_risk_chd[2]*100,
-	// 			"y": 200-beer_risk_chd[2]*100
-	// 		},400);
-	// 		wine_rect_chd.animate({
-	// 			"height": wine_risk_chd[2]*100,
-	// 			"y": 200-wine_risk_chd[2]*100
-	// 		},400);
-	// 		beer_rect_cancer.animate({
-	// 			"height": beer_risk_cancer[2]*100,
-	// 			"y": 200-beer_risk_cancer[2]*100
-	// 		},400);
-	// 		wine_rect_cancer.animate({
-	// 			"height": wine_risk_cancer[2]*100,
-	// 			"y": 200-wine_risk_cancer[2]*100
-	// 		},400);
-	// 	}
-	// 	cursor_nbverre_8.click(click_nbverre_8);
-	// 	var click_nbverre_21 = function(){
-	// 		cursor_nbverre.animate({
-	// 			"cx":paper_risk_death_width-10,
-	// 			"cy":paper_risk_death_height-10
-	// 		},400);
-	// 		beer_rect_all.animate({
-	// 			"height": beer_risk_all[3]*100,
-	// 			"y": 200-beer_risk_all[3]*100
-	// 		},400);
-	// 		
-	// 		wine_rect_all.animate({
-	// 			"height": wine_risk_all[3]*100,
-	// 			"y": 200-wine_risk_all[3]*100
-	// 		},400);
-	// 		beer_rect_chd.animate({
-	// 			"height": beer_risk_chd[3]*100,
-	// 			"y": 200-beer_risk_chd[3]*100
-	// 		},400);
-	// 		wine_rect_chd.animate({
-	// 			"height": wine_risk_chd[3]*100,
-	// 			"y": 200-wine_risk_chd[3]*100
-	// 		},400);
-	// 		beer_rect_cancer.animate({
-	// 			"height": beer_risk_cancer[3]*100,
-	// 			"y": 200-beer_risk_cancer[3]*100
-	// 		},400);
-	// 		wine_rect_cancer.animate({
-	// 			"height": wine_risk_cancer[3]*100,
-	// 			"y": 200-wine_risk_cancer[3]*100
-	// 		},400);
-	// 	}
-	// 	cursor_nbverre_21.click(click_nbverre_21);
+	/*var paper_risk_death_width = 550,
+	paper_risk_death_height = 350, 
+	paper_risk_death = Raphael(document.getElementById("death"), paper_risk_death_width, paper_risk_death_height),
+	beer_risk_all = new Array(1,0.9,1,1.3),
+	beer_risk_chd = new Array(1,0.8,0.6,0.8),
+	beer_risk_cancer = new Array(1,1.1,1.3,1.5),
+	wine_risk_all = new Array(1,0.8,0.7,0.9),
+	wine_risk_chd = new Array(1,0.7,0.6,0.8),
+	wine_risk_cancer = new Array(1,0.9,0.8,0.9);
+	for (var i=1;i<=10;i++){
+		var abscisse = paper_risk_death.path("M45"+" "+(200-i*20)+"L"+(paper_risk_death_width-45)+" "+(200-i*20));
+		abscisse.attr({
+			"stroke":"1px"
+		});
+	}
+	//x y width height
+	var beer_rect_all = paper_risk_death.rect(90, 100, 35, 100, 5),
+	wine_rect_all = paper_risk_death.rect(130, 100, 35, 100, 5),
+	beer_rect_chd = paper_risk_death.rect(240, 100, 35, 100, 5),
+	wine_rect_chd = paper_risk_death.rect(280, 100, 35, 100, 5),
+	beer_rect_cancer = paper_risk_death.rect(390, 100, 35, 100, 5),
+	wine_rect_cancer = paper_risk_death.rect(430, 100, 35, 100, 5);
+	wine_rect_all.attr({
+		"stroke":"none",
+		"fill":"#8F0F0B"
+	});
+	beer_rect_all.attr({
+		"stroke":"none",
+		"fill":"#FCD014"
+	});
+	wine_rect_chd.attr({
+		"stroke":"none",
+		"fill":"#8F0F0B"
+	});
+	beer_rect_chd.attr({
+		"stroke":"none",
+		"fill":"#FCD014"
+	});
+	wine_rect_cancer.attr({
+		"stroke":"none",
+		"fill":"#8F0F0B"
+	});
+	beer_rect_cancer.attr({
+		"stroke":"none",
+		"fill":"#FCD014"
+	});
+	var max_ordonnee = paper_risk_death.text(15, 5, "1,8*");
+	var middle_ordonnee = paper_risk_death.text(15, 100, "1*");
+	var min_ordonnee = paper_risk_death.text(15, 195, "0,2*");
+	max_ordonnee.attr({
+		"font-family":'NovecentowideBold',
+		"font-size" : '12px'
+	});
+	middle_ordonnee.attr({
+		"font-family":'NovecentowideBold',
+		"font-size" : '12px'
+	});
+	min_ordonnee.attr({
+		"font-family":'NovecentowideBold',
+		"font-size" : '12px'
+	});
+	var all = paper_risk_death.text(126, 225, "Causes diverses"),
+	chd = paper_risk_death.text(280, 225, "Problème cardiaque"),
+	cancer = paper_risk_death.text(430, 225, "Cancer");
+	all.attr({
+		"font-family":'NovecentowideBold',
+		"font-size" : '12px'
+	});
+	chd.attr({
+		"font-family":'NovecentowideBold',
+		"font-size" : '12px'
+	});
+	cancer.attr({
+		"font-family":'NovecentowideBold',
+		"font-size" : '12px'
+	});
+	var toolbar = paper_risk_death.path("M0"+" "+(paper_risk_death_height-10)+"L"+paper_risk_death_width+" "+(paper_risk_death_height-10));
+	nbverre_0 = paper_risk_death.text(10, paper_risk_death_height-30, "0"),
+	nbverre_1 = paper_risk_death.text((paper_risk_death_width/3), paper_risk_death_height-30, "1-7"),
+	nbverre_8 = paper_risk_death.text((paper_risk_death_width/3)*2, paper_risk_death_height-30, "8-21"),
+	nbverre_21 = paper_risk_death.text(paper_risk_death_width-10, paper_risk_death_height-30, ">21"),
+	legend_nbverre = paper_risk_death.text(270, paper_risk_death_height-55, "Nombre de verres par semaine");
+	nbverre_0.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	nbverre_1.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	nbverre_8.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	nbverre_21.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	legend_nbverre.attr({
+		"font-family":"NovecentowideBookRegular",
+		"font-size" : '12px'
+	});
+	var cursor_nbverre_0 = paper_risk_death.circle(5, paper_risk_death_height-10, 5),
+	cursor_nbverre_1 = paper_risk_death.circle((paper_risk_death_width/3), paper_risk_death_height-10, 5),
+	cursor_nbverre_8 = paper_risk_death.circle((paper_risk_death_width/3)*2, paper_risk_death_height-10, 5),
+	cursor_nbverre_21 = paper_risk_death.circle((paper_risk_death_width-5), paper_risk_death_height-10, 5),
+	cursor_nbverre = paper_risk_death.circle(10, paper_risk_death_height-10, 10);
+	cursor_nbverre.attr({
+		"stroke":"none",
+		"fill":"black"
+	});
+	cursor_nbverre_0.attr({
+		"stroke":"none",
+		"fill":"#A2D4DD"
+	});
+	cursor_nbverre_1.attr({
+		"stroke":"none",
+		"fill":"#A2D4DD"
+	});
+	cursor_nbverre_8.attr({
+		"stroke":"none",
+		"fill":"#A2D4DD"
+	});
+	cursor_nbverre_21.attr({
+		"stroke":"none",
+		"fill":"#A2D4DD"
+	});
+	var click_nbverre_0 = function(){
+		cursor_nbverre.animate({
+			"cx":10,
+			"cy":paper_risk_death_height-10
+		},400);
+		beer_rect_all.animate({
+			"height": beer_risk_all[0]*100,
+			"y": beer_risk_all[0]*100
+		},400);
+		wine_rect_all.animate({
+			"height": wine_risk_all[0]*100,
+			"y": wine_risk_all[0]*100
+		},400);
+		beer_rect_chd.animate({
+			"height": beer_risk_chd[0]*100,
+			"y": beer_risk_chd[0]*100
+		},400);
+		wine_rect_chd.animate({
+			"height": wine_risk_chd[0]*100,
+			"y": wine_risk_chd[0]*100
+		},400);
+		beer_rect_cancer.animate({
+			"height": beer_risk_cancer[0]*100,
+			"y": beer_risk_cancer[0]*100
+		},400);
+		wine_rect_cancer.animate({
+			"height": wine_risk_cancer[0]*100,
+			"y": wine_risk_cancer[0]*100
+		},400);
+		
+	}
+	cursor_nbverre_0.click(click_nbverre_0);
+	var click_nbverre_1 = function(){
+		cursor_nbverre.animate({
+			"cx":paper_risk_death_width/3,
+			"cy":paper_risk_death_height-10
+		},400);
+		beer_rect_all.animate({
+			"height": beer_risk_all[1]*100,
+			"y": 200-beer_risk_all[1]*100
+		},400);
+		
+		wine_rect_all.animate({
+			"height": wine_risk_all[1]*100,
+			"y": 200-wine_risk_all[1]*100
+		},400);
+		beer_rect_chd.animate({
+			"height": beer_risk_chd[1]*100,
+			"y": 200-beer_risk_chd[1]*100
+		},400);
+		wine_rect_chd.animate({
+			"height": wine_risk_chd[1]*100,
+			"y": 200-wine_risk_chd[1]*100
+		},400);
+		beer_rect_cancer.animate({
+			"height": beer_risk_cancer[1]*100,
+			"y": 200-beer_risk_cancer[1]*100
+		},400);
+		wine_rect_cancer.animate({
+			"height": wine_risk_cancer[1]*100,
+			"y": 200-wine_risk_cancer[1]*100
+		},400);
+	}
+	cursor_nbverre_1.click(click_nbverre_1);
+	var click_nbverre_8 = function(){
+		cursor_nbverre.animate({
+			"cx":(paper_risk_death_width/3)*2,
+			"cy":paper_risk_death_height-10
+		},400);
+		beer_rect_all.animate({
+			"height": beer_risk_all[2]*100,
+			"y": 200-beer_risk_all[2]*100
+		},400);
+		
+		wine_rect_all.animate({
+			"height": wine_risk_all[2]*100,
+			"y": 200-wine_risk_all[2]*100
+		},400);
+		beer_rect_chd.animate({
+			"height": beer_risk_chd[2]*100,
+			"y": 200-beer_risk_chd[2]*100
+		},400);
+		wine_rect_chd.animate({
+			"height": wine_risk_chd[2]*100,
+			"y": 200-wine_risk_chd[2]*100
+		},400);
+		beer_rect_cancer.animate({
+			"height": beer_risk_cancer[2]*100,
+			"y": 200-beer_risk_cancer[2]*100
+		},400);
+		wine_rect_cancer.animate({
+			"height": wine_risk_cancer[2]*100,
+			"y": 200-wine_risk_cancer[2]*100
+		},400);
+	}
+	cursor_nbverre_8.click(click_nbverre_8);
+	var click_nbverre_21 = function(){
+		cursor_nbverre.animate({
+			"cx":paper_risk_death_width-10,
+			"cy":paper_risk_death_height-10
+		},400);
+		beer_rect_all.animate({
+			"height": beer_risk_all[3]*100,
+			"y": 200-beer_risk_all[3]*100
+		},400);
+		
+		wine_rect_all.animate({
+			"height": wine_risk_all[3]*100,
+			"y": 200-wine_risk_all[3]*100
+		},400);
+		beer_rect_chd.animate({
+			"height": beer_risk_chd[3]*100,
+			"y": 200-beer_risk_chd[3]*100
+		},400);
+		wine_rect_chd.animate({
+			"height": wine_risk_chd[3]*100,
+			"y": 200-wine_risk_chd[3]*100
+		},400);
+		beer_rect_cancer.animate({
+			"height": beer_risk_cancer[3]*100,
+			"y": 200-beer_risk_cancer[3]*100
+		},400);
+		wine_rect_cancer.animate({
+			"height": wine_risk_cancer[3]*100,
+			"y": 200-wine_risk_cancer[3]*100
+		},400);
+	}
+	cursor_nbverre_21.click(click_nbverre_21);*/
 }
 
 //#sante
