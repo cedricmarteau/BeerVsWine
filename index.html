@@ -8,8 +8,8 @@
 		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/raphael-min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/easing.1.3.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery-ui-1.8.20.custom.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
@@ -102,21 +102,179 @@
 			<section id="content">
 				<section id="production" class="pages current">
 					<section id="production1" class="subpages subCurrent">
-					<h2>Production Mondiale</h2> 
+					<h2>Production Mondiale</h2>
+					 	<div id="production_mondial">
+							<div id="animation2">
+
+								<div id="blocAnimation_2">
+
+									<div id="bouteilles_2">
+										<div id="vin_2">
+											<img src="img/2_vin.png"/>
+											<p id ="nbVin2">260</p>
+										</div>
+										<div id="biere_2">
+											<img src="img/2_biere.png"/>
+											<p id ="nbBiere2">1400</p>
+										</div>
+									</div>
+
+									<div id="graduation_2">
+										<img src="img/2_fleche.png">
+									</div>
+
+								</div>
+
+								<div id="tiret21"></div>
+								<div id="tiret22"></div>
+							</div>
+						</div>
 					</section>
 					<section id="production2" class="subpages">
 					<h2>Production/import/export par pays</h2>
+						<div id="marche">
+							<div id="axe_ord">
+							</div>
+							<ul id="production_vin">
+								<li><span>(50,50)</span> Italie</li>
+								<li class="diagram left"></li>
+								<li><span>(47,12)</span> France</li>
+								<li class="diagram left"></li>
+								<li><span>(36,45)</span> Espagne</li>
+								<li class="diagram left"></li>
+								<li><span>(23)</span> États-Unis</li>
+								<li class="diagram left"></li>
+								<li><span>(15,50)</span> Argentine</li>
+								<li class="diagram left"></li>
+								<li><span>(14,50)</span> Chine</li>
+								<li class="diagram left"></li>
+								<li><span>(10,50)</span> Afrique du Sud</li>
+								<li class="diagram left"></li>
+								<li><span>(9,62)</span> Australie</li>
+								<li class="diagram left"></li>
+								<li><span>(8,33)</span> Allemagne</li>
+								<li class="diagram left"></li>
+								<li><span>(8,28)</span> Chili</li>
+								<li class="diagram left"></li>
+							</ul>
+							<ul id="production_biere">
+								<li>États-Unis</li>
+								<li class="diagram"></li>
+								<li>France</li>
+								<li class="diagram"></li>
+								<li>Royaume-Uni</li>
+								<li class="diagram"></li>
+								<li>Italie</li>
+								<li class="diagram"></li>
+								<li>Canada</li>
+								<li class="diagram"></li>
+								<li>Allemagne</li>
+								<li class="diagram"></li>
+								<li>Pays-bas</li>
+								<li class="diagram"></li>
+								<li>Espagne</li>
+								<li class="diagram"></li>
+								<li>Irlande</li>
+								<li class="diagram"></li>
+								<li>Méxique</li>
+								<li class="diagram"></li>
+							</ul>
+						</div>
 					</section>
 				</section>
 				<section id="consommation" class="pages">
 					<section id="consommation1" class="subpages subCurrent">
 					<h2>Les plus gros consommateurs</h2>
+						<div id="plus_consom">
+						</div>
 					</section>
 					<section id="consommation2" class="subpages">
 					<h2>Consommation par age/sexe/revenue/</h2>
+						<div id="consommationPar">
+							<div id="parSexe">
+								<div id="masqueParSexe"></div>
+								<div id="statsParSexe">
+									<!--div id="statsHomme"></div>
+									<div id="statsFemme"></div-->
+								</div>
+							</div>
+							<div id="age">
+								<div id="jeune">
+									<div class="VinAge">
+										<p>25%</p>
+										<div class="pourcentageAge"></div>
+									</div>
+									<img src="img/6_jeune.png"/>
+									<div class="biereAge">
+										<p>39%</p>
+										<div class="pourcentageAge"></div>
+									</div>
+								</div>
+								<div id="adulte">
+									<div class="VinAge">
+										<p>31%</p>
+										<div class="pourcentageAge"></div>
+									</div>
+									<img src="img/6_adulte.png"/>
+									<div class="biereAge">
+										<p>41%</p>
+										<div class="pourcentageAge"></div>
+									</div>
+								</div>
+								<div id="vieux">
+									<div class="VinAge">
+										<p>47%</p>
+										<div class="pourcentageAge"></div>
+									</div>
+									<img src="img/6_vieux.png"/>
+									<div class="biereAge">
+										<p>27%</p>
+										<div class="pourcentageAge"></div>
+									</div>
+								</div>
+							</div>
+							<div id="revenus">
+								<div id="pauvres">
+									<div class="bierreRevenus">
+										<div class="jaugeRevenus"></div>
+									</div>
+									<div class="texteRevenus">
+										<p>23 000€ / an (et moins)</p>
+									</div>
+									<div class="vinRevenus">
+										<div class="jaugeRevenus"></div>
+									</div>
+								</div>
+								<div id="moyens">
+									<div class="bierreRevenus">
+										<div class="jaugeRevenus"></div>
+									</div>
+									<div class="texteRevenus">
+										<p>24 000€ À 59000€ / An</p>
+									</div>
+									<div class="vinRevenus">
+										<div class="jaugeRevenus"></div>
+									</div>
+								</div>
+								<div id="riches">
+									<div class="bierreRevenus">
+										<div class="jaugeRevenus"></div>
+									</div>
+									<div class="texteRevenus">
+										<p>60 000€ / an (et plus)</p>
+									</div>
+									<div class="vinRevenus">
+										<div class="jaugeRevenus"></div>
+									</div>
+								</div>
+
+							</div>
+						</div>
 					</section>
 					<section id="consommation3" class="subpages">
 					<h2>Consommation par type de boissons</h2>
+						<div id="best_consom">
+						</div>
 					</section>
 				</section>
 				<section id="sante" class="pages">
@@ -166,6 +324,8 @@
 					</section>
 					<section id="sante3" class="subpages">
 					<h2>Risques</h2>
+					<div id="death">
+					</div>
 					</section>
 				</section>
 				<section id="environnement" class="pages">
@@ -201,7 +361,37 @@
 				</section>
 				<section id="internet" class="pages">
 					<section id="internet1" class="subpages subCurrent">
-					<h2>Google/Facebook/Twitter</h2>
+					<h2>Internet & Réseaux sociaux</h2>
+						<div id="internet">
+							<div id="conteneurInternet">
+								<div id="twitter">
+									<div class="tweet vin">
+										<p><span></span></br>tweets par minute</p>
+									</div>
+									<div class="tweet biere">
+										<p><span></span></br>tweets par minute</p>
+									</div>
+								</div>
+								<div id="google">
+									<div class="googl vin">
+										<p>Environ <span></span> millions de résultats</p>
+									</div>
+									<div class="googl biere">
+										<p>Environ <span></span> millions de résultats</p>
+									</div>
+								</div>
+								<div id="facebook">
+									<div class="faceb vin">
+										<p><span class="likeCount"></span> personnes aiment le vin</br>
+										<span class="speakCount"></span> en parlent</p>
+									</div>
+									<div class="faceb biere">
+										<p><span class="likeCount"></span> personnes aiment le vin</br>
+										<span class="speakCount"></span> en parlent</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</section>
 				</section>
 				<section id="divers" class="pages">

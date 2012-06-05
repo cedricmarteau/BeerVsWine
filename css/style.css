@@ -439,9 +439,9 @@
 	position:relative;
 }
 #death{
-	width:700px;
-	height:700px;
-	margin:300px auto;
+	width:550px;
+	height:350px;
+	margin:200px auto;
 	position:relative;
 }
 
@@ -610,4 +610,104 @@
 	width: 95px;
 	background-size: 95px;
 	cursor: default;
+}
+
+/*------------------------------------*\
+	$PART 5 (hugo)
+\*------------------------------------*/
+/*---internet--*/
+
+#internet {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background: url('../img/13_bg.png') no-repeat center center;
+}
+#internet #conteneurInternet {
+	height: 500px;
+	width: 700px;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	margin-top: -250px;
+}
+#internet #twitter {
+	height: 153px;
+	width: 346px;
+	background: url('../img/13_twitterBG.png');
+	margin: 0 auto;
+}
+#internet #twitter .tweet {
+	height: 46px;
+	width: 148px;
+	float: left;
+	margin-right: 1px;
+	margin-top: 94px;
+	font-family: arial;
+	color: #999999;
+	font-size: 10px;
+	text-align: right;
+	text-transform: uppercase;
+}
+#internet #twitter .vin {
+	margin-left: 25px;
+	text-align: left;
+}
+#internet #twitter .tweet p {
+	margin-top: 10px;
+	margin-left: 9px;
+	margin-right: 9px;
+}
+#internet #twitter .tweet span {
+	color: black;
+	font-size: 14px;
+	font-weight: 800;
+}
+#internet #google {
+	height: 106px;
+	width: 657px;
+	background: url('../img/13_googleBG.png');
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#internet #google .googl {
+	height: 31px;
+	width: 300px;
+	float: left;
+	margin-left: 7px;
+	margin-top: 73px;
+	font-family: arial;
+	color: #9b9999;
+	font-size: 12px;
+}
+#internet #google .googl p {
+	margin-top: 10px;
+	margin-left: 8px;
+}
+#internet #google .googl.vin {
+	margin-left: 25px;
+}
+#internet #facebook {
+	height: 172px;
+	width: 474px;
+	background: url('../img/13_facebookBG.png');
+	margin: 0 auto;
+}
+#internet #facebook .faceb {
+	height: 40px;
+	width: 207px;
+	float: left;
+	margin-left: 7px;
+	margin-top: 103px;
+	font-family: arial;
+	color: #333333;
+	font-size: 12px;
+}
+#internet #facebook .faceb p {
+	margin-top: 8px;
+	margin-left: 9px;
+}
+#internet #facebook .faceb.vin {
+	margin-left: 27px;
 }

@@ -10,6 +10,22 @@ $(document).ready(function(){
 	setZindex();
 	setSubZindex();
 	
+	
+	
+	production_mondiale();
+	data_production();
+	import_export();
+	more_consume();
+	best_consom();
+	creerStatsParSexe();
+	creerStatsParAge();
+	creerStatsParRevenus();
+	nuage_tag();
+	litre_eau();
+	risk_of_death();
+	internet();
+	
+	
 	setTimeout(animateMenu, 400);
 });
 
