@@ -711,3 +711,117 @@
 #internet #facebook .faceb.vin {
 	margin-left: 27px;
 }
+/*------------------------------------*\
+	$PART 6 (hugo)
+\*------------------------------------*/
+/*Les plus ...*/
+
+#lesPlus {
+	height: 500px;
+	width: 680px;
+	margin: 0 auto;
+	position: relative;
+	top : 50%;
+	margin-top: -250px;	
+}
+#lesPlusChere {
+	width: 100%;
+	height: 33%;
+}
+#lesPlusAlcool {
+	width: 100%;
+	height: 33%;
+}
+#lesPlusVieux {
+	width: 100%;
+	height: 34%;
+}
+#lesPlus div img {
+	height: 102px;
+	width: 102px;
+	position: relative;
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#lesPlus div h3 {
+	width: 100%;
+	text-align: center;
+	font-family: 'NovecentowideBold';
+	font-size: 16px;
+	margin-bottom: 5px;
+	color: #8b8b8b;
+}
+#lesPlus div .leftPlus {
+	height: 50px;
+	float: left;
+	width: 269px;
+	margin-top: 36px;
+	color: #393939;
+	text-align: right;
+	position: relative;
+}
+#lesPlus div .rightPlus {
+	height: 50px;
+	float: left;
+	width: 269px;
+	margin-top: 36px;
+	color: #393939;
+	text-align: left;
+	position: relative;
+}
+#lesPlus div div p, #lesPlus div div span {
+	font-size: 30px;
+	margin-left: 10px;
+}
+#lesPlus #lesPlusChere div p {
+	font-size: 16px;
+}
+#plusChereLeftProgress {
+	background: #8a0601;
+	height: 4px;
+	width: 150%;
+	position: absolute;
+	bottom: -22px;
+	right: -71px;
+}
+#plusChereRightProgress {
+	background: #fcd11c;
+	height: 4px;
+	width: 150%;
+	position: absolute;
+	bottom: -22px;
+	left: -71px;
+}
+#plusAlcoolLeftProgress {
+	background: #8a0601;
+	height: 4px;
+	width: 150%;
+	position: absolute;
+	bottom: -22px;
+	right: -71px;
+}
+#plusAlcoolRightProgress {
+	background: #fcd11c;
+	height: 4px;
+	width: 150%;
+	position: absolute;
+	bottom: -22px;
+	left: -71px;
+}
+#plusVieuxLeftProgress {
+	background: #8a0601;
+	height: 4px;
+	width: 150%;
+	position: absolute;
+	bottom: -22px;
+	right: -71px;
+}
+#plusVieuxRightProgress {
+	background: #fcd11c;
+	height: 4px;
+	width: 150%;
+	position: absolute;
+	bottom: -22px;
+	left: -71px;
+}

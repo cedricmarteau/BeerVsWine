@@ -60,6 +60,7 @@ var placementTirets22 = hauteurAnimation2 - hauteurBiere - 30;
 	nuage_tag();
 	litre_eau();
 	risk_of_death();
+	lesPlus();
 
 
 
@@ -799,4 +800,59 @@ function internet(){
         	facebookSpeakBiereOrigin = facebookSpeakBiere;
         }
 	}, 1);
+}
+
+function lesPlus(){	
+	var lesPlusText= new Array(224000,625,16,55,1650,200);
+	//var lesPlusZero= new Array(0,0,0,0,0,0);
+
+	var plus11=224000;
+	var plus10=0;
+	var plus21=625;
+	var plus20=5;
+	var plus31=16;
+	var plus30=0;
+	var plus41=55;
+	var plus40=0;
+	var plus51=1650;
+	var plus50=0;
+	var plus61=200;
+	var plus60=0;
+	
+	$('#plusChereLeftProgress').animate({width:lesPlusText[0]/1000}, 2000);
+	$('#plusChereRightProgress').animate({width:10}, 2000);
+	$('#plusAlcoolLeftProgress').animate({width:lesPlusText[2]*4}, 2000);
+	$('#plusAlcoolRightProgress').animate({width:lesPlusText[3]*4},2000);
+	$('#plusVieuxLeftProgress').animate({width:lesPlusText[4]/7}, 2000);
+	$('#plusVieuxRightProgress').animate({width:lesPlusText[5]/7},2000);
+	$('#plusChereLeft, #plusChereRight, #plusAlcoolLeft, #plusAlcoolRight, #plusVieuxLeft, #plusVieuxRight,').text(0);
+	var timerPlus1 =setInterval(function(){
+		plus10+=800;
+		plus20+=10;
+		plus30+=1;
+		plus40+=1;
+		plus50+=15;
+		plus60+=5;
+		if (plus20<=plus21) {
+			$('#plusChereRight').text(plus20);
+		}
+		if (plus30<=plus31) {
+			$('#plusAlcoolLeft').text(plus30);
+		}
+		if (plus40<=plus41) {
+			$('#plusAlcoolRight').text(plus40);
+		}
+		if (plus50<=plus51) {
+			$('#plusVieuxLeft').text(plus50);
+		}
+		if (plus60<=plus61) {
+			$('#plusVieuxRight').text(plus60);
+		}
+        $('#plusChereLeft').text(plus10);
+       	if(plus10==plus11){
+	    	clearInterval(timerPlus1);
+        	plus10 = plus11;
+        }
+	}, 10);
+
 }
