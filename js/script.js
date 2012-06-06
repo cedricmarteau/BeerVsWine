@@ -236,6 +236,7 @@ function more_consume(){
 	line_liqueur_anim = "",
 	tab_circle_beer = new Array(),
 	tab_circle_wine = new Array(),
+	tab_circle_liqueur = new Array(),
 	circle_beer_anim = new Object(),
 	circle_wine_anim = new Object(),
 	circle_liqueur_anim = new Object(),
@@ -248,10 +249,12 @@ function more_consume(){
 	for (var i=1;i<=7;i++){
 		if (i==1){letter="M"}else{letter="L"};
 		var abscisse = paper.path("M"+((paper_width/8)*i)+" "+paper_height+"L"+((paper_width/8)*i)+" "+(paper_height-5)),
-		circle_beer = paper.circle(i*(paper_width/8), paper_width-((45*paper_width)/50), 5),
-		circle_wine = paper.circle(i*(paper_width/8), paper_width-((32*paper_width)/50), 5);
+		circle_beer = paper.circle(i*(paper_width/8), paper_width-((45*paper_width)/50), 10),
+		circle_wine = paper.circle(i*(paper_width/8), paper_width-((32*paper_width)/50), 10);
+		circle_liqueur = paper.circle(i*(paper_width/8), paper_width-((18*paper_width)/50), 10);
 		tab_circle_beer.push(circle_beer);
 		tab_circle_wine.push(circle_wine);
+		tab_circle_liqueur.push(circle_liqueur);
 		circle_beer.attr({
 			"stroke":"#FCD014",
 			"fill":"#FCD014"
@@ -260,8 +263,13 @@ function more_consume(){
 			"stroke":"#8F0F0B",
 			"fill":"#8F0F0B"	
 		});
+		circle_liqueur.attr({
+			"stroke":"#A2D4DD",
+			"fill":"#A2D4DD"
+		});
 		line_beer += letter+i*(paper_width/8)+" "+(paper_width-((45*paper_width)/50));
 		line_wine += letter+i*(paper_width/8)+" "+(paper_width-((32*paper_width)/50));
+		line_liqueur += letter+i*(paper_width/8)+" "+(paper_width-((18*paper_width)/50));
 	}
 	var beer_path = paper.path(line_beer);
 	beer_path.attr({
@@ -292,13 +300,14 @@ function more_consume(){
 		//Cercles
 		circle_beer_anim[i] = [i*(paper_width/8), paper_width-((data_beer_more_consum[i]*paper_width)/50)];
 		circle_wine_anim[i] = [i*(paper_width/8), paper_width-((data_wine_more_consum[i]*paper_width)/50)];
-		//circle_liqueur_anim[i] = [i*(paper_width/8), paper_width-((data_liqueur_more_consum[i]*paper_width)/50)];
+		circle_liqueur_anim[i] = [i*(paper_width/8), paper_width-((data_liqueur_more_consum[i]*paper_width)/50)];
 		tab_circle_beer[i-1].animate({cx: circle_beer_anim[i][0], cy: circle_beer_anim[i][1]},1000);
 		tab_circle_wine[i-1].animate({cx: circle_wine_anim[i][0], cy: circle_wine_anim[i][1]},1000);
+		tab_circle_liqueur[i-1].animate({cx: circle_liqueur_anim[i][0], cy: circle_liqueur_anim[i][1]},1000);
 	}
 	beer_path.animate({path:line_beer_anim},1000);
 	wine_path.animate({path:line_wine_anim},1000);
-	//liqueur_path.animate({path:line_liqueur_anim},1000);
+	liqueur_path.animate({path:line_liqueur_anim},1000);
 }
 
 //les plus gros consommateur
