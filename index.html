@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/raphael-min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/protovis.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/easing.1.3.js" type="text/javascript" charset="utf-8"></script>
@@ -331,6 +332,55 @@
 				<section id="environnement" class="pages">
 					<section id="environnement1" class="subpages subCurrent">
 					<h2>Empreinte carbone</h2>
+					<div id="empreinte_carbon">
+						<table id="provenance_wine_beer">
+							<tr>
+								<td>
+									<!-- 100% = 3.2 -->
+									<script type="text/javascript+protovis">
+										var s = 0, dataviz = new pv.Panel()
+										.width(200)
+										.height(200);
+
+										dataviz.add(pv.Wedge)
+										.data([1.0, 1.4, 1.8, 2.0])
+										.left(100)
+										.top(100)
+										.fillStyle(pv.Scale.linear(1.2, 1.4, 1.6, 2.0).range('#b52f46', '#952230', '#71161e','#521013'))
+										.startAngle(Math.PI)
+										.innerRadius(function() this.index * 10 + 40)
+										.outerRadius(function() this.index * 10 + 30)
+										.startAngle(function() (s += .0005) * (this.index + 1))
+										.angle(function(d) d * 2);
+
+										dataviz.render();
+										//setInterval(function() dataviz.render(), 50);
+									</script>
+								</td>
+								<td>
+									<script type="text/javascript+protovis">
+										var s2 =0, dataviz2 = new pv.Panel()
+										.width(200)
+										.height(200);
+
+										dataviz2.add(pv.Wedge)
+										.data([1.0, 1.2, 1.4, 1.8, 2.0])
+										.left(100)
+										.top(100)
+										.fillStyle(pv.Scale.linear(1.0, 1.2, 1.4, 1.6, 2.0).range('#ffd62d', '#eec825', '#e4be1f', '#dbb61b','#ceaa14'))
+										.startAngle(Math.PI)
+										.innerRadius(function() this.index * 10 + 40)
+										.outerRadius(function() this.index * 10 + 30)
+										.startAngle(function() (s2 += .0005) * (this.index + 1))
+										.angle(function(d) d * 2);
+
+										dataviz2.render();
+										//setInterval(function() dataviz2.render(), 50);
+									</script>
+								</td>
+							</tr>
+						</table>
+					</div>
 					</section>
 					<section id="environnement2" class="subpages">
 					<h2>Litres d’eau pour la production</h2>

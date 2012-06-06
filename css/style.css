@@ -444,7 +444,15 @@
 	margin:200px auto;
 	position:relative;
 }
-
+#empreinte_carbon{
+	width:700px;
+	height:700px;
+	margin:300px auto;
+	position:relative;
+}
+#provenance_wine_beer{
+	margin:0 auto;
+}
 
 /*------------------------------------*\
 	$PART 3 (hugo)
