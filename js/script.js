@@ -44,29 +44,6 @@ var placementTirets22 = hauteurAnimation2 - hauteurBiere - 30;
                   		}
 				}, 1);
 	});
-<<<<<<< HEAD
-=======
-
-
-	data_production();
-	import_export();
-	more_consume();
-	best_consom();
-
-	creerStatsParSexe();
-	creerStatsParAge();
-	creerStatsParRevenus();
-	nuage_tag();
-
-
-	nuage_tag();
-	litre_eau();
-	risk_of_death();
-	lesPlus();
-
-
-
->>>>>>> 6df1933054aaf19ec6f4053ad4ad8edf503d0cc4
 }
 
 

@@ -24,6 +24,7 @@ $(document).ready(function(){
 	litre_eau();
 	risk_of_death();
 	internet();
+	lesPlus();
 	
 	
 	setTimeout(animateMenu, 400);
