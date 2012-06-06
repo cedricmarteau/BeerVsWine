@@ -359,10 +359,6 @@
 #marche li{
 	clear:both;
 }
-#marche span{
-	font-family: 'NovecentowideLight';
-	font-size:16px;
-}
 #marche li.left{
 	float:right;
 }
@@ -382,8 +378,8 @@
 
 #import li, #export li{
 	clear:both;
-	font-family: 'NovecentowideLight';
-	font-size:16px;
+	font-family: 'NovecentowideBookRegular';
+	font-size:20px;
 }
 #import li.left, #export li.left{
 	float:right;
@@ -407,8 +403,6 @@
 	height:20px;
 	margin-bottom:8px;
 	overflow:hidden;
-	font-family: 'NovecentowideLight';
-	font-size:14px;
 }
 #vin_import,#vin_export{
 	position:absolute;
