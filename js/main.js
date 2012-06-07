@@ -81,7 +81,7 @@ $(document).ready(function(){
 					checkPage();
 				});
 			}
-		}
+		}return false;
 	});
 });
 
@@ -311,7 +311,7 @@ function checkPage(){
 	}
 	if(currentPage == "environnement1" && fEnv1!=false){
 		fEnv1 = false;
-		//setTimeout(nuage_tag, 500)
+		setTimeout(carbon, 500)
 	}
 	if(currentPage == "environnement2" && fEnv2!=false){
 		fEnv2 = false;

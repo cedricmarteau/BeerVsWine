@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -18,24 +17,3 @@
 		c0-13.272-9.056-24.107-20.475-24.89C288.858,393.375,275.759,380.599,259.899,380.599L259.899,380.599z"/>
 </g>
 </svg>
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1"
-	 id="svg6011" sodipodi:docname="nuage.svg" inkscape:version="0.48.0 r9654" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="147.551px"
-	 height="98.704px" viewBox="0 0 147.551 98.704" enable-background="new 0 0 147.551 98.704" xml:space="preserve">
-<title  id="title6047">nuage</title>
-<sodipodi:namedview  pagecolor="#ffffff" id="base" bordercolor="#666666" inkscape:zoom="0.98994949" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:cx="272.83947" inkscape:cy="56.690216" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" inkscape:window-width="1018" inkscape:window-height="665" inkscape:window-x="447" inkscape:window-y="107" inkscape:window-maximized="0" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0">
-	</sodipodi:namedview>
-<g id="layer1" transform="translate(-167.05466,-379.59924)" inkscape:label="Calque 1" inkscape:groupmode="layer">
-	<path id="path4074" inkscape:connector-curvature="0" fill="#878786" d="M259.899,380.599c-13.133,0-24.365,8.755-28.939,21.153
-		c-3.284-1.449-6.928-2.224-10.754-2.224c-12.897,0-23.631,9.135-25.978,21.246c-1.652-0.411-3.385-0.618-5.167-0.618
-		c-11.606,0-21.006,9.254-21.006,20.659c0,11.404,9.4,20.659,21.006,20.659c3.649,0,7.093-0.925,10.083-2.532
-		c5.162,5.176,13.55,8.555,23.017,8.555c7.625,0,14.534-2.19,19.637-5.744c4.385,4.596,10.522,7.441,17.318,7.441
-		c8.83,0,16.55-4.818,20.755-12.012c2.895,1.628,6.165,2.562,9.608,2.562c12.036,0,21.788-11.171,21.788-24.951
-		c0-13.272-9.056-24.107-20.475-24.89C288.858,393.375,275.759,380.599,259.899,380.599L259.899,380.599z"/>
-</g>
-</svg>
->>>>>>> b651986dd13340f5f52577cc5cfa7ce559b1b73a
