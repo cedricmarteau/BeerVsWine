@@ -900,3 +900,51 @@ function lesPlus(){
 	}, 10);
 
 }
+
+
+function calorie() {
+	$('#calorieBiere .calorieLiquide').stop(true,false).animate({'margin-top':'-86px'},1000);
+	$('#calorieVin .calorieLiquide').stop(true,false).animate({'margin-top':'-56px'},1000);
+	
+	$('#calorieRouge').hover(function(){
+		$('#calorieVin #calorieRouge #calorieRouge1').stop(true,false).animate({'margin-top':'-16px'},300,function(){
+			$('#calorieVin #calorieRouge #calorieRouge2').stop(true,false).animate({'margin-top':'-16px'},300,function(){
+				$('#calorieVin #calorieRouge #calorieRouge3').stop(true,false).animate({'margin-top':'-16px'},300);
+			});
+		});
+	}, function(){
+		$('#calorieVin #calorieRouge .calorieLiquide').stop(true,false).animate({'margin-top':'-56px'},1000);
+	});
+	
+	
+	$('#calorieBlanc').hover(function(){
+		$('#calorieVin #calorieBlanc #calorieBlanc1').stop(true,false).animate({'margin-top':'-16px'},300,function(){
+			$('#calorieVin #calorieBlanc #calorieBlanc2').stop(true,false).animate({'margin-top':'-16px'},300,function(){
+				$('#calorieVin #calorieBlanc #calorieBlanc3').stop(true,false).animate({'margin-top':'-16px'},300);
+			});
+		});
+	}, function(){
+		$('#calorieVin #calorieBlanc .calorieLiquide').stop(true,false).animate({'margin-top':'-56px'},1000);
+	});
+	
+	
+	$('#calorieBiereGlasses1').hover(function(){
+		$('.calorieLiquide#calorieBiere1').stop(true,false).animate({'margin-top':'-0px'}, 500);
+	}, function(){
+		$('.calorieLiquide#calorieBiere1').stop(true,false).animate({'margin-top':'-86px'}, 500);
+	});
+	
+	
+	$('#calorieBiereGlasses2').hover(function(){
+		$('.calorieLiquide#calorieBiere2').stop(true,false).animate({'margin-top':'-0px'}, 500);
+	}, function(){
+		$('.calorieLiquide#calorieBiere2').stop(true,false).animate({'margin-top':'-86px'}, 500);
+	});
+	
+	
+	$('#calorieBiereGlasses3').hover(function(){
+		$('.calorieLiquide#calorieBiere3').stop(true,false).animate({'margin-top':'-0px'}, 500);
+	}, function(){
+		$('.calorieLiquide#calorieBiere3').stop(true,false).animate({'margin-top':'-86px'}, 500);
+	});
+}

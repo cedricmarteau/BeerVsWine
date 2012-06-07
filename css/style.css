@@ -448,7 +448,7 @@
 	right:0px;
 }
 /*------------------------------------*\
-	$PART 2 (cedric)
+	$PART 2 (cedric & hugo)
 \*------------------------------------*/
 /*--- PLUS CONSOMMÉ ---*/
 #plus_consom{
@@ -514,6 +514,159 @@
 }
 #provenance_wine_beer{
 	margin:0 auto;
+}
+
+
+/* --- Calories --- */
+#calorieContent {
+	width: 670px;
+	height: 360px;
+	position: relative;
+	top: 50%;
+	margin: 0 auto;
+	margin-top: -190px;
+}
+#calorieContent #calorieTop {
+	width: 100%;
+	height: 160px;
+	position: absolute;
+	top: 0;
+}
+#calorieContent #calorieTop #calorieVin {
+	height: 100%;
+	width: 370px;
+	float: left;
+}
+#calorieContent #calorieTop #calorieVin #calorieRouge {
+	width: 145px;
+	height: 67px;
+	float: left;
+	margin: 50px 10px 0px 30px;
+	overflow: hidden;
+	cursor: pointer;
+}
+#calorieContent #calorieTop #calorieVin #calorieRouge div {
+	float: left;
+	width: 48px;
+	height: 100%;
+	z-index: 2;
+	background: url('../img/9_vinMasque.png') repeat;
+	position: relative;
+}
+#calorieContent #calorieTop #calorieVin #calorieRouge div.calorieLiquide {
+	background: #a51f20;
+	width: 46px;
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: -16px;
+	z-index: 1;
+	position: relative;
+	height: 70px;
+}
+#calorieContent #calorieTop #calorieVin #calorieBlanc {
+	width: 145px;
+	height: 67px;
+	float: left;
+	margin: 50px 30px 0px 10px;
+	overflow: hidden;
+	cursor: pointer;
+}
+#calorieContent #calorieTop #calorieVin #calorieBlanc div {
+	float: left;
+	width: 48px;
+	height: 100%;
+	z-index: 2;
+	background: url('../img/9_vinMasque.png') no-repeat;
+	position: relative;
+}
+#calorieContent #calorieTop #calorieVin #calorieBlanc div.calorieLiquide {
+	background: #f4f1a2;
+	width: 46px;
+	height: 70px;
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: -16px;
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+}
+#calorieContent #calorieTop #calorieBiere {
+	height: 100px;
+	width: 230px;
+	float: right;
+	position: relative;
+	padding-left: 10px;
+	overflow: hidden;
+	margin-top: 17px;
+	cursor: pointer;
+}
+#calorieContent #calorieTop #calorieBiere div {
+	float: left;
+	width: 70px;
+	height: 100px;
+	z-index: 2;
+	background: url('../img/9_biereMasque.png') no-repeat;
+	position: relative;
+}
+#calorieContent #calorieTop #calorieBiere div.calorieLiquide {
+	position: relative;
+	margin-top: 0px; 
+	z-index: 1;
+}
+#calorieContent #calorieTop #calorieBiere div.calorieLiquide#calorieBiere1 {
+	background: #f6ce13;
+}
+#calorieContent #calorieTop #calorieBiere div.calorieLiquide#calorieBiere2 {
+	background: #945f14;
+}
+#calorieContent #calorieTop #calorieBiere div.calorieLiquide#calorieBiere3 {
+	background: #020303;
+}
+#calorieContent #calorieBottom {
+	width: 362px;
+	height: 197px;
+	left: 150px;
+	background: url('../img/9_round.png') no-repeat;
+	position: absolute;
+	bottom: 0;
+}
+#calorieContent #calorieBottom #calorieText {
+	height: 65px;
+	width: 88px;
+	position: absolute;
+	top: 80px;
+	left: 40px;
+}
+#calorieContent #calorieBottom #calorieText p {
+	color: #808080;
+	font-size: 14px;
+	text-align: center;
+	width: 100%;
+}
+#calorieContent #calorieBottom #calorieText p span {
+	font-size: 50px;
+	font-family: 'NovecentowideBold';
+	letter-spacing: -2px;
+}
+#calorieContent #calorieBottom #calorieIcon {
+	height: 90px;
+	width: 188px;
+	position: absolute;
+	top: 65px;
+	left: 175px;
+	opacity: 1;
+}
+#calorieContent #calorieBottom #calorieIcon img {
+	position: relative;
+	margin-left: 55px;
+}
+#calorieContent #calorieBottom #calorieIcon p {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	color: #808080;
+	font-size: 14px;
 }
 
 /*------------------------------------*\
