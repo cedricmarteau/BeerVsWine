@@ -54,6 +54,7 @@ $(document).ready(function(){
 	$(".item-mask").click(function(){
 			var pages = $("#content").find('.pages');
 			var current = $("#content").find('.current');
+			var lastIndex = current.index();
 			var indexCurrent=$(this).index();
 			
 		if(!animating){
@@ -61,15 +62,25 @@ $(document).ready(function(){
 			animateMenu();
 			animating=true;
 			pages.eq(indexCurrent).css('z-index',"29");
-			current.delay(800).animate({"top":-windowHeight}, 1000,"easeInQuint",function(){
-				animating=false;
-				current.removeClass("current");
-				pages.eq(indexCurrent).addClass("current");
-				setZindex();
-				setPagePos();
-				checkPage();
-			});
-			
+			if (lastIndex<indexCurrent){
+				current.delay(800).animate({"top":-windowHeight}, 1000,"easeInQuint",function(){
+					animating=false;
+					current.removeClass("current");
+					pages.eq(indexCurrent).addClass("current");
+					setZindex();
+					setPagePos();
+					checkPage();
+				});
+			} else if (lastIndex>indexCurrent){
+				current.delay(800).animate({"top":+windowHeight}, 1000,"easeInQuint",function(){
+					animating=false;
+					current.removeClass("current");
+					pages.eq(indexCurrent).addClass("current");
+					setZindex();
+					setPagePos();
+					checkPage();
+				});
+			}
 		}
 	});
 });
