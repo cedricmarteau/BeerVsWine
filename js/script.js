@@ -364,6 +364,57 @@ function best_consom(){
 	}
 }
 
+function carbon(){
+	var legend_wine_paper = new Raphael(document.getElementById("legend_wine"), 20, 100),
+	circle_legend_wine1 = legend_wine_paper.circle(10, 10, 6),
+	circle_legend_wine2 = legend_wine_paper.circle(10, 35, 6),
+	circle_legend_wine3 = legend_wine_paper.circle(10, 60, 6);
+	circle_legend_wine4 = legend_wine_paper.circle(10, 85, 6);
+	circle_legend_wine1.attr({
+		"stroke":"#b52f46",
+		"fill":"#b52f46"
+	});;
+	circle_legend_wine2.attr({
+		"stroke":"#952230",
+		"fill":"#952230"
+	});;
+	circle_legend_wine3.attr({
+		"stroke":"#901b20",
+		"fill":"#901b20"
+	});
+	circle_legend_wine4.attr({
+		"stroke":"#521013",
+		"fill":"#521013"
+	});
+	var legend_beer_paper = new Raphael(document.getElementById("legend_beer_2"), 20, 150),
+	circle_legend_beer1 = legend_beer_paper.circle(10, 10, 6),
+	circle_legend_beer2 = legend_beer_paper.circle(10, 35, 6),
+	circle_legend_beer3 = legend_beer_paper.circle(10, 60, 6);
+	circle_legend_beer4 = legend_beer_paper.circle(10, 85, 6);
+	circle_legend_beer5 = legend_beer_paper.circle(10, 110, 6);
+	circle_legend_beer1.attr({
+		"stroke":"#FFF000",
+		"fill":"#FFF000"
+	});;
+	circle_legend_beer2.attr({
+		"stroke":"#FFE100",
+		"fill":"#FFE100"
+	});;
+	circle_legend_beer3.attr({
+		"stroke":"#CCB400",
+		"fill":"#CCB400"
+	});
+	circle_legend_beer4.attr({
+		"stroke":"#ABA259",
+		"fill":"#ABA259"
+	});
+	circle_legend_beer5.attr({
+		"stroke":"#867f45",
+		"fill":"#867f45"
+	});
+	var x = this.legend_beer_paper.legend_beer.offsetLeft;
+}
+
 
 //risques de mort
 function risk_of_death(){

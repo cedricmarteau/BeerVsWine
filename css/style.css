@@ -475,6 +475,43 @@
 	margin:300px auto;
 	position:relative;
 }
+#legend_wine{
+	position:absolute;
+	width:200px;
+	height:100px;
+	top:0px;
+	left:0px;
+}
+#legend_wine_txt{
+	font-size:10px;
+	position:absolute;
+	top:5px;
+	left:25px;
+}
+#legend_wine_txt li{
+	margin-bottom:15px;
+}
+#legend_beer{
+	position:absolute;
+	width:200px;
+	height:150px;
+	top:0px;
+	right:0px;
+}
+#legend_beer_2{
+	position:absolute;
+	right:0px;
+}
+#legend_beer_txt{
+	font-size:10px;
+	position:absolute;
+	top:5px;
+	right:25px;
+}
+#legend_beer_txt li{
+	margin-bottom:15px;
+	text-align:right;
+}
 #provenance_wine_beer{
 	margin:0 auto;
 }

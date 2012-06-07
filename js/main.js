@@ -26,6 +26,8 @@ $(document).ready(function(){
 	internet();
 	lesPlus();
 	
+	carbon();
+	
 	
 	setTimeout(animateMenu, 400);
 });

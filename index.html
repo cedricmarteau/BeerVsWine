@@ -428,6 +428,26 @@
 					<section id="environnement1" class="subpages subCurrent">
 					<h2>Empreinte carbone</h2>
 					<div id="empreinte_carbon">
+						<div id="legend_wine">
+							<ul id="legend_wine_txt">
+								<li>Matières & ingrédients (50%)</li>
+								<li>Manufacture (20%)</li>
+								<li>Distribution (20%)</li>
+								<li>Recyclage (10%)</li>
+							</ul>
+						</div>
+						<div id="legend_beer">
+							<div id="legend_beer_2"></div>
+							<ul id="legend_beer_txt">
+								<li>(41%) Matières & ingrédients</li>
+								<li>(34%) Manufacture</li>
+								<li>(17%) Distribution</li>
+								<li>(5%) Fermentation</li>
+								<li>(3%) Packaging</li>
+							</ul>
+						</div>
+						<div id="legend_beer">
+						</div>
 						<table id="provenance_wine_beer">
 							<tr>
 								<td>
@@ -438,39 +458,40 @@
 										.height(200);
 
 										dataviz.add(pv.Wedge)
-										.data([1.0, 1.4, 1.8, 2.0])
+										.data([0.32, 0.74, 0.64, 1.6])
 										.left(100)
 										.top(100)
-										.fillStyle(pv.Scale.linear(1.2, 1.4, 1.6, 2.0).range('#b52f46', '#952230', '#71161e','#521013'))
+										.fillStyle(pv.Scale.linear(0.32, 0.74, 0.64, 1.6).range('#521013','#952230','#901b20','#b52f46'))
 										.startAngle(Math.PI)
-										.innerRadius(function() this.index * 10 + 40)
-										.outerRadius(function() this.index * 10 + 30)
+										.innerRadius(function() this.index * 5 + 40)
+										.outerRadius(function() this.index * 5 + 25)
 										.startAngle(function() (s += .0005) * (this.index + 1))
 										.angle(function(d) d * 2);
 
-										dataviz.render();
-										//setInterval(function() dataviz.render(), 50);
+										//dataviz.render();
+										setInterval(function() dataviz.render(), 50);
 									</script>
 								</td>
 								<td>
+									<!-- BIERE // 100% = 3.2 -->
 									<script type="text/javascript+protovis">
 										var s2 =0, dataviz2 = new pv.Panel()
 										.width(200)
 										.height(200);
 
 										dataviz2.add(pv.Wedge)
-										.data([1.0, 1.2, 1.4, 1.8, 2.0])
+										.data([0.096, 0.16, 0.54, 1.09, 1.31])
 										.left(100)
 										.top(100)
-										.fillStyle(pv.Scale.linear(1.0, 1.2, 1.4, 1.6).range('#f1cc49', '#eba438', '#df9958', '#d36658'))
+										.fillStyle(pv.Scale.linear(0.096, 0.16, 0.54, 1.09, 1.31).range('#867f45','#ABA259','#CCB400','#FFE100','#FFF000'))
 										.startAngle(Math.PI)
-										.innerRadius(function() this.index * 10 + 40)
-										.outerRadius(function() this.index * 10 + 30)
+										.innerRadius(function() this.index * 5 + 40)
+										.outerRadius(function() this.index * 5 + 25)
 										.startAngle(function() (s2 += .0005) * (this.index + 1))
 										.angle(function(d) d * 2);
 
-										dataviz2.render();
-										//setInterval(function() dataviz2.render(), 50);
+										//dataviz2.render();
+										setInterval(function() dataviz2.render(), 50);
 									</script>
 								</td>
 							</tr>
