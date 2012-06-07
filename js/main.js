@@ -50,6 +50,28 @@ $(document).ready(function(){
 	
 	
 	setTimeout(animateMenu, 400);
+	
+	$(".item-mask").click(function(){
+			var pages = $("#content").find('.pages');
+			var current = $("#content").find('.current');
+			var indexCurrent=$(this).index();
+			
+		if(!animating){
+			indexItem=indexCurrent;
+			animateMenu();
+			animating=true;
+			pages.eq(indexCurrent).css('z-index',"29");
+			current.delay(800).animate({"top":-windowHeight}, 1000,"easeInQuint",function(){
+				animating=false;
+				current.removeClass("current");
+				pages.eq(indexCurrent).addClass("current");
+				setZindex();
+				setPagePos();
+				checkPage();
+			});
+			
+		}
+	});
 });
 
 
