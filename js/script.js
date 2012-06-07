@@ -683,12 +683,17 @@ function litre_eau(){
 	$('#litreEau #raisin, #litreEau #cereales').animate({marginTop:0}, 500,function(){
 		$('#litreEau ul').animate({bottom:0});
 	});
+
+
 	
 	$('#litreEau li').not('.litreTxt').hover(function(){
 		$(this).animate({'background-size':5});
 	}, function(){
 		$(this).animate({'background-size':18});
 	});
+
+	var listeCereales =$('#cereales ul');
+	var listeGrape = $('#cereales ul');
 }
 function internet(){
 	$('#internet').animate({'background-size':'960'}, 1000, 'easeOutExpo');
