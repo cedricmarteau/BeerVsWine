@@ -287,7 +287,7 @@
 									.fillStyle(pv.Scale.linear(1.2, 1.4, 1.6, 2.0).range('#b52f46', '#952230', '#71161e','#521013'))
 									.startAngle(Math.PI)
 									.innerRadius(function() this.index * 10 + 40)
-									.outerRadius(function() this.index * 10 + 30)
+									.outerRadius(function() this.index * 10 + 25)
 									.startAngle(function() (s += .0005) * (this.index + 1))
 									.angle(function(d) d * 2);
 									
@@ -302,16 +302,16 @@
 									.height(200);
 
 									dataviz2.add(pv.Wedge)
-									.data([1.0, 1.2, 1.4, 1.8, 2.0])
+									.data([1.0, 1.2, 1.4, 1.8])
 									.left(100)
 									.top(100)
-									.fillStyle(pv.Scale.linear(1.0, 1.2, 1.4, 1.6, 2.0).range('#ffd62d', '#eec825', '#e4be1f', '#dbb61b','#ceaa14'))
+									.fillStyle(pv.Scale.linear(1.0, 1.2, 1.4, 1.8).range('#FFF000', '#FFE100', '#CCB400', '#7F7842'))
 									.startAngle(Math.PI)
 									.innerRadius(function() this.index * 10 + 40)
-									.outerRadius(function() this.index * 10 + 30)
+									.outerRadius(function() this.index * 10 + 25)
 									.startAngle(function() (s2 += .0005) * (this.index + 1))
 									.angle(function(d) d * 2);
-									
+
 									dataviz2.render();
 									//setInterval(function() dataviz2.render(), 50);
 								</script>
