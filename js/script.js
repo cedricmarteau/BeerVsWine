@@ -627,25 +627,25 @@ function risk_of_death(){
 //#sante
 function nuage_tag(){
         var nuageTextVal= new Array(
- 			'Texte1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte7 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte8 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte9 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte10 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte11 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte12 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte13 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte14 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte15 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte16 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte17 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte18 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.',
- 			'Texte19 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum consectetur augue, eu interdum augue sollicitudin at.'
+ 			'La consommation modérée de vin allonge l’espérence de vie</br>en réduisant les risques de certaines maladies.',
+ 			'Le vin rouge a un effet bénéfique sur le cerveau en augmentant le flux sanguin cérébral et en diminuant la perte de neurones.',
+ 			'La consommation de bière permet de maintenir une densité osseuse suffisante pour lutter contre l’ostéoporose.',
+ 			'La bière augmente le taux de vitamine B6, souvent administrée pour faciliter le développement des cheveux et des ongles.',
+ 			'Le vin rouge, consommé de manière modérée, a un effet protecteur</br>sur le coeur et protège du risque coronarien. ',
+ 			'Le vin rouge réduit le risque de cancer du poumon,</br>notamment chez les fumeurs.',
+ 			'La bière joue un rôle préventif</br>contre la formation de calculs rénaux.',
+ 			'Consommer de la bière permet de réduire certains risques de</br>maladies et donc de prolonger la durée de vie.',
+ 			'La consommation de vin rouge divise par deux le risque</br>de cancer de la prostate.',
+ 			'Le vin, connu pour ses vertus bénéfiques, permet également</br>de réduire la sensation de froid.',
+ 			'La bière a un effet protecteur qui fortifie le coeur et</br>qui diminue le risque de maladies cardio-vasculaires.',
+ 			'La bière, consommée occasionnellement, augmente le taux</br>d’insuline et permet de protéger du diabète.',
+ 			'Le vin rouge permet de lutter contre le cancer du sein lors d’une résistance à la thérapie hormonale.',
+ 			'Le vin rouge aide à réduire le mauvais cholesterol en diminuant</br>le taux de LDL-cholesterol.',
+ 			'La consommation de bière permet de réduire les risques liés</br>à Alzheimer et autres maladies mentales.',
+ 			'La bière permet de baisser la pression artérielle et de diminuer</br>le risque de crises cardiaques.',
+ 			'Le vin rouge permet de combattre l’inflammation qui joue un rôle</br>majeur notamment dans le diabète et l’arthrite.',
+ 			'La bière prévient des attaques cardio-vasculaires en limitant la</br>formation de caillots qui  obstruent les artères.',
+ 			'La consommation de bière, de manière modérée,</br>permet de réduire le risque de cancer.'
  		);
 		var nuageName;
 		var nuageText;
