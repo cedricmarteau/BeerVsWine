@@ -153,49 +153,49 @@
 						<li class="diagram left"></li>
 					</ul>
 					<ul id="production_biere">
-						<li>États-Unis</li>
+						<li>États-Unis (233.50)</li>
 						<li class="diagram"></li>
-						<li>France</li>
+						<li>France (167.70)</li>
 						<li class="diagram"></li>
-						<li>Royaume-Uni</li>
+						<li>Royaume-Uni (98.90)</li>
 						<li class="diagram"></li>
-						<li>Italie</li>
+						<li>Italie (58.10)</li>
 						<li class="diagram"></li>
-						<li>Canada</li>
+						<li>Canada (31)</li>
 						<li class="diagram"></li>
-						<li>Allemagne</li>
+						<li>Allemagne (17.30)</li>
 						<li class="diagram"></li>
-						<li>Pays-bas</li>
+						<li>Pays-bas (15.50)</li>
 						<li class="diagram"></li>
-						<li>Espagne</li>
+						<li>Espagne (12.10)</li>
 						<li class="diagram"></li>
-						<li>Irlande</li>
+						<li>Irlande (11.90)</li>
 						<li class="diagram"></li>
-						<li>Méxique</li>
+						<li>Méxique (3.50)</li>
 						<li class="diagram"></li>
 					</ul>
 				</div>
 				<div id="import">
 					<ul id="vin_import">
-						<li>NC</li>
-						<li class="diagram left">NC</li>
-						<li>NC</li>
-						<li class="diagram left">NC</li>
-						<li>Allemagne</li>
+						<li>Allemagne <span>(18%)</span></li>
 						<li class="diagram left"></li>
-						<li>Irlande</li>
+						<li>Royaume-Uni <span>(15,51%)</span></li>
 						<li class="diagram left"></li>
-						<li>Royaume-Uni</li>
+						<li>États-Unis <span>(14,51%)</span></li>
 						<li class="diagram left"></li>
-						<li>Danemark</li>
+						<li>France <span>(9,54%)</span></li>
 						<li class="diagram left"></li>
-						<li>États-Unis</li>
+						<li>Russie <span>(7,35%)</span></li>
 						<li class="diagram left"></li>
-						<li>France</li>
+						<li>Pays-Bas <span>(2,09%)</span></li>
 						<li class="diagram left"></li>
-						<li>Canada</li>
+						<li>Canada <span>(4,72%)</span></li>
 						<li class="diagram left"></li>
-						<li>République Tchèque</li>
+						<li>Belgique <span>(3,47%)</span></li>
+						<li class="diagram left"></li>
+						<li>Japon <span>(2,20%)</span></li>
+						<li class="diagram left"></li>
+						<li>Danemark <span>(2,15%)</span></li>
 						<li class="diagram left"></li>
 					</ul>
 					<ul id="biere_import">
@@ -290,7 +290,7 @@
 									.fillStyle(pv.Scale.linear(1.2, 1.4, 1.6, 2.0).range('#b52f46', '#952230', '#71161e','#521013'))
 									.startAngle(Math.PI)
 									.innerRadius(function() this.index * 10 + 40)
-									.outerRadius(function() this.index * 10 + 30)
+									.outerRadius(function() this.index * 10 + 25)
 									.startAngle(function() (s += .0005) * (this.index + 1))
 									.angle(function(d) d * 2);
 									
@@ -305,16 +305,16 @@
 									.height(200);
 
 									dataviz2.add(pv.Wedge)
-									.data([1.0, 1.2, 1.4, 1.8, 2.0])
+									.data([1.0, 1.2, 1.4, 1.8])
 									.left(100)
 									.top(100)
-									.fillStyle(pv.Scale.linear(1.0, 1.2, 1.4, 1.6, 2.0).range('#ffd62d', '#eec825', '#e4be1f', '#dbb61b','#ceaa14'))
+									.fillStyle(pv.Scale.linear(1.0, 1.2, 1.4, 1.8).range('#FFF000', '#FFE100', '#CCB400', '#7F7842'))
 									.startAngle(Math.PI)
 									.innerRadius(function() this.index * 10 + 40)
-									.outerRadius(function() this.index * 10 + 30)
+									.outerRadius(function() this.index * 10 + 25)
 									.startAngle(function() (s2 += .0005) * (this.index + 1))
 									.angle(function(d) d * 2);
-									
+
 									dataviz2.render();
 									//setInterval(function() dataviz2.render(), 50);
 								</script>

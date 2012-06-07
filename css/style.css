@@ -427,6 +427,7 @@
 	height:650px;
 	margin:100px auto;
 	position:relative;
+	display:none;
 }
 #import li.diagram, #export li.diagram{
 	width:0px;
