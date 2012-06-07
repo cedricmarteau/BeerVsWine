@@ -192,23 +192,27 @@ function creerStatsParRevenus(){
 //#import_export
 function data_production(){
 	var data_production_wine= new Array(50.50,47.12,36.45,23.00,15.50,14.50,10.50,9.62,8.33,8.28);
-	var data_production_beer= new Array(50.50,47.12,36.45,23.00,15.50,14.50,10.50,9.62,8.33,8.28);
+	var data_production_beer= new Array(233.50,167.70,98.90,58.10,31,17.30,15.50,12.10,11.90,3.50);
 	for (var i=0;i<10;i++){
 		$("#production_vin li.diagram").eq(i).animate({
-			width: data_production_wine[i]*4+"px"
+			width: data_production_wine[i]*2+"px"
 		}, 1500, 'easeInOutQuint');
 		$("#production_biere li.diagram").eq(i).animate({
-			width: data_production_wine[i]*4+"px"
+			width: data_production_beer[i]*2+"px"
 		}, 1500, 'easeInOutQuint');
 	}
 }
 function import_export(){
-	var data_import_wine= new Array(37,6.8,6.6,6.3,5.6,5.2,2.5,2.4,2.2,1.1);
+	var data_import_beer= new Array(37,6.8,6.6,6.3,5.6,5.2,2.5,2.4,2.2,1.1);
+	var data_import_wine= new Array(18,15.51,14.51,9.54,7.35,6.09,4.72,3.47,2.2,2.15);
 	var data_export_wine= new Array(34.9,18.0,9.3,8.7,4.3,3.6,3.5,3.0,2.4,1.8);
 	var data_export_beer= new Array(21,19,13,5,4.9,4,3.4,2.8,2.5,2.1);
 	for (var i=0;i<10;i++){
-		$("#biere_import li.diagram").eq(i).animate({
+		$("#vin_import li.diagram").eq(i).animate({
 			width: data_import_wine[i]*13+"px"
+		}, 1500, 'linear');
+		$("#biere_import li.diagram").eq(i).animate({
+			width: data_import_beer[i]*13+"px"
 		}, 1500, 'linear');
 		$("#biere_export li.diagram").eq(i).animate({
 			width: data_export_wine[i]*13+"px"
