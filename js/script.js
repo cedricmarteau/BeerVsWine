@@ -736,7 +736,7 @@ var listeCereales =$('#cereales ul li').not('.litreTxt');
 
 //listeGrape.css({'background-image':'none'});
 //listeCereales.css({'background-image':'none'});
-
+$('#litreEau #raisin, #litreEau #cereales').css({margin-top:1000});
 
 listeGrape.css({'background-size':0});
 listeCereales.css({'background-size':0});
