@@ -166,6 +166,26 @@
 	position: relative;
 	top: -17px;
 }
+
+#loadLeft{
+	width: 50%;
+	height: 100%;
+	background:#8e0c06;
+	float: left;
+	text-align: center;
+}
+
+#loadRight{
+	width: 50%;
+	height: 100%;
+	background: #fcd118;
+	float: right;
+	text-align: center;
+}
+
+#loadRight img, #loadLeft img{
+	margin-top: 100px;
+}
 /*------------------------------------*\
 	$PART 1 (greg)
 \*------------------------------------*/
