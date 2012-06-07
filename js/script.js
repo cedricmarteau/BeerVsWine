@@ -680,20 +680,47 @@ function nuage_tag(){
          });
 }
 function litre_eau(){
+
+var listeGrape = $('#raisin ul li').not('.litreTxt');
+var listeCereales =$('#cereales ul li').not('.litreTxt');
+
+//listeGrape.css({'background-image':'none'});
+//listeCereales.css({'background-image':'none'});
+
+
+listeGrape.css({'background-size':0});
+listeCereales.css({'background-size':0});
+
 	$('#litreEau #raisin, #litreEau #cereales').animate({marginTop:0}, 500,function(){
-		$('#litreEau ul').animate({bottom:0});
+		$('#litreEau ul').animate({bottom:0},function(){
+
+		for (var i = 0; i<listeCereales.size(); i++){
+			//listeCereales.css({'background-image':'url("img/12_goutte.png")'});
+			listeCereales.eq(i).delay(40*i).animate({'background-size':18});
+		}
+
+		for (var j = 0; j<listeGrape.size(); j++){
+			//listeGrape.css({'background-image':'url("img/12_goutte.png")'});
+			listeGrape.eq(j).delay(40*j).animate({'background-size':18});
+		}
+				
+		});
 	});
 
 
 	
-	$('#litreEau li').not('.litreTxt').hover(function(){
-		$(this).animate({'background-size':5});
+	listeGrape.hover(function(){
+		$(this).stop(true,true).animate({'background-size':5});
 	}, function(){
-		$(this).animate({'background-size':18});
+		$(this).stop(true,true).animate({'background-size':18});
 	});
 
-	var listeCereales =$('#cereales ul');
-	var listeGrape = $('#cereales ul');
+		listeCereales.hover(function(){
+		$(this).stop(true,true).animate({'background-size':5});
+	}, function(){
+		$(this).stop(true,true).animate({'background-size':18});
+	});
+
 }
 function internet(){
 	$('#internet').animate({'background-size':'960'}, 1000, 'easeOutExpo');
