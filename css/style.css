@@ -497,9 +497,13 @@
 	position:relative;
 }
 #nuage_carbon{
-	height:700px;
+	height:500px;
 	width:900px;
 	position:relative;
+}
+#empreinte_carbon strong{
+	font-family:'NovecentowideBold';
+	font-size:18px;
 }
 #clouds{
 	font-family:'NovecentowideBold';
@@ -516,10 +520,6 @@
 	position:absolute;
 	top:220px;
 	left:70px;
-}
-strong{
-	font-family:'NovecentowideBold';
-	font-size:18px;
 }
 #beer_cloud1{
 	width:160px;
