@@ -25,13 +25,8 @@ $(document).ready(function(){
 	risk_of_death();
 	internet();
 	lesPlus();
-<<<<<<< HEAD
-	
 	carbon();
-	
-=======
 	calorie();
->>>>>>> calorie en commentaire 1ier page
 	
 	setTimeout(animateMenu, 400);
 });
