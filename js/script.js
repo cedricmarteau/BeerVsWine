@@ -902,47 +902,161 @@ function lesPlus(){
 
 
 function calorie() {
+	var calorieIndex=0;
+	var calorieSportIcon= new Array('arc','baby','natation','golf','musculation');
+	var calorieSportText= new Array("de tir à l'arc","de baby-sitting","de natation","de golf","de musculation");
+	
+	calorieVinRouge=105;
+	calorieVinRougeOrigin=0;
+	
+	calorieVinBlanc=108;
+	calorieVinBlancOrigin=0;
+	
+	calorieBiere1=200;
+	calorieBiere1Origin=0;
+	
+	calorieBiere2=187;
+	calorieBiere2Origin=0;
+	
+	calorieBiere3=210;
+	calorieBiere3Origin=0;
+
 	$('#calorieBiere .calorieLiquide').stop(true,false).animate({'margin-top':'-86px'},1000);
 	$('#calorieVin .calorieLiquide').stop(true,false).animate({'margin-top':'-56px'},1000);
 	
 	$('#calorieRouge').hover(function(){
+		calorieVinRougeOrigin=0;
+		calorieVinBlancOrigin=0;
+		calorieBiere1Origin=0;
+		calorieBiere2Origin=0;
+		calorieBiere3Origin=0;
+		$('#calorieIcon').html('');
 		$('#calorieVin #calorieRouge #calorieRouge1').stop(true,false).animate({'margin-top':'-16px'},300,function(){
 			$('#calorieVin #calorieRouge #calorieRouge2').stop(true,false).animate({'margin-top':'-16px'},300,function(){
 				$('#calorieVin #calorieRouge #calorieRouge3').stop(true,false).animate({'margin-top':'-16px'},300);
 			});
 		});
+		if (calorieVinRougeOrigin==0) {
+			$('#calorieText p span').text(0);
+			var timerRouge =setInterval(function(){
+				calorieVinRougeOrigin+=1;
+        		$('#calorieText p span').text(calorieVinRougeOrigin);
+       			if(calorieVinRougeOrigin==calorieVinRouge){
+	    			clearInterval(timerRouge);
+        			calorieVinRougeOrigin = calorieVinRouge;
+        			
+        			$('#calorieIcon').html('<img src="img/9_'+calorieSportIcon[0]+'.png" /><p>'+calorieSportText[0]+'</p>');
+        		}
+			}, 1);
+		}
 	}, function(){
 		$('#calorieVin #calorieRouge .calorieLiquide').stop(true,false).animate({'margin-top':'-56px'},1000);
 	});
 	
 	
 	$('#calorieBlanc').hover(function(){
+		calorieVinRougeOrigin=0;
+		calorieVinBlancOrigin=0;
+		calorieBiere1Origin=0;
+		calorieBiere2Origin=0;
+		calorieBiere3Origin=0;
+		$('#calorieIcon').html('');
 		$('#calorieVin #calorieBlanc #calorieBlanc1').stop(true,false).animate({'margin-top':'-16px'},300,function(){
 			$('#calorieVin #calorieBlanc #calorieBlanc2').stop(true,false).animate({'margin-top':'-16px'},300,function(){
 				$('#calorieVin #calorieBlanc #calorieBlanc3').stop(true,false).animate({'margin-top':'-16px'},300);
 			});
 		});
+		if (calorieVinBlancOrigin==0) {
+			$('#calorieText p span').text(0);
+			var timerBlanc =setInterval(function(){
+				calorieVinBlancOrigin+=1;
+        		$('#calorieText p span').text(calorieVinBlancOrigin);
+       			if(calorieVinBlancOrigin==calorieVinBlanc){
+	    			clearInterval(timerBlanc);
+        			calorieVinBlancOrigin = calorieVinBlanc;
+        			
+        			$('#calorieIcon').html('<img src="img/9_'+calorieSportIcon[1]+'.png" /><p>'+calorieSportText[1]+'</p>');
+        		}
+			}, 1);
+		}	
 	}, function(){
 		$('#calorieVin #calorieBlanc .calorieLiquide').stop(true,false).animate({'margin-top':'-56px'},1000);
 	});
 	
 	
 	$('#calorieBiereGlasses1').hover(function(){
+		calorieVinRougeOrigin=0;
+		calorieVinBlancOrigin=0;
+		calorieBiere1Origin=0;
+		calorieBiere2Origin=0;
+		calorieBiere3Origin=0;
+		$('#calorieIcon').html('');
 		$('.calorieLiquide#calorieBiere1').stop(true,false).animate({'margin-top':'-0px'}, 500);
+		if (calorieBiere1Origin==0) {
+			$('#calorieText p span').text(0);
+			var timerBiere1 =setInterval(function(){
+				calorieBiere1Origin+=1;
+        		$('#calorieText p span').text(calorieBiere1Origin);
+       			if(calorieBiere1Origin==calorieBiere1){
+	    			clearInterval(timerBiere1);
+        			calorieBiere1Origin = calorieBiere1;
+        			
+        			$('#calorieIcon').html('<img src="img/9_'+calorieSportIcon[2]+'.png" /><p>'+calorieSportText[2]+'</p>');
+        		}
+			}, 1);
+		}
 	}, function(){
 		$('.calorieLiquide#calorieBiere1').stop(true,false).animate({'margin-top':'-86px'}, 500);
 	});
 	
 	
 	$('#calorieBiereGlasses2').hover(function(){
+		calorieVinRougeOrigin=0;
+		calorieVinBlancOrigin=0;
+		calorieBiere1Origin=0;
+		calorieBiere2Origin=0;
+		calorieBiere3Origin=0;
+		$('#calorieIcon').html('');
 		$('.calorieLiquide#calorieBiere2').stop(true,false).animate({'margin-top':'-0px'}, 500);
+		if (calorieBiere2Origin==0) {
+			$('#calorieText p span').text(0);
+			var timerBiere2 =setInterval(function(){
+				calorieBiere2Origin+=1;
+        		$('#calorieText p span').text(calorieBiere2Origin);
+       			if(calorieBiere2Origin==calorieBiere2){
+	    			clearInterval(timerBiere2);
+        			calorieBiere2Origin = calorieBiere2;
+        			
+        			$('#calorieIcon').html('<img src="img/9_'+calorieSportIcon[3]+'.png" /><p>'+calorieSportText[3]+'</p>');
+        		}
+			}, 1);
+		}
 	}, function(){
 		$('.calorieLiquide#calorieBiere2').stop(true,false).animate({'margin-top':'-86px'}, 500);
 	});
 	
 	
 	$('#calorieBiereGlasses3').hover(function(){
+		calorieVinRougeOrigin=0;
+		calorieVinBlancOrigin=0;
+		calorieBiere1Origin=0;
+		calorieBiere2Origin=0;
+		calorieBiere3Origin=0;
+		$('#calorieIcon').html('');
 		$('.calorieLiquide#calorieBiere3').stop(true,false).animate({'margin-top':'-0px'}, 500);
+		if (calorieBiere3Origin==0) {
+			$('#calorieText p span').text(0);
+			var timerBiere3 =setInterval(function(){
+				calorieBiere3Origin+=1;
+        		$('#calorieText p span').text(calorieBiere3Origin);
+       			if(calorieBiere3Origin==calorieBiere3){
+	    			clearInterval(timerBiere3);
+        			calorieBiere3Origin = calorieBiere3;
+        			
+        			$('#calorieIcon').html('<img src="img/9_'+calorieSportIcon[4]+'.png" /><p>'+calorieSportText[4]+'</p>');
+        		}
+			}, 1);
+		}
 	}, function(){
 		$('.calorieLiquide#calorieBiere3').stop(true,false).animate({'margin-top':'-86px'}, 500);
 	});
