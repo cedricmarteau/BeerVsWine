@@ -5,7 +5,29 @@ var animating=false;
 
 var indexItem=0;
 
+var fProd1;
+var fProd2;
+var fConsom1;
+var fConsom2;
+var fSante1;
+var fSante2;
+var fSante3;
+var fEnv1;
+var fEnv2;
+var fInt;
+var fDivers;
+
+
 $(document).ready(function(){
+
+	$("body").queryLoader2({
+	       barColor: "#6e6d73",
+	       backgroundColor: "#fff1b0",
+	       percentage: true,
+	       barHeight: 30,
+	       completeAnimation: "grow"
+	   });
+	  
 	resizeContent();
 	setZindex();
 	setSubZindex();
@@ -13,18 +35,18 @@ $(document).ready(function(){
 	
 	
 	production_mondiale();
-	data_production();
-	import_export();
-	more_consume();
-	best_consom();
-	creerStatsParSexe();
-	creerStatsParAge();
-	creerStatsParRevenus();
-	nuage_tag();
-	litre_eau();
-	risk_of_death();
-	internet();
-	lesPlus();
+	//data_production();
+	//import_export();
+	//more_consume();
+	//best_consom();
+	//creerStatsParSexe();
+	//creerStatsParAge();
+	//creerStatsParRevenus();
+	//nuage_tag();
+	//litre_eau();
+	//risk_of_death();
+	//internet();
+	//lesPlus();
 	
 	
 	setTimeout(animateMenu, 400);
@@ -46,7 +68,7 @@ function resizeContent(){
 	windowHeight = $(window).height();
 	
 	var content = $("#content");
-	content.css({'width' : windowWidth, 'height' : windowHeight}).find(".pages").css({'width' : windowWidth, 'height' : windowHeight});
+	content.css({'width' : windowWidth, 'height' : windowHeight}).find(".pages").css({'width' : windowWidth, 'height' : windowHeight}).find(".subpages").css({'width' : windowWidth-10, 'height' : windowHeight-10});
 }
 
 function setZindex(){
@@ -102,6 +124,7 @@ $(document).keydown(function(event){
 				pages.eq(indexCurrent+1).addClass("current");
 				setZindex();
 				setPagePos();
+				checkPage();
 			});
 			
 		}
@@ -122,6 +145,7 @@ $(document).keydown(function(event){
 				pages.eq(indexCurrent-1).addClass("current");
 				setZindex();
 				setPagePos();
+				checkPage();
 			});
 			
 		}
@@ -146,6 +170,8 @@ $(document).keydown(function(event){
 					setSubZindex();
 					setSubPagePos();
 					animateSubMenu();
+					checkPage();
+					
 				});
 			});
 			
@@ -172,6 +198,7 @@ $(document).keydown(function(event){
 					setSubZindex();
 					setSubPagePos();
 					animateSubMenu();
+					checkPage();
 				});
 			});
 		}
@@ -212,5 +239,57 @@ function animateSubMenu(){
 	currentItem.find("h3").html(value).delay(100).animate({"top":"0px"}, 400);
 }
 
-
-
+function checkPage(){
+	var currentPage = ($(".current .subCurrent").attr("id"));
+	
+	if(currentPage == "production2" && fProd2!=false){
+		fProd2 = false;
+		setTimeout(data_production, 500)
+	}
+	if(currentPage == "production3" && fProd3!=false){
+		fProd3 = false;
+		setTimeout(data_production, 500)
+	}
+	if(currentPage == "consommation1" && fConsom1!=false){
+		fConsom1 = false;
+		setTimeout(more_consume, 500)
+	}
+	if(currentPage == "consommation3" && fConsom3!=false){
+		fConsom3 = false;
+		//setTimeout(more_consume, 500)
+	}
+	if(currentPage == "consommation2" && fConsom2!=false){
+		fConsom2 = false;
+		setTimeout(creerStatsParSexe, 500)
+		setTimeout(creerStatsParAge, 3000)
+		setTimeout(creerStatsParRevenus, 6000)
+	}
+	if(currentPage == "sante1" && fSante1!=false){
+		fSante1 = false;
+		setTimeout(nuage_tag, 500)
+	}
+	if(currentPage == "sante2" && fSante2!=false){
+		fSante2 = false;
+		//setTimeout(litre_eau, 500)
+	}
+	if(currentPage == "sante3" && fSante3!=false){
+		fSante3 = false;
+		risk_of_death();
+	}
+	if(currentPage == "environnement1" && fEnv1!=false){
+		fEnv1 = false;
+		//setTimeout(nuage_tag, 500)
+	}
+	if(currentPage == "environnement2" && fEnv2!=false){
+		fEnv2 = false;
+		setTimeout(litre_eau, 500)
+	}
+	if(currentPage == "internet1" && fInt!=false){
+		fInt = false;
+		setTimeout(internet, 500)
+	}
+	if(currentPage == "divers1" && fDivers!=false){
+		fDivers = false;
+		setTimeout(lesPlus, 500)
+	}
+}
