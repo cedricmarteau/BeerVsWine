@@ -303,7 +303,7 @@ function checkPage(){
 	}
 	if(currentPage == "sante2" && fSante2!=false){
 		fSante2 = false;
-		//setTimeout(litre_eau, 500)
+		setTimeout(calorie, 500)
 	}
 	if(currentPage == "sante3" && fSante3!=false){
 		fSante3 = false;

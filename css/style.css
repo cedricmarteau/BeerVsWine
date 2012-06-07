@@ -307,6 +307,7 @@
 	
 	height:13px;
 	background-color: red;
+	width: 0px;
 }
 .biereAge .pourcentageAge{
 	background : url(../img/texture_biere.png);
