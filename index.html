@@ -8,8 +8,9 @@
 		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/raphael-min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/protovis.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/easing.1.3.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery-ui-1.8.20.custom.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
@@ -103,49 +104,548 @@
 				<section id="production" class="pages current">
 					<section id="production1" class="subpages subCurrent">
 					<h2>Production Mondiale</h2>
+
+						
+						<div id="production_mondial">
+							<div id="animation2">
+								<div id="blocAnimation_2">
+
+									<div id="bouteilles_2">
+										<div id="vin_2">
+											<img src="img/2_vin.png"/>
+											<p id ="nbVin2">260</p>
+										</div>
+										<div id="biere_2">
+											<img src="img/2_biere.png"/>
+											<p id ="nbBiere2">1400</p>
+										</div>
+									</div>
+
+									<div id="graduation_2">
+										<img src="img/2_fleche.png">
+									</div>
+
+								</div>
+
+								<div id="tiret21"></div>
+								<div id="tiret22"></div>
+							</div>
+						</div>
+						
+					
 					</section>
 					<section id="production2" class="subpages">
 					<h2>Production/import/export par pays</h2>
+						<div id="marche">
+							<div id="axe_ord">
+							</div>
+							<ul id="production_vin">
+								<li><span>(50,50)</span> Italie</li>
+								<li class="diagram left"></li>
+								<li><span>(47,12)</span> France</li>
+								<li class="diagram left"></li>
+								<li><span>(36,45)</span> Espagne</li>
+								<li class="diagram left"></li>
+								<li><span>(23)</span> États-Unis</li>
+								<li class="diagram left"></li>
+								<li><span>(15,50)</span> Argentine</li>
+								<li class="diagram left"></li>
+								<li><span>(14,50)</span> Chine</li>
+								<li class="diagram left"></li>
+								<li><span>(10,50)</span> Afrique du Sud</li>
+								<li class="diagram left"></li>
+								<li><span>(9,62)</span> Australie</li>
+								<li class="diagram left"></li>
+								<li><span>(8,33)</span> Allemagne</li>
+								<li class="diagram left"></li>
+								<li><span>(8,28)</span> Chili</li>
+								<li class="diagram left"></li>
+							</ul>
+							<ul id="production_biere">
+								<li>États-Unis (233.50)</li>
+								<li class="diagram"></li>
+								<li>France (167.70)</li>
+								<li class="diagram"></li>
+								<li>Royaume-Uni (98.90)</li>
+								<li class="diagram"></li>
+								<li>Italie (58.10)</li>
+								<li class="diagram"></li>
+								<li>Canada (31)</li>
+								<li class="diagram"></li>
+								<li>Allemagne (17.30)</li>
+								<li class="diagram"></li>
+								<li>Pays-bas (15.50)</li>
+								<li class="diagram"></li>
+								<li>Espagne (12.10)</li>
+								<li class="diagram"></li>
+								<li>Irlande (11.90)</li>
+								<li class="diagram"></li>
+								<li>Méxique (3.50)</li>
+								<li class="diagram"></li>
+							</ul>
+						</div>
+						<div id="import">
+							<ul id="vin_import">
+								<li>Allemagne <span>(18%)</span></li>
+								<li class="diagram left"></li>
+								<li>Royaume-Uni <span>(15,51%)</span></li>
+								<li class="diagram left"></li>
+								<li>États-Unis <span>(14,51%)</span></li>
+								<li class="diagram left"></li>
+								<li>France <span>(9,54%)</span></li>
+								<li class="diagram left"></li>
+								<li>Russie <span>(7,35%)</span></li>
+								<li class="diagram left"></li>
+								<li>Pays-Bas <span>(2,09%)</span></li>
+								<li class="diagram left"></li>
+								<li>Canada <span>(4,72%)</span></li>
+								<li class="diagram left"></li>
+								<li>Belgique <span>(3,47%)</span></li>
+								<li class="diagram left"></li>
+								<li>Japon <span>(2,20%)</span></li>
+								<li class="diagram left"></li>
+								<li>Danemark <span>(2,15%)</span></li>
+								<li class="diagram left"></li>
+							</ul>
+							<ul id="biere_import">
+								<li>États-Unis <span>(37%)</span></li>
+								<li class="diagram"></li>
+								<li>France <span>(6,8%)</span></li>
+								<li class="diagram"></li>
+								<li>Royaume-Uni <span>(6,6%)</span></li>
+								<li class="diagram"></li>
+								<li>Italy <span>(6,3%)</span></li>
+								<li class="diagram"></li>
+								<li>Canada <span>(5,6%)</span></li>
+								<li class="diagram"></li>
+								<li>Allemagne <span>(5,2%)</span></li>
+								<li class="diagram"></li>
+								<li>Pays-Bas <span>(2,5%)</span></li>
+								<li class="diagram"></li>
+								<li>Espagne <span>(2,4%)</span></li>
+								<li class="diagram"></li>
+								<li>Ireland <span>(2,2%)</span></li>
+								<li class="diagram"></li>
+								<li>Méxique <span>(1,1%)</span></li>
+								<li class="diagram"></li>
+							</ul>
+						</div>
+						<div id="export">
+							<ul id="vin_export">
+								<li><span>(34,9%)</span> Italie</li>
+								<li class="diagram left"></li>
+								<li><span>(18%)</span> France</li>
+								<li class="diagram left"></li>
+								<li><span>(9,3%)</span> Australie</li>
+								<li class="diagram left"></li>
+								<li><span>(8,7%)</span> Espagne</li>
+								<li class="diagram left"></li>
+								<li><span>(4,3%)</span> Chili</li>
+								<li class="diagram left"></li>
+								<li><span>(3,6%)</span> États-Unis</li>
+								<li class="diagram left"></li>
+								<li><span>(3,5%)</span> Allemagne</li>
+								<li class="diagram left"></li>
+								<li><span>(3%)</span> Portugal</li>
+								<li class="diagram left"></li>
+								<li><span>(2,4%)</span> Afrique du sud</li>
+								<li class="diagram left"></li>
+								<li><span>(1,8%)</span> Nouvelle-Zélande</li>
+								<li class="diagram left"></li>
+							</ul>
+							<ul id="biere_export">
+								<li>Méxique <span>(21%)</span></li>
+								<li class="diagram"></li>
+								<li>Pays-Bas <span>(19%)</span></li>
+								<li class="diagram"></li>
+								<li>Allemagne <span>(13%)</span></li>
+								<li class="diagram"></li>
+								<li>Irlande <span>(5%)</span></li>
+								<li class="diagram"></li>
+								<li>Royaume-Uni <span>(4,9%)</span></li>
+								<li class="diagram"></li>
+								<li>Danemark <span>(4%)</span></li>
+								<li class="diagram"></li>
+								<li>États-Unis <span>(3,4%)</span></li>
+								<li class="diagram"></li>
+								<li>France <span>(2,8%)</span></li>
+								<li class="diagram"></li>
+								<li>Canada <span>(2,5%)</span></li>
+								<li class="diagram"></li>
+								<li>République Tchèque <span>(2%)</span></li>
+								<li class="diagram"></li>
+							</ul>
+						</div>
 					</section>
 				</section>
 				<section id="consommation" class="pages">
 					<section id="consommation1" class="subpages subCurrent">
 					<h2>Les plus gros consommateurs</h2>
+						<div id="plus_consom">
+						</div>
 					</section>
 					<section id="consommation2" class="subpages">
 					<h2>Consommation par age/sexe/revenue/</h2>
+						<div id="consommationPar">
+							<h2 id="parAgeTitre">par âge</h2>
+							<div id="parSexe">
+								<div id="masqueParSexe"></div>
+								<div id="statsParSexe">
+									<!--div id="statsHomme"></div>
+									<div id="statsFemme"></div-->
+								</div>
+							</div>
+
+							<div id="age">
+								
+								<div id="jeune">
+									<div class="VinAge">
+										<p>25%</p>
+										<div class="pourcentageAge"></div>
+									</div>
+									<img src="img/6_jeune.png"/>
+									<div class="biereAge">
+										<p>39%</p>
+										<div class="pourcentageAge"></div>
+									</div>
+								</div>
+								<div id="adulte">
+									<div class="VinAge">
+										<p>31%</p>
+										<div class="pourcentageAge"></div>
+									</div>
+									<img src="img/6_adulte.png"/>
+									<div class="biereAge">
+										<p>41%</p>
+										<div class="pourcentageAge"></div>
+									</div>
+								</div>
+								<div id="vieux">
+									<div class="VinAge">
+										<p>47%</p>
+										<div class="pourcentageAge"></div>
+									</div>
+									<img src="img/6_vieux.png"/>
+									<div class="biereAge">
+										<p>27%</p>
+										<div class="pourcentageAge"></div>
+									</div>
+								</div>
+							</div>
+							<div id="revenus">
+								<h2>par revenue</h2>
+								<div id="pauvres">
+									<div class="bierreRevenus">
+										<div class="jaugeRevenus"></div>
+									</div>
+									<div class="texteRevenus">
+										<p>23 000€ / an (et moins)</p>
+									</div>
+									<div class="vinRevenus">
+										<div class="jaugeRevenus"></div>
+									</div>
+								</div>
+								<div id="moyens">
+									<div class="bierreRevenus">
+										<div class="jaugeRevenus"></div>
+									</div>
+									<div class="texteRevenus">
+										<p>24 000€ À 59000€ / An</p>
+									</div>
+									<div class="vinRevenus">
+										<div class="jaugeRevenus"></div>
+									</div>
+								</div>
+								<div id="riches">
+									<div class="bierreRevenus">
+										<div class="jaugeRevenus"></div>
+									</div>
+									<div class="texteRevenus">
+										<p>60 000€ / an (et plus)</p>
+									</div>
+									<div class="vinRevenus">
+										<div class="jaugeRevenus"></div>
+									</div>
+								</div>
+
+							</div>
+						</div>
 					</section>
 					<section id="consommation3" class="subpages">
 					<h2>Consommation par type de boissons</h2>
+						<div id="best_consom">
+						</div>
 					</section>
 				</section>
 				<section id="sante" class="pages">
 					<section id="sante1" class="subpages subCurrent">
 					<h2>Bénéfices</h2>
+						<!-- Début nuage de tag --> 
+						<div id="nuageDeTag">
+							<p id="nuageLine1">
+								<a href="#" name="nuageText01 vin" class="nuageBold nuageVin">longévité</a>
+								<a href="#" name="nuageText02 vin" class="nuageBook nuageVin">santé cérébrale</a>
+								<a href="#" name="nuageText03 biere" class="nuageBook nuageBiere">os plus solide</a>
+								<a href="#" name="nuageText04 biere" class="nuageBold nuageBiere">vitamine</a>
+							</p>
+							<p id="nuageLine2">
+								<a href="#" name="nuageText05 vin" class="nuageBook nuageVin">santé du coeur</a>
+								<a href="#" name="nuageText06 vin" class="nuageBold nuageVin">cancer du poumon</a>
+								<a href="#" name="nuageText07 biere" class="nuageBold nuageBiere">rein plus sains</a>
+								<a href="#" name="nuageText08 biere" class="nuageBook nuageBiere">longévité</a>
+							</p>
+							<p id="nuageLine3">
+								<a href="#" name="nuageText09 vin" class="nuageBold nuageVin">cancer de la prostate</a>
+								<a href="#" name="nuageText10 vin" class="nuageBook nuageVin">froid</a>
+								<a href="#" name="nuageText11 biere" class="nuageBook nuageBiere">coeur plus solide</a>
+								<a href="#" name="nuageText12 biere" class="nuageBold nuageBiere">diabète</a>
+							</p>
+							<p id="nuageLine4">
+								<a href="#" name="nuageText13 vin" class="nuageBook nuageVin">cancer du sein</a>
+								<a href="#" name="nuageText14 vin" class="nuageBold nuageVin">cholesterol</a>
+								<a href="#" name="nuageText15 biere" class="nuageBold nuageBiere">santé cérébrale</a>
+								<a href="#" name="nuageText16 biere" class="nuageBook nuageBiere">pression arterielle</a>
+							</p>
+							<p id="nuageLine5">
+								<a href="#" name="nuageText17 vin" class="nuageBold nuageVin">inflammation</a>
+								<a href="#" name="nuageText18 biere" class="nuageBook nuageBiere">prévient des attaques</a>
+								<a href="#" name="nuageText19 biere" class="nuageBold nuageBiere">réduit les risques de cancer</a>
+							</p>						
+						</div>
+						<div id="nuageDetails">
+							<div id="nuageTexte"></div>
+							<div id="nuageIconVin"></div>
+							<div id="nuageIconBiere"></div>
+						</div>
+						<!-- Fin nuage de tag --> 
 					</section>
 					<section id="sante2" class="subpages">
 					<h2>Calories</h2>
+					<div id="calorieContent">
+							<div id="calorieTop">
+								<div id="calorieVin">
+									<div id="calorieRouge">
+										<div class="calorieRougeGlasses"></div>
+										<div class="calorieRougeGlasses"></div>
+										<div class="calorieRougeGlasses"></div>
+										
+										<div class="calorieLiquide" id="calorieRouge1"></div>
+										<div class="calorieLiquide" id="calorieRouge2"></div>
+										<div class="calorieLiquide" id="calorieRouge3"></div>
+									</div>
+									<div id="calorieBlanc">
+										<div id="calorieBlancGlasses"></div>
+										<div id="calorieBlancGlasses"></div>
+										<div id="calorieBlancGlasses"></div>
+										
+										<div class="calorieLiquide" id="calorieBlanc1"></div>
+										<div class="calorieLiquide" id="calorieBlanc2"></div>
+										<div class="calorieLiquide" id="calorieBlanc3"></div>
+									</div>
+								</div>
+								<div id="calorieBiere">
+									<div id="calorieBiereGlasses1"></div>
+									<div id="calorieBiereGlasses2"></div>
+									<div id="calorieBiereGlasses3"></div>
+									
+									<div class="calorieLiquide" id="calorieBiere1"></div>
+									<div class="calorieLiquide" id="calorieBiere2"></div>
+									<div class="calorieLiquide" id="calorieBiere3"></div>
+								</div>
+							</div>
+							<div id="calorieBottom">
+								<div id="calorieText">
+									<p><span>0</span></br>calories</p>
+								</div>
+								<div id="calorieIcon">
+								</div>								
+							</div>
+						</div>
 					</section>
 					<section id="sante3" class="subpages">
 					<h2>Risques</h2>
+					<div id="death">
+					</div>
 					</section>
 				</section>
 				<section id="environnement" class="pages">
 					<section id="environnement1" class="subpages subCurrent">
 					<h2>Empreinte carbone</h2>
+					<div id="empreinte_carbon">
+						<div id="legend_wine">
+							<ul id="legend_wine_txt">
+								<li>Matières & ingrédients (50%)</li>
+								<li>Manufacture (20%)</li>
+								<li>Distribution (20%)</li>
+								<li>Recyclage (10%)</li>
+							</ul>
+						</div>
+						<div id="legend_beer">
+							<div id="legend_beer_2"></div>
+							<ul id="legend_beer_txt">
+								<li>(41%) Matières & ingrédients</li>
+								<li>(34%) Manufacture</li>
+								<li>(17%) Distribution</li>
+								<li>(5%) Fermentation</li>
+								<li>(3%) Packaging</li>
+							</ul>
+						</div>
+						<div id="legend_beer">
+						</div>
+						<table id="provenance_wine_beer">
+							<tr>
+								<td>
+									<!-- 100% = 3.2 -->
+									<script type="text/javascript+protovis">
+										var s = 0, dataviz = new pv.Panel()
+										.width(200)
+										.height(200);
+
+										dataviz.add(pv.Wedge)
+										.data([0.32, 0.74, 0.64, 1.6])
+										.left(100)
+										.top(100)
+										.fillStyle(pv.Scale.linear(0.32, 0.74, 0.64, 1.6).range('#521013','#952230','#901b20','#b52f46'))
+										.startAngle(Math.PI)
+										.innerRadius(function() this.index * 5 + 40)
+										.outerRadius(function() this.index * 5 + 25)
+										.startAngle(function() (s += .0005) * (this.index + 1))
+										.angle(function(d) d * 2);
+
+										//dataviz.render();
+										setInterval(function() dataviz.render(), 50);
+									</script>
+								</td>
+								<td>
+									<!-- BIERE // 100% = 3.2 -->
+									<script type="text/javascript+protovis">
+										var s2 =0, dataviz2 = new pv.Panel()
+										.width(200)
+										.height(200);
+
+										dataviz2.add(pv.Wedge)
+										.data([0.096, 0.16, 0.54, 1.09, 1.31])
+										.left(100)
+										.top(100)
+										.fillStyle(pv.Scale.linear(0.096, 0.16, 0.54, 1.09, 1.31).range('#867f45','#ABA259','#CCB400','#FFE100','#FFF000'))
+										.startAngle(Math.PI)
+										.innerRadius(function() this.index * 5 + 40)
+										.outerRadius(function() this.index * 5 + 25)
+										.startAngle(function() (s2 += .0005) * (this.index + 1))
+										.angle(function(d) d * 2);
+
+										//dataviz2.render();
+										setInterval(function() dataviz2.render(), 50);
+									</script>
+								</td>
+							</tr>
+						</table>
+					</div>
 					</section>
 					<section id="environnement2" class="subpages">
 					<h2>Litres d’eau pour la production</h2>
+						<!-- Début litre d'eau --> 
+						<div id="litreEau">
+							<div id="raisin">
+								<ul>
+									<li></li><li></li>
+									<li class="hugoclr"></li><li></li><li></li><li></li><li></li>
+									<li></li><li></li><li></li><li></li><li></li>
+									<li></li><li></li><li></li><li></li><li></li>
+									<li></li><li></li><li></li><li></li><li></li>
+									<li></li><li></li><li></li><li></li><li></li>
+									<li></li><li></li><li></li><li></li><li></li>
+									<li class="litreTxt" ></li>
+								</ul>
+							</div>
+							<div id="cereales">
+								<ul>
+									<li></li><li></li><li></li><li></li><li></li>
+									<li></li><li></li><li></li><li></li><li></li>
+									<li class="litreTxt" ></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Fin litre d'eau -->
 					</section>
 				</section>
 				<section id="internet" class="pages">
 					<section id="internet1" class="subpages subCurrent">
-					<h2>Google/Facebook/Twitter</h2>
+					<h2>Internet & Réseaux sociaux</h2>
+						<div id="internet">
+							<div id="conteneurInternet">
+								<div id="twitter">
+									<div class="tweet vin">
+										<p><span></span></br>tweets par minute</p>
+									</div>
+									<div class="tweet biere">
+										<p><span></span></br>tweets par minute</p>
+									</div>
+								</div>
+								<div id="google">
+									<div class="googl vin">
+										<p>Environ <span></span> millions de résultats</p>
+									</div>
+									<div class="googl biere">
+										<p>Environ <span></span> millions de résultats</p>
+									</div>
+								</div>
+								<div id="facebook">
+									<div class="faceb vin">
+										<p><span class="likeCount"></span> personnes aiment le vin</br>
+										<span class="speakCount"></span> en parlent</p>
+									</div>
+									<div class="faceb biere">
+										<p><span class="likeCount"></span> personnes aiment le vin</br>
+										<span class="speakCount"></span> en parlent</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</section>
 				</section>
 				<section id="divers" class="pages">
 					<section id="divers1" class="subpages subCurrent">
-					<h2>+cher/+alcoolisé/+plus vieux</h2>
+					<h2>Divers</h2>
+						<div id="lesPlus">
+					 			<div id="lesPlusChere">
+					 				<h3>Le Plus cher</h3>
+					 				<div class="leftPlus">
+					 					<p>château cheval blanc 1947</br><span id="plusChereLeft">224000</span> €</p>
+					 					<div id="plusChereLeftProgress"></div>
+					 				</div>
+					 				<img src="img/14_picto1.png" />
+					 				<div class="rightPlus">
+					 					<p>The End of History</br><span id="plusChereRight">625</span> €</p>
+					 					<div id="plusChereRightProgress"></div>
+					 				</div>
+					 			</div>
+								<div id="lesPlusAlcool">
+									<h3>Le Plus alcoolisé</h3>
+									<div class="leftPlus">
+										<p><span id="plusAlcoolLeft">16</span> °</p>
+										<div id="plusAlcoolLeftProgress"></div>
+									</div>
+									<img src="img/14_picto2.png" />
+									<div class="rightPlus">
+										<p><span id="plusAlcoolRight">55</span> °</p>
+										<div id="plusAlcoolRightProgress"></div>
+									</div>
+								</div>
+								<div id="lesPlusVieux">
+									<h3>Les Plus vieilles bouteilles</h3>
+									<div class="leftPlus">
+										<p><span id="plusVieuxLeft">1650</span> ans</p>
+										<div id="plusVieuxLeftProgress"></div>
+									</div>
+									<img src="img/14_picto3.png" />
+									<div class="rightPlus">
+										<p><span id="plusVieuxRight">200</span> ans</p>
+										<div id="plusVieuxRightProgress"></div>
+									</div>
+								</div>
+							</div>
+							
 					</section>
 				</section>
 			</section>

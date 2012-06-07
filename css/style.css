@@ -52,7 +52,8 @@
 	color: #a2d4dd;
 	margin-left: 10px;
 	margin-top: 5px;
-	width: 310px;
+	width: 410px;
+	position: absolute;
 }
 
 .pages{
@@ -209,6 +210,160 @@
 #tiret21{margin-top:532px;}
 #tiret22{margin-top:42px;}
 
+/*------------------------------------------------------------------Alcool préféré par ...------------------*/
+#consommationPar{
+	width:960px;
+	margin:0px auto;
+}
+
+#consommationPar #parAgeTitre{
+	position:relative;
+	text-align:right;
+	margin-left:580px;
+}
+
+
+#parSexe{
+	display: inline-block;
+	width:339px;
+	height:332px;
+	border-right:#ebebeb solid 2px;
+	margin-left:130px;
+	margin-top:00px;
+}
+
+#parSexe #masqueParSexe{
+	z-index:2;
+	position: absolute;
+	width:339px;
+	height:332px;
+	background:url(../img/6_sexe.png) no-repeat;
+}
+
+#parSexe #statsParSexe{
+	z-index:1;
+	position: absolute;
+	width:339px;
+	height:332px;
+}
+
+/*-----------------------------------âge-----------------*/
+#age{
+	height:332px;
+	display: inline-block;
+	margin-left:114px;
+}
+
+#age #jeune {
+	margin-top:22px;
+}
+
+#age>div{
+	width:232px;
+	height:85px;
+}
+
+.biereAge,.VinAge,#age img{
+	width:90px;
+	height:85px;
+	display: block;
+	float: left;
+}
+
+.VinAge p{
+	padding-top: 45px;
+	text-align:right;
+}
+
+.biereAge p{
+	padding-top: 45px;
+}
+
+#age img{
+	width:50px;
+}
+
+.pourcentageAge{
+	
+	height:13px;
+	background-color: red;
+}
+.biereAge .pourcentageAge{
+	background : url(../img/texture_biere.png);
+}
+
+.VinAge .pourcentageAge{
+	background : url(../img/texture_vin.png);
+	float: right;
+}
+
+
+/*-----------------------------------revenus-----------------*/
+
+#revenus{
+	border-top:#ebebeb solid 2px;
+	width:600px;
+	height:224px;
+	margin-left:170px;
+}
+
+#revenus #pauvres{
+	margin-left:94px;
+}
+
+.texteRevenus{
+	height:60px;
+}
+
+.texteRevenus{
+	margin-top:40px;
+	margin-top:10px;
+}
+
+.texteRevenus p{
+	text-align:center;
+}
+
+#revenus>div{
+	display: inline-block;
+	height:224px;
+	width:140px;
+	color: #393939;
+	font-size:16px;
+}
+
+#revenus .bierreRevenus, #revenus .vinRevenus{
+	height:94px;
+	position: relative;
+}
+
+#revenus h2{
+	margin-left:160px;
+	margin-top:10px;
+}
+
+#pauvres, #moyens, #riches{
+	margin-top:65px;
+}
+
+#revenus p{
+	height:36px;
+}
+
+#revenus .jaugeRevenus{
+	width: 140px;
+	height:0px;
+}
+
+#revenus .bierreRevenus .jaugeRevenus{
+	background:url(../img/6_revenusBiere.png);
+	position:absolute; bottom:0;
+}
+
+#revenus .vinRevenus .jaugeRevenus{
+	background:url(../img/6_revenusVin.png);
+}
+
 /*------------------------------------*\
 	$PART 1 (cedric)
 \*------------------------------------*/
@@ -216,7 +371,7 @@
 #marche{
 	width:820px;
 	height:450px;
-	margin:100px auto;
+	margin:190px auto;
 	position:relative;
 }
 #marche li.diagram{
@@ -233,10 +388,6 @@
 }
 #marche li{
 	clear:both;
-}
-#marche span{
-	font-family: 'NovecentowideLight';
-	font-size:16px;
 }
 #marche li.left{
 	float:right;
@@ -257,8 +408,8 @@
 
 #import li, #export li{
 	clear:both;
-	font-family: 'NovecentowideLight';
-	font-size:16px;
+	font-family: 'NovecentowideBookRegular';
+	font-size:20px;
 }
 #import li.left, #export li.left{
 	float:right;
@@ -276,14 +427,13 @@
 	height:650px;
 	margin:100px auto;
 	position:relative;
+	display:none;
 }
 #import li.diagram, #export li.diagram{
 	width:0px;
-	height:39px;
+	height:20px;
 	margin-bottom:8px;
 	overflow:hidden;
-	font-family: 'NovecentowideLight';
-	font-size:14px;
 }
 #vin_import,#vin_export{
 	position:absolute;
@@ -298,7 +448,7 @@
 	right:0px;
 }
 /*------------------------------------*\
-	$PART 2 (cedric)
+	$PART 2 (cedric & hugo)
 \*------------------------------------*/
 /*--- PLUS CONSOMMÉ ---*/
 #plus_consom{
@@ -306,4 +456,595 @@
 	height:400px;
 	margin:100px auto;
 	position:relative;
+}
+#best_consom{
+	width:700px;
+	height:700px;
+	margin:300px auto;
+	position:relative;
+}
+#death{
+	width:550px;
+	height:350px;
+	margin:200px auto;
+	position:relative;
+}
+#empreinte_carbon{
+	width:700px;
+	height:700px;
+	margin:300px auto;
+	position:relative;
+}
+#legend_wine{
+	position:absolute;
+	width:200px;
+	height:100px;
+	top:0px;
+	left:0px;
+}
+#legend_wine_txt{
+	font-size:10px;
+	position:absolute;
+	top:5px;
+	left:25px;
+}
+#legend_wine_txt li{
+	margin-bottom:15px;
+}
+#legend_beer{
+	position:absolute;
+	width:200px;
+	height:150px;
+	top:0px;
+	right:0px;
+}
+#legend_beer_2{
+	position:absolute;
+	right:0px;
+}
+#legend_beer_txt{
+	font-size:10px;
+	position:absolute;
+	top:5px;
+	right:25px;
+}
+#legend_beer_txt li{
+	margin-bottom:15px;
+	text-align:right;
+}
+#provenance_wine_beer{
+	margin:0 auto;
+}
+
+
+/* --- Calories --- */
+#calorieContent {
+	width: 670px;
+	height: 360px;
+	position: relative;
+	top: 50%;
+	margin: 0 auto;
+	margin-top: -190px;
+}
+#calorieContent #calorieTop {
+	width: 100%;
+	height: 160px;
+	position: absolute;
+	top: 0;
+}
+#calorieContent #calorieTop #calorieVin {
+	height: 100%;
+	width: 370px;
+	float: left;
+}
+#calorieContent #calorieTop #calorieVin #calorieRouge {
+	width: 145px;
+	height: 67px;
+	float: left;
+	margin: 50px 10px 0px 30px;
+	overflow: hidden;
+	cursor: pointer;
+}
+#calorieContent #calorieTop #calorieVin #calorieRouge div {
+	float: left;
+	width: 48px;
+	height: 100%;
+	z-index: 2;
+	background: url('../img/9_vinMasque.png') repeat;
+	position: relative;
+}
+#calorieContent #calorieTop #calorieVin #calorieRouge div.calorieLiquide {
+	background: #a51f20;
+	width: 46px;
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: -16px;
+	z-index: 1;
+	position: relative;
+	height: 70px;
+}
+#calorieContent #calorieTop #calorieVin #calorieBlanc {
+	width: 145px;
+	height: 67px;
+	float: left;
+	margin: 50px 30px 0px 10px;
+	overflow: hidden;
+	cursor: pointer;
+}
+#calorieContent #calorieTop #calorieVin #calorieBlanc div {
+	float: left;
+	width: 48px;
+	height: 100%;
+	z-index: 2;
+	background: url('../img/9_vinMasque.png') no-repeat;
+	position: relative;
+}
+#calorieContent #calorieTop #calorieVin #calorieBlanc div.calorieLiquide {
+	background: #f4f1a2;
+	width: 46px;
+	height: 70px;
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: -16px;
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+}
+#calorieContent #calorieTop #calorieBiere {
+	height: 100px;
+	width: 230px;
+	float: right;
+	position: relative;
+	padding-left: 10px;
+	overflow: hidden;
+	margin-top: 17px;
+	cursor: pointer;
+}
+#calorieContent #calorieTop #calorieBiere div {
+	float: left;
+	width: 70px;
+	height: 100px;
+	z-index: 2;
+	background: url('../img/9_biereMasque.png') no-repeat;
+	position: relative;
+}
+#calorieContent #calorieTop #calorieBiere div.calorieLiquide {
+	position: relative;
+	margin-top: 0px; 
+	z-index: 1;
+}
+#calorieContent #calorieTop #calorieBiere div.calorieLiquide#calorieBiere1 {
+	background: #f6ce13;
+}
+#calorieContent #calorieTop #calorieBiere div.calorieLiquide#calorieBiere2 {
+	background: #945f14;
+}
+#calorieContent #calorieTop #calorieBiere div.calorieLiquide#calorieBiere3 {
+	background: #020303;
+}
+#calorieContent #calorieBottom {
+	width: 362px;
+	height: 197px;
+	left: 150px;
+	background: url('../img/9_round.png') no-repeat;
+	position: absolute;
+	bottom: 0;
+}
+#calorieContent #calorieBottom #calorieText {
+	height: 65px;
+	width: 88px;
+	position: absolute;
+	top: 80px;
+	left: 40px;
+}
+#calorieContent #calorieBottom #calorieText p {
+	color: #808080;
+	font-size: 14px;
+	text-align: center;
+	width: 100%;
+}
+#calorieContent #calorieBottom #calorieText p span {
+	font-size: 50px;
+	font-family: 'NovecentowideBold';
+	letter-spacing: -2px;
+}
+#calorieContent #calorieBottom #calorieIcon {
+	height: 90px;
+	width: 188px;
+	position: absolute;
+	top: 65px;
+	left: 175px;
+	opacity: 1;
+}
+#calorieContent #calorieBottom #calorieIcon img {
+	position: relative;
+	margin-left: 55px;
+}
+#calorieContent #calorieBottom #calorieIcon p {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	color: #808080;
+	font-size: 14px;
+}
+
+/*------------------------------------*\
+	$PART 3 (hugo)
+\*------------------------------------*/
+/*---Nuage de TAG écologie--*/
+#nuageDeTag {
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	top: 50%;
+	margin-top: -70px;
+}
+#nuageDeTag p {
+	width: 100%;
+	text-align: center;
+	line-height: 24px;
+	/*width: 665px;
+	text-align: center;*/
+}
+#nuageDeTag p a {
+	font-size: 16px;
+	text-decoration: none;
+}
+#nuageDeTag p a.nuageBiere:hover, #nuageDeTag p a.nuageVin:hover {
+	color: #878787;
+}
+#nuageDeTag p a.nuageBold {
+	font-family: 'NovecentowideBold';
+}
+#nuageDeTag p a.nuageBook {
+	font-family: 'NovecentowideBookRegular';
+}
+#nuageDeTag p a.nuageVin {
+	color: #8e0f0a;
+}
+#nuageDeTag p a.nuageBiere {
+	color: #fbcf0d;
+}
+#nuageDeTag p#nuageLine1 {
+	margin-left: -4061px;
+}
+#nuageDeTag p#nuageLine2 {
+	margin-left: 4012px;
+}
+#nuageDeTag p#nuageLine3 {
+	margin-left: -4022px;
+}
+#nuageDeTag p#nuageLine4 {
+	margin-left: 4000px;
+}
+#nuageDeTag p#nuageLine5 {
+	margin-left: -4042px;
+}
+#nuageDetails {
+	height: 70px;
+	width: 528px;
+	margin: 0 auto;
+	position: relative;
+	top: 60%;
+}
+#nuageDetails #nuageTexte {
+	width: 445px;
+	height: 50px;
+	background: #f0f0f0;
+	margin: 0 auto;
+	position: relative;
+	z-index: 3;
+	border: solid 1px #f0f0f0;
+	font-family: Verdana;
+	text-transform: none;
+	font-size: 12px;
+	text-align: center;
+	color: #808080;
+	padding-top: 20px;
+	line-height: 15px;
+}
+#nuageDetails #nuageIconVin {
+	height: 57px;
+	width: 57px;
+	background: url('../img/8_iconVin.png') no-repeat;
+	position: absolute;
+	top: 50%;
+	margin-top: -28px;
+	left: 45px;
+	z-index: 2;
+}
+#nuageDetails #nuageIconBiere {
+	height: 57px;
+	width: 57px;
+	background: url('../img/8_iconbiere.png') no-repeat;
+	position: absolute;
+	top: 50%;
+	margin-top: -28px;
+	right: 45px;
+	z-index: 2;
+}
+
+/*------------------------------------*\
+	$PART 4 (hugo)
+\*------------------------------------*/
+/*---litre d'eau pour la production--*/
+
+#litreEau {
+	height: 386px;
+	width: 569px;
+	position: relative;
+	top: 50%;
+	margin: 0 auto;
+	margin-top: -193px;
+}
+#litreEau #raisin {
+	width: 317px;
+	height: 100%;
+	background: url('../img/12_raisin.png') no-repeat left bottom;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: -3000px;
+}
+#litreEau #cereales {
+	width: 194px;
+	height: 100%;
+	background: url('../img/12_cereales.png') no-repeat right bottom;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: 3000px;
+}
+#litreEau #raisin ul {
+	width: 96px;
+	position: absolute;
+	bottom: -3000px;
+	right: 10px;
+}
+#litreEau #cereales ul {
+	width: 96px;
+	position: absolute;
+	bottom: 3000px;
+	left: 50px;
+}
+#litreEau li {
+	height: 30px;
+	width: 18px;
+	background: url('../img/12_goutte.png') no-repeat center center;
+	background-size: 18px;
+	float: left;
+	cursor: pointer;
+	margin-left: 1px;
+}
+#litreEau li.hugoclr {
+	clear: both;
+}
+#litreEau #raisin li.litreTxt {
+	background: url('../img/12_raisinTxt.png') no-repeat left bottom;
+	height: 92px;
+	width: 95px;
+	background-size: 95px;
+	cursor: default;
+}
+#litreEau #cereales li.litreTxt {
+	background: url('../img/12_cerealesTxt.png') no-repeat left bottom;
+	height: 87px;
+	width: 95px;
+	background-size: 95px;
+	cursor: default;
+}
+
+/*------------------------------------*\
+	$PART 5 (hugo)
+\*------------------------------------*/
+/*---internet--*/
+
+#internet {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background: url('../img/13_bg.png') no-repeat center center;
+}
+#internet #conteneurInternet {
+	height: 500px;
+	width: 700px;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	margin-top: -250px;
+}
+#internet #twitter {
+	height: 153px;
+	width: 346px;
+	background: url('../img/13_twitterBG.png');
+	margin: 0 auto;
+}
+#internet #twitter .tweet {
+	height: 46px;
+	width: 148px;
+	float: left;
+	margin-right: 1px;
+	margin-top: 94px;
+	font-family: arial;
+	color: #999999;
+	font-size: 10px;
+	text-align: right;
+	text-transform: uppercase;
+}
+#internet #twitter .vin {
+	margin-left: 25px;
+	text-align: left;
+}
+#internet #twitter .tweet p {
+	margin-top: 10px;
+	margin-left: 9px;
+	margin-right: 9px;
+}
+#internet #twitter .tweet span {
+	color: black;
+	font-size: 14px;
+	font-weight: 800;
+}
+#internet #google {
+	height: 106px;
+	width: 657px;
+	background: url('../img/13_googleBG.png');
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#internet #google .googl {
+	height: 31px;
+	width: 300px;
+	float: left;
+	margin-left: 7px;
+	margin-top: 73px;
+	font-family: arial;
+	color: #9b9999;
+	font-size: 12px;
+}
+#internet #google .googl p {
+	margin-top: 10px;
+	margin-left: 8px;
+}
+#internet #google .googl.vin {
+	margin-left: 25px;
+}
+#internet #facebook {
+	height: 172px;
+	width: 474px;
+	background: url('../img/13_facebookBG.png');
+	margin: 0 auto;
+}
+#internet #facebook .faceb {
+	height: 40px;
+	width: 207px;
+	float: left;
+	margin-left: 7px;
+	margin-top: 103px;
+	font-family: arial;
+	color: #333333;
+	font-size: 12px;
+}
+#internet #facebook .faceb p {
+	margin-top: 8px;
+	margin-left: 9px;
+}
+#internet #facebook .faceb.vin {
+	margin-left: 27px;
+}
+/*------------------------------------*\
+	$PART 6 (hugo)
+\*------------------------------------*/
+/*Les plus ...*/
+
+#lesPlus {
+	height: 500px;
+	width: 680px;
+	margin: 0 auto;
+	position: relative;
+	top : 50%;
+	margin-top: -250px;	
+}
+#lesPlusChere {
+	width: 100%;
+	height: 33%;
+}
+#lesPlusAlcool {
+	width: 100%;
+	height: 33%;
+}
+#lesPlusVieux {
+	width: 100%;
+	height: 34%;
+}
+#lesPlus div img {
+	height: 102px;
+	width: 102px;
+	position: relative;
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#lesPlus div h3 {
+	width: 100%;
+	text-align: center;
+	font-family: 'NovecentowideBold';
+	font-size: 16px;
+	margin-bottom: 5px;
+	color: #8b8b8b;
+}
+#lesPlus div .leftPlus {
+	height: 50px;
+	float: left;
+	width: 269px;
+	margin-top: 36px;
+	color: #393939;
+	text-align: right;
+	position: relative;
+}
+#lesPlus div .rightPlus {
+	height: 50px;
+	float: left;
+	width: 269px;
+	margin-top: 36px;
+	color: #393939;
+	text-align: left;
+	position: relative;
+}
+#lesPlus div div p, #lesPlus div div span {
+	font-size: 30px;
+	margin-left: 10px;
+}
+#lesPlus #lesPlusChere div p {
+	font-size: 16px;
+}
+#plusChereLeftProgress {
+	background: #8a0601;
+	height: 4px;
+	width: 150%;
+	position: absolute;
+	bottom: -22px;
+	right: -71px;
+}
+#plusChereRightProgress {
+	background: #fcd11c;
+	height: 4px;
+	width: 150%;
+	position: absolute;
+	bottom: -22px;
+	left: -71px;
+}
+#plusAlcoolLeftProgress {
+	background: #8a0601;
+	height: 4px;
+	width: 150%;
+	position: absolute;
+	bottom: -22px;
+	right: -71px;
+}
+#plusAlcoolRightProgress {
+	background: #fcd11c;
+	height: 4px;
+	width: 150%;
+	position: absolute;
+	bottom: -22px;
+	left: -71px;
+}
+#plusVieuxLeftProgress {
+	background: #8a0601;
+	height: 4px;
+	width: 150%;
+	position: absolute;
+	bottom: -22px;
+	right: -71px;
+}
+#plusVieuxRightProgress {
+	background: #fcd11c;
+	height: 4px;
+	width: 150%;
+	position: absolute;
+	bottom: -22px;
+	left: -71px;
 }
