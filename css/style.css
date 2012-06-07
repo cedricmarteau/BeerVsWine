@@ -213,9 +213,14 @@
 /*------------------------------------------------------------------Alcool préféré par ...------------------*/
 #consommationPar{
 	width:960px;
-	margin:0 auto;
+	margin:0px auto;
 }
 
+#consommationPar #parAgeTitre{
+	position:relative;
+	text-align:right;
+	margin-left:580px;
+}
 
 
 #parSexe{
@@ -223,6 +228,8 @@
 	width:339px;
 	height:332px;
 	border-right:#ebebeb solid 2px;
+	margin-left:130px;
+	margin-top:00px;
 }
 
 #parSexe #masqueParSexe{
@@ -297,10 +304,24 @@
 	border-top:#ebebeb solid 2px;
 	width:600px;
 	height:224px;
+	margin-left:170px;
 }
 
 #revenus #pauvres{
-	margin-left:120px;
+	margin-left:94px;
+}
+
+.texteRevenus{
+	height:60px;
+}
+
+.texteRevenus{
+	margin-top:40px;
+	margin-top:10px;
+}
+
+.texteRevenus p{
+	text-align:center;
 }
 
 #revenus>div{
@@ -314,6 +335,15 @@
 #revenus .bierreRevenus, #revenus .vinRevenus{
 	height:94px;
 	position: relative;
+}
+
+#revenus h2{
+	margin-left:160px;
+	margin-top:10px;
+}
+
+#pauvres, #moyens, #riches{
+	margin-top:65px;
 }
 
 #revenus p{
@@ -341,7 +371,7 @@
 #marche{
 	width:820px;
 	height:450px;
-	margin:100px auto;
+	margin:190px auto;
 	position:relative;
 }
 #marche li.diagram{
