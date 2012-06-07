@@ -412,7 +412,6 @@ function carbon(){
 		"stroke":"#867f45",
 		"fill":"#867f45"
 	});
-	var x = this.legend_beer_paper.legend_beer.offsetLeft;
 }
 
 
