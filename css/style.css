@@ -497,6 +497,26 @@
 	margin:100px auto;
 	position:relative;
 }
+#plus_consom ul {
+	height: 30px;
+	width: 600px;
+	position: relative;
+	left: -19px;
+}
+#plus_consom ul li {
+	float: left;
+	margin-right: 27px;
+}
+#plus_consom ul#plus_consomPourcentage {
+	height: 300px;
+	width: 50px;
+	top: -440px;
+	position: relative;
+	left: -50px;
+}
+#plus_consom ul#plus_consomPourcentage li {
+	margin-bottom: 177px;
+}
 #best_consom{
 	width:700px;
 	margin:100px auto;
