@@ -365,6 +365,17 @@ function best_consom(){
 }
 
 function carbon(){
+	
+	$(".cloud1 img").animate({"width":"200px"}, 300, function(){
+		$(".cloud2 img").animate({"width":"75px"}, 300, function(){
+			$(".cloud3 img").animate({"width":"125px"}, 300, function(){
+				$(".cloud4 img").animate({"width":"225px"}, 300, function(){
+					
+				});
+			});
+		});
+	});
+
 	var legend_wine_paper = new Raphael(document.getElementById("legend_wine"), 20, 100),
 	circle_legend_wine1 = legend_wine_paper.circle(10, 10, 6),
 	circle_legend_wine2 = legend_wine_paper.circle(10, 35, 6),
@@ -729,6 +740,8 @@ function nuage_tag(){
  			return false;
          });
 }
+
+
 function litre_eau(){
 
 var listeGrape = $('#raisin ul li').not('.litreTxt');
@@ -884,6 +897,8 @@ function internet(){
         }
 	}, 1);
 }
+
+
 
 function lesPlus(){	
 	var lesPlusText= new Array(224000,625,16,55,1650,200);
