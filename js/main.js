@@ -35,7 +35,7 @@ $(document).ready(function(){
 	
 	
 	clickImp();
-	production_mondiale();
+	//production_mondiale();
 	//data_production();
 	//import_export();
 	//more_consume();

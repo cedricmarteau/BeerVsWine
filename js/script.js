@@ -36,7 +36,7 @@ var placementTirets22 = hauteurAnimation2 - hauteurBiere - 30;
 		});
 
 		var t2 =setInterval(function(){
-				hectolitreCalcule2+=28;
+				hectolitreCalcule2+=21;
                   $('#nbBiere2').text(hectolitreCalcule2);
                   if(hectolitreCalcule2>hectolitreBiere-3){
                   		//hectolitreCalcule2 = hectolitreBiere;

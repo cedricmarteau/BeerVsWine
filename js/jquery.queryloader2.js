@@ -77,6 +77,8 @@
                     }, 2000, function () {
                         $(qLoverlay).fadeOut(1000, function () {
                             $(this).remove();
+                            production_mondiale();
+                            
                             qLoptions.onComplete();
                         })
                     });
