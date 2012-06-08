@@ -569,6 +569,13 @@
 #plus_consom ul#plus_consomPourcentage li {
 	margin-bottom: 177px;
 }
+#legend_best_consom{
+	font-family: 'NovecentowideLight';
+	font-size:14px;
+	position:absolute;
+	top:50px;
+	left:100px;
+}
 #best_consom{
 	width:700px;
 	margin:100px auto;
