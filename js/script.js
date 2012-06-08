@@ -17,7 +17,7 @@ var placementTirets22 = hauteurAnimation2 - hauteurBiere - 30;
 
 	 $('#nbBiere2').text(0);
 	var t1 =setInterval(function(){
-				hectolitreCalcule1+=2;
+				hectolitreCalcule1+=4;
                  $('#nbVin2').text(hectolitreCalcule1);
                  if(hectolitreCalcule1==hectolitreVin){
 	                 clearInterval(t1);
@@ -36,7 +36,7 @@ var placementTirets22 = hauteurAnimation2 - hauteurBiere - 30;
 		});
 
 		var t2 =setInterval(function(){
-				hectolitreCalcule2+=7;
+				hectolitreCalcule2+=28;
                   $('#nbBiere2').text(hectolitreCalcule2);
                   if(hectolitreCalcule2>hectolitreBiere-3){
                   		//hectolitreCalcule2 = hectolitreBiere;

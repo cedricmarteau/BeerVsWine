@@ -393,7 +393,9 @@ function clickImp(){
 
 	$('.prod-button').click(function(){
 		var index = $(this).index();
-
+		$('.prod-button').animate({ backgroundColor: "#393939" }, 800);
+		$(this).animate({ backgroundColor: "#A2D4DD" }, 800);
+		
 		if(index==0){
 			$("#marche").delay(500).fadeIn(500);
 			$("#import").fadeOut(500);
@@ -402,6 +404,7 @@ function clickImp(){
 			$("#import").delay(500).fadeIn(500);
 			$("#marche").fadeOut(500);
 			$("#export").fadeOut(500);
+			
 			setTimeout(import1, 500)
 		}else if(index==2){
 			$("#export").delay(500).fadeIn(500);
