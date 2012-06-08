@@ -749,7 +749,9 @@ listeCereales.css({'background-size':0});
 
 	$('#litreEau #raisin, #litreEau #cereales').animate({marginTop:0}, 500,function(){
 		$('#litreEau ul').animate({bottom:0},function(){
-
+		$('#litreEau #raisin ul').css("visibility","visible");
+		$('#litreEau #cereales ul').css("visibility","visible");
+		
 		for (var i = 0; i<listeCereales.size(); i++){
 			//listeCereales.css({'background-image':'url("img/12_goutte.png")'});
 			listeCereales.eq(i).delay(40*i).animate({'background-size':18});
