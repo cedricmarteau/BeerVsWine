@@ -528,6 +528,7 @@
 	width: 600px;
 	position: relative;
 	left: -19px;
+	display:none;
 }
 #plus_consom ul li {
 	float: left;
@@ -562,6 +563,30 @@
 	position: absolute;
 	bottom: 80px;
 	right: 80px;
+	display:none;
+}
+#best_consom_current{
+	width:250px;
+	height:50px;
+	background-color:#f1f1f1;
+	position:absolute;
+	top:330px;
+	left:160px;
+	border:1px solid #e0e0e0;
+	padding-top:24px;
+	text-align:center;
+	display:none;
+}
+#best_consom_current span.numero{
+	font-family: 'NovecentowideBookRegular';
+}
+#best_consom_current span.country{
+	font-family: 'NovecentowideBold';
+	color:black;
+}
+#best_consom_current span.number{
+	font-family: 'NovecentowideLight';
+	color:black;
 }
 #death{
 	width:550px;

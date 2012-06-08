@@ -348,8 +348,7 @@ function best_consom(){
 		paper_best_consom_beer_path.attr({
 			"stroke":"white",
 			"stroke-width":"4px",
-			"fill":"#FCD014",
-			"id":i
+			"fill":"#FCD014"
 		});
 		paper_best_consom_wine_path.attr({
 			"stroke":"white",
@@ -363,10 +362,89 @@ function best_consom(){
 		tab_fromage_wine[i].animate({transform:"r"+deg+" 150 200"},1500, 'easeInCirc');
 	}
 	$("#best_consom svg path").hover(function(){
-		console.log($(this).index())
+		console.log($(this).index());
+		var txt_country;
 		$(this).attr({
 			"fill":"#C5C5C5"
 		});
+		switch ($(this).index()){
+			case 2:
+				txt_country = "<span class='numero'>10. </span><span class='country'>Slovaquie</span><span class='number'> (88,4)</span>";
+			break;
+			case 3:
+				txt_country = "<span class='numero'>10. </span><span class='country'>Espagne</span><span class='number'> (34,66)</span>";
+			break;
+			case 4:
+				txt_country = "<span class='numero'>9. </span><span class='country'>Australie</span><span class='number'> (91,5)</span>";
+			break;
+			case 5:
+				txt_country = "<span class='numero'>9. </span><span class='country'>Suisse</span><span class='number'> (39,87)</span>";
+			break;
+			case 6:
+				txt_country = "<span class='numero'>8. </span><span class='country'>Danemark</span><span class='number'> (96,2)</span>";
+			break;
+			case 7:
+				txt_country = "<span class='numero'>8. </span><span class='country'>Croatie</span><span class='number'> (42,27)</span>";
+			break;
+			case 8:
+				txt_country = "<span class='numero'>7. </span><span class='country'>Belgique</span><span class='number'> (96,2)</span>";
+			break;
+			case 9:
+				txt_country = "<span class='numero'>7. </span><span class='country'>Slovénie</span><span class='number'> (43,77)</span>";
+			break;
+			case 10:
+				txt_country = "<span class='numero'>6. </span><span class='country'>Royaume-Uni</span><span class='number'> (101,5)</span>";
+			break;
+			case 11:
+				txt_country = "<span class='numero'>6. </span><span class='country'>Portugal</span><span class='number'> (46,67)</span>";
+			break;
+			case 12:
+				txt_country = "<span class='numero'>5. </span><span class='country'>Luxembourg</span><span class='number'> (101,6)</span>";
+			break;
+			case 13:
+				txt_country = "<span class='numero'>5. </span><span class='country'>Italie</span><span class='number'> (48,16)</span>";
+			break;
+			case 14:
+				txt_country = "<span class='numero'>4. </span><span class='country'>Autriche</span><span class='number'> (110,6)</span>";
+			break;
+			case 15:
+				txt_country = "<span class='numero'>4. </span><span class='country'>Luxembourg</span><span class='number'> (52,70)</span>";
+			break;
+			case 16:
+				txt_country = "<span class='numero'>3. </span><span class='country'>Irlande</span><span class='number'> (141,2)</span>";
+			break;
+			case 17:
+				txt_country = "<span class='numero'>3. </span><span class='country'>France</span><span class='number'> (55,85)</span>";
+			break;
+			case 18:
+				txt_country = "<span class='numero'>2. </span><span class='country'>République Tchèque</span><span class='number'> (157)</span>";
+			break;
+			case 19:
+				txt_country = "<span class='numero'>2. </span><span class='country'>Andorre</span><span class='number'> (60,13)</span>";
+			break;
+			case 20:
+				txt_country = "<span class='numero'>1. </span><span class='country'>Allemagne</span><span class='number'> (161,5)</span>";
+			break;
+			case 21:
+				txt_country = "<span class='numero'>1. </span><span class='country'>Vatican</span><span class='number'> (62,2)</span>";
+			break;
+		}
+		$("#best_consom_current").html(txt_country);
+		$("#best_consom_current").fadeIn(500);
+	},
+	function(){
+		$("#best_consom_current").hide();
+		$("#best_consom_current").html("");
+		if ($(this).index()%2==0){
+			$(this).attr({
+				"fill":"#FCD014"
+			});
+		}
+		else{
+			$(this).attr({
+				"fill":"#8F0F0B"
+			});
+		}
 	});
 }
 

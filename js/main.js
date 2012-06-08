@@ -346,10 +346,12 @@ function checkPage(){
 	if(currentPage == "consommation1" && fConsom1!=false){
 		fConsom1 = false;
 		setTimeout(more_consume, 500)
+		$("#plus_consom ul").fadeIn(1500);
 	}
 	if(currentPage == "consommation3" && fConsom3!=false){
 		fConsom3 = false;
 		setTimeout(best_consom, 500)
+		$("#best_consom_france").fadeIn(2500);
 	}
 	if(currentPage == "consommation2" && fConsom2!=false){
 		fConsom2 = false;
