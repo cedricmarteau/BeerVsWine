@@ -412,9 +412,11 @@
 	width:820px;
 	height:450px;
 	margin:0 auto;
-	position:relative;
+	position:absolute;
 	top: 50%;
 	margin-top: -225px;
+	left: 50%;
+	margin-left: -410px;
 }
 #marche p {
 	position: absolute;
@@ -487,14 +489,19 @@
 	border-top-right-radius: 7px;
 	border-bottom-right-radius: 7px;
 	background: url('../img/texture_biere.png') repeat;
+	height:20px;
 }
 #import,#export{
 	width:820px;
 	height:650px;
-	margin:100px auto;
-	position:relative;
+	position:absolute;
 	display:none;
+	top: 50%;
+	left: 50%;
+	margin-left: -410px;
+	margin-top: -225px;
 }
+
 #import li.diagram, #export li.diagram{
 	width:0px;
 	height:20px;
@@ -515,11 +522,12 @@
 }
 
 .prod-buttons{
-	position: relative;
-	top: 50%;
+	position: absolute;
+	bottom: 10%;	
 	margin-top: 55px;
 	margin-left: -220px;
 	left: 50%;
+	
 }
 
 .prod-button{
