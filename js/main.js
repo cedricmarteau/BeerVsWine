@@ -9,6 +9,7 @@ var fProd1;
 var fProd2;
 var fConsom1;
 var fConsom2;
+var fConsom3;
 var fSante1;
 var fSante2;
 var fSante3;
@@ -83,6 +84,65 @@ $(document).ready(function(){
 			}
 		}return false;
 	});
+	
+	$(".right-arrow").click(function(){
+		var current = $("#content").find('.current');
+		var pages = $("#content").find('.pages');
+		var subCurrent = current.find(".subCurrent");
+		var indexSubCurrent = subCurrent.index();
+		var subPages = current.find(".subpages");
+		
+		if(!animating){
+			animating=true;
+			subPages.eq(indexSubCurrent+1).css("z-index","29");
+						
+			$("#menu").find(".current-item h3").animate({"top":"-17px"}, 400,function() {
+			
+				current.find(".subCurrent").animate({"left":-windowWidth}, 1000,"easeInQuint",function(){
+					animating=false;					
+					subCurrent.removeClass("subCurrent");
+					subPages.eq(indexSubCurrent+1).addClass("subCurrent");
+					setSubZindex();
+					setSubPagePos();
+					animateSubMenu();
+					checkPage();
+					
+				});
+			});
+			
+		}
+	});
+	
+	$(".left-arrow").click(function(){
+	
+		var current = $("#content").find('.current');
+				var pages = $("#content").find('.pages');
+				var subCurrent = current.find(".subCurrent");
+				var indexSubCurrent = subCurrent.index();
+				var subPages = current.find(".subpages");
+				
+				if(!animating){
+					animating=true;
+					subPages.eq(indexSubCurrent-1).css("z-index","29");
+		
+					$("#menu").find(".current-item h3").animate({"top":"-17px"}, 400,function() {
+					
+						current.delay(400).find(".subCurrent").animate({"left":+windowWidth}, 1000,"easeInQuint",function(){
+							animating=false;
+							subCurrent.removeClass("subCurrent");
+							subPages.eq(indexSubCurrent-1).addClass("subCurrent");
+							
+							setSubZindex();
+							setSubPagePos();
+							animateSubMenu();
+							checkPage();
+						});
+					});
+				}
+	
+	});
+	
+	
 });
 
 
