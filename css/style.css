@@ -576,6 +576,35 @@
 #clouds img{
 	margin-left:35px;
 }
+
+#clouds .cloud1{
+	float: left;
+	width: 200px;
+	position: relative;
+	top: 20px;
+}
+#clouds .cloud2{
+	float: left;
+	width: 75px;
+	position: relative;
+	top: 101px;
+	left: 40px;
+}
+#clouds .cloud3{
+	float: left;
+	width: 125px;
+	position: relative;
+	top: 62px;
+	left: 85px;
+}
+#clouds .cloud4{
+	float: left;
+	width: 225px;
+	position: relative;
+	left: 103px;
+	top: 6px;
+}
+
 #wine_cloud{
 	width:100px;
 	height:270px;
