@@ -9,6 +9,7 @@ var fProd1;
 var fProd2;
 var fConsom1;
 var fConsom2;
+var fConsom3;
 var fSante1;
 var fSante2;
 var fSante3;
