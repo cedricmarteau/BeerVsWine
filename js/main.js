@@ -408,7 +408,7 @@ function clickImp(){
 			$("#import").fadeOut(500);
 			$("#marche").fadeOut(500);
 			setTimeout(import2, 500)
-		}		
+		}return false;		
 	});
 }
 
