@@ -571,9 +571,9 @@ function risk_of_death(){
 		"stroke":"none",
 		"fill":"#FCD014"
 	});
-	var max_ordonnee = paper_risk_death.text(15, 5, "1,8*");
-	var middle_ordonnee = paper_risk_death.text(15, 100, "1*");
-	var min_ordonnee = paper_risk_death.text(15, 195, "0,2*");
+	var max_ordonnee = paper_risk_death.text(15, 5, "1,8x");
+	var middle_ordonnee = paper_risk_death.text(15, 100, "1x");
+	var min_ordonnee = paper_risk_death.text(15, 195, "0,2x");
 	max_ordonnee.attr({
 		"font-family":'NovecentowideBold',
 		"font-size" : '12px'

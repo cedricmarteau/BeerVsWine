@@ -569,6 +569,13 @@
 #plus_consom ul#plus_consomPourcentage li {
 	margin-bottom: 177px;
 }
+#legend_best_consom{
+	font-family: 'NovecentowideLight';
+	font-size:14px;
+	position:absolute;
+	top:50px;
+	left:100px;
+}
 #best_consom{
 	width:700px;
 	margin:100px auto;
@@ -611,6 +618,14 @@
 	height:350px;
 	margin:150px auto;
 	position:relative;
+}
+#legend_death{
+	font-family: 'NovecentowideLight';
+	font-size:14px;
+	position:absolute;
+	top:120px;
+	left:290px;
+	color:black;
 }
 #empreinte_carbon{
 	width:800px;
