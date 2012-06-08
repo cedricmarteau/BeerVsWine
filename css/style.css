@@ -411,8 +411,34 @@
 #marche{
 	width:820px;
 	height:450px;
-	margin:80px auto;
+	margin:0 auto;
 	position:relative;
+	top: 50%;
+	margin-top: -225px;
+}
+#marche p {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: -30px;
+	font-size: 12px;
+	color: #ddd;
+}
+#marcheSeparator {
+	width: 1px;
+	background: #ddd;
+	height: 500px;
+	position: absolute;
+	left: 409px;
+	top: -10px;
+}
+#marcheSeparatorBottom {
+	width: 300px;
+	background: #ddd;
+	height: 1px;
+	position: absolute;
+	left: 255px;
+	bottom: -40px;
 }
 #marche li.diagram{
 	width:0px;
