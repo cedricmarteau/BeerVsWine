@@ -548,6 +548,14 @@
 	margin:100px auto;
 	position:relative;
 }
+#best_consom_france {
+	width: 196px;
+	height: 62px;
+	background: url('../img/7_france.png');
+	position: absolute;
+	bottom: 80px;
+	right: 80px;
+}
 #death{
 	width:550px;
 	height:350px;
