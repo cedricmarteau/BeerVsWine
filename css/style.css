@@ -170,7 +170,7 @@
 #loadLeft{
 	width: 50%;
 	height: 100%;
-	background:#8e0c06;
+	background : url(../img/texture_vin.png);
 	float: left;
 	text-align: center;
 }
@@ -178,20 +178,38 @@
 #loadRight{
 	width: 50%;
 	height: 100%;
-	background: #fcd118;
-	float: right;
+	background : url(../img/texture_biere.png);	float: right;
 	text-align: center;
 }
 
 #loadRight img, #loadLeft img{
 	margin-top: 100px;
 }
+
+.arrow{
+	background: url('../img/arrow_sprite.png') no-repeat;
+	width: 57px;
+	height: 111px;
+	position: absolute;
+	bottom: 5%;
+	cursor: pointer;
+}
+
+.left-arrow{
+	background-position: 0 0;
+	left: 100px;
+}
+
+.right-arrow{
+	background-position: -82px 0px;
+	right: 100px;
+}
 /*------------------------------------*\
 	$PART 1 (greg)
 \*------------------------------------*/
 #production_mondial{
 	width:960px;
-	height:700px;
+	height:768px;
 	margin: 10px auto;
 }
 #animation2{
