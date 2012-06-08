@@ -498,8 +498,7 @@
 	position:relative;
 }
 #best_consom{
-	width:700px;/*
-		height:700px;*/
+	width:700px;
 	margin:100px auto;
 	position:relative;
 }
@@ -511,13 +510,12 @@
 }
 #empreinte_carbon{
 	width:800px;
-	height:700px;
 	margin:0px auto;
 	position:relative;
 }
 #nuage_carbon{
-	height:700px;
-	width:900px;
+	width:800px;
+	height:500px;
 	position:relative;
 }
 
@@ -937,12 +935,15 @@ strong{
 	position: absolute;
 	bottom: -3000px;
 	right: 10px;
+	visibility: hidden;
 }
 #litreEau #cereales ul {
 	width: 96px;
 	position: absolute;
 	bottom: 3000px;
 	left: 50px;
+	visibility: hidden;
+	
 }
 #litreEau li {
 	height: 30px;
