@@ -344,8 +344,13 @@ function best_consom(){
 		var paper_best_consom_beer_path = paper_best_consom.path("M"+centre_fromage_beer+"l"+(rayon*size_beer)/data_beer_best_consum[i]+" "+(L_cote_oppose_little*size_beer)/data_beer_best_consum[i]+"l"+0+" "+(-L_cote_oppose_big*size_beer)/data_beer_best_consum[i]+"L"+centre_fromage_beer);
 		var paper_best_consom_wine_path = paper_best_consom.path("M"+centre_fromage_wine+"l"+(rayon*size_wine)/data_wine_best_consum[i]+" "+(L_cote_oppose_little*size_wine)/data_wine_best_consum[i]+"l"+0+" "+(-L_cote_oppose_big*size_wine)/data_wine_best_consum[i]+"L"+centre_fromage_wine);
 		console.log(paper_best_consom_beer_path)
+		paper_best_consom_beer_path.id = i;
+		paper_best_consom_wine_path.id = i+10;
+
+		console.log(paper_best_consom_beer_path.id);
 		tab_fromage_beer.push(paper_best_consom_beer_path);
 		tab_fromage_wine.push(paper_best_consom_wine_path);
+
 		paper_best_consom_beer_path.attr({
 			"stroke":"white",
 			"stroke-width":"4px",
@@ -362,6 +367,8 @@ function best_consom(){
 		tab_fromage_beer[i].animate({transform:"r"+deg+" 200 200"},1500, 'easeInCirc');
 		tab_fromage_wine[i].animate({transform:"r"+deg+" 550 200"},1500, 'easeInCirc');
 	}
+
+	
 }
 
 function carbon(){
