@@ -946,10 +946,10 @@ function calorie() {
 	var calorieSportIcon= new Array('arc','baby','natation','golf','musculation');
 	var calorieSportText= new Array("de tir à l'arc","de baby-sitting","de natation","de golf","de musculation");
 	
-	calorieVinRouge=105;
+	calorieVinRouge=315;
 	calorieVinRougeOrigin=0;
 	
-	calorieVinBlanc=108;
+	calorieVinBlanc=324;
 	calorieVinBlancOrigin=0;
 	
 	calorieBiere1=200;
@@ -971,6 +971,7 @@ function calorie() {
 		calorieBiere1Origin=0;
 		calorieBiere2Origin=0;
 		calorieBiere3Origin=0;*/
+		$('#calorieBottom').css({'background-image':'url("img/9_round90.png")'});
 		$('#calorieIcon').html('');
 		$('#calorieVin #calorieRouge #calorieRouge1').stop(true,false).animate({'margin-top':'-16px'},300,function(){
 			$('#calorieVin #calorieRouge #calorieRouge2').stop(true,false).animate({'margin-top':'-16px'},300,function(){
@@ -992,6 +993,7 @@ function calorie() {
 		}
 	}, function(){
 		clearInterval(timerRouge);
+		$('#calorieBottom').css({'background-image':'url("img/9_round.png")'});
 		$('#calorieIcon').html('');
 		$('#calorieText p span').text(0);
 		calorieVinRougeOrigin = 0;
@@ -1005,6 +1007,7 @@ function calorie() {
 		calorieBiere1Origin=0;
 		calorieBiere2Origin=0;
 		calorieBiere3Origin=0;*/
+		$('#calorieBottom').css({'background-image':'url("img/9_round90.png")'});
 		$('#calorieIcon').html('');
 		$('#calorieVin #calorieBlanc #calorieBlanc1').stop(true,false).animate({'margin-top':'-16px'},300,function(){
 			$('#calorieVin #calorieBlanc #calorieBlanc2').stop(true,false).animate({'margin-top':'-16px'},300,function(){
@@ -1026,6 +1029,7 @@ function calorie() {
 		}	
 	}, function(){
 		clearInterval(timerBlanc);
+		$('#calorieBottom').css({'background-image':'url("img/9_round.png")'});
 		$('#calorieIcon').html('');
 		$('#calorieText p span').text(0);
 		calorieVinBlancOrigin = 0;
@@ -1040,6 +1044,7 @@ function calorie() {
 		calorieBiere2Origin=0;
 		calorieBiere3Origin=0;*/
 		$('#calorieIcon').html('');
+		$('#calorieBottom').css({'background-image':'url("img/9_round30.png")'});
 		$('.calorieLiquide#calorieBiere1').stop(true,false).animate({'margin-top':'-0px'}, 500);
 		if (calorieBiere1Origin==0) {
 			$('#calorieText p span').text(0);
@@ -1056,6 +1061,7 @@ function calorie() {
 		}
 	}, function(){
 		clearInterval(timerBiere1);
+		$('#calorieBottom').css({'background-image':'url("img/9_round.png")'});
 		$('#calorieIcon').html('');
 		$('#calorieText p span').text(0);
 		calorieBiere1Origin = 0;
@@ -1070,6 +1076,7 @@ function calorie() {
 		calorieBiere2Origin=0;
 		calorieBiere3Origin=0;*/
 		$('#calorieIcon').html('');
+		$('#calorieBottom').css({'background-image':'url("img/9_round30.png")'});
 		$('.calorieLiquide#calorieBiere2').stop(true,false).animate({'margin-top':'-0px'}, 500);
 		if (calorieBiere2Origin==0) {
 			$('#calorieText p span').text(0);
@@ -1086,6 +1093,7 @@ function calorie() {
 		}
 	}, function(){
 		clearInterval(timerBiere2);
+		$('#calorieBottom').css({'background-image':'url("img/9_round.png")'});
 		$('#calorieIcon').html('');
 		$('#calorieText p span').text(0);
 		calorieBiere2Origin = 0;
@@ -1100,6 +1108,7 @@ function calorie() {
 		calorieBiere2Origin=0;
 		calorieBiere3Origin=0;*/
 		$('#calorieIcon').html('');
+		$('#calorieBottom').css({'background-image':'url("img/9_round30.png")'});
 		$('.calorieLiquide#calorieBiere3').stop(true,false).animate({'margin-top':'-0px'}, 500);
 		if (calorieBiere3Origin==0) {
 			$('#calorieText p span').text(0);
@@ -1116,6 +1125,7 @@ function calorie() {
 		}
 	}, function(){
 		clearInterval(timerBiere3);
+		$('#calorieBottom').css({'background-image':'url("img/9_round.png")'});
 		$('#calorieIcon').html('');
 		$('#calorieText p span').text(0);
 		calorieBiere3Origin = 0;
