@@ -480,15 +480,15 @@
 	position:relative;
 }
 #best_consom{
-	width:700px;
-	height:700px;
-	margin:300px auto;
+	width:700px;/*
+		height:700px;*/
+	margin:100px auto;
 	position:relative;
 }
 #death{
 	width:550px;
 	height:350px;
-	margin:200px auto;
+	margin:150px auto;
 	position:relative;
 }
 #empreinte_carbon{
