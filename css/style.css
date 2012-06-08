@@ -513,6 +513,24 @@
 	width:400px;
 	right:0px;
 }
+
+.prod-buttons{
+	position: relative;
+	top: 50%;
+	margin-top: 55px;
+	margin-left: -220px;
+	left: 50%;
+}
+
+.prod-button{
+	background:#393939;
+	color: white;
+	padding: 5px 20px;
+	margin-right: 5px;
+	text-decoration: none;
+	font-family: "NovecentowideBold";
+}
+
 /*------------------------------------*\
 	$PART 2 (cedric & hugo)
 \*------------------------------------*/
