@@ -533,6 +533,13 @@
 	float: left;
 	margin-right: 27px;
 }
+#avion {
+	height: 52px;
+	width: 363px;
+	background: url('../img/5_avionLiqueur.png');
+	position: relative;
+	margin: 0 auto;
+}
 #plus_consom ul#plus_consomPourcentage {
 	height: 300px;
 	width: 50px;
