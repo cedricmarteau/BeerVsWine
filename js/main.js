@@ -349,7 +349,7 @@ function checkPage(){
 	}
 	if(currentPage == "consommation3" && fConsom3!=false){
 		fConsom3 = false;
-		//setTimeout(more_consume, 500)
+		setTimeout(best_consom, 500)
 	}
 	if(currentPage == "consommation2" && fConsom2!=false){
 		fConsom2 = false;

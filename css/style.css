@@ -54,6 +54,7 @@
 	margin-top: 5px;
 	width: 410px;
 	position: absolute;
+	z-index:100;
 }
 
 .pages{
@@ -410,7 +411,7 @@
 #marche{
 	width:820px;
 	height:450px;
-	margin:190px auto;
+	margin:80px auto;
 	position:relative;
 }
 #marche li.diagram{
@@ -497,15 +498,15 @@
 	position:relative;
 }
 #best_consom{
-	width:700px;
-	height:700px;
-	margin:300px auto;
+	width:700px;/*
+		height:700px;*/
+	margin:100px auto;
 	position:relative;
 }
 #death{
 	width:550px;
 	height:350px;
-	margin:200px auto;
+	margin:150px auto;
 	position:relative;
 }
 #empreinte_carbon{
@@ -519,6 +520,12 @@
 	width:900px;
 	position:relative;
 }
+
+#empreinte_carbon strong{
+	font-family:'NovecentowideBold';
+	font-size:14px;
+}
+
 #clouds{
 	font-family:'NovecentowideBold';
 }
@@ -528,11 +535,11 @@
 #wine_cloud{
 	width:100px;
 	height:270px;
-	font-size:16px;
+	font-size:12px;
 	font-family:'NovecentowideLight';
 	text-align:center;
 	position:absolute;
-	top:220px;
+	top:170px;
 	left:70px;
 }
 strong{
@@ -542,36 +549,36 @@ strong{
 #beer_cloud1{
 	width:160px;
 	height:180px;
-	font-size:14px;
+	font-size:12px;
 	font-family:'NovecentowideLight';
 	text-align:center;
 	position:absolute;
-	top:300px;
+	top:250px;
 	left:230px;
 }
 #beer_cloud2{
 	width:170px;
 	height:180px;
-	font-size:14px;
+	font-size:12px;
 	font-family:'NovecentowideLight';
 	text-align:center;
 	position:absolute;
-	top:300px;
+	top:250px;
 	left:390px;
 }
 #beer_cloud3{
 	width:170px;
 	height:180px;
-	font-size:14px;
+	font-size:12px;
 	font-family:'NovecentowideLight';
 	text-align:center;
 	position:absolute;
-	top:300px;
+	top:250px;
 	left:590px;
 }
 #first_cloud{
 	position:absolute;
-	top:120px;
+	top:80px;
 	left:85px;
 	color:white;
 	font-size:20px;
@@ -579,7 +586,7 @@ strong{
 }
 #second_cloud{
 	position:absolute;
-	top:185px;
+	top:125px;
 	left:280px;
 	color:white;
 	font-size:12px;
@@ -587,7 +594,7 @@ strong{
 }
 #third_cloud{
 	position:absolute;
-	top:160px;
+	top:105px;
 	left:410px;
 	color:white;
 	font-size:16px;
@@ -595,7 +602,7 @@ strong{
 }
 #fourth_cloud{
 	position:absolute;
-	top:120px;
+	top:80px;
 	left:590px;
 	color:white;
 	font-size:24px;
