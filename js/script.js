@@ -953,7 +953,7 @@ function internet(){
 	
 	$('#facebook .vin p .likeCount').text(0);
 	var timerInternet5 =setInterval(function(){
-		facebookLikeVinOrigin+=1000;
+		facebookLikeVinOrigin+=3000;
         $('#facebook .vin p .likeCount').text(facebookLikeVinOrigin);
        	if(facebookLikeVinOrigin==facebookLikeVin){
 	    	clearInterval(timerInternet5);
@@ -973,7 +973,7 @@ function internet(){
 	
 	$('#facebook .biere p .likeCount').text(0);
 	var timerInternet7 =setInterval(function(){
-		facebookLikeBiereOrigin+=1000;
+		facebookLikeBiereOrigin+=14000;
         $('#facebook .biere p .likeCount').text(facebookLikeBiereOrigin);
        	if(facebookLikeBiereOrigin==facebookLikeBiere){
 	    	clearInterval(timerInternet7);
