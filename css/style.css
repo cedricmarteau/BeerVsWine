@@ -54,6 +54,7 @@
 	margin-top: 5px;
 	width: 410px;
 	position: absolute;
+	z-index:100;
 }
 
 .pages{
