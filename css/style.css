@@ -619,6 +619,14 @@
 	margin:150px auto;
 	position:relative;
 }
+#legend_death{
+	font-family: 'NovecentowideLight';
+	font-size:14px;
+	position:absolute;
+	top:120px;
+	left:290px;
+	color:black;
+}
 #empreinte_carbon{
 	width:800px;
 	margin:0px auto;
