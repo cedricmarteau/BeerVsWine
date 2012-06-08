@@ -34,7 +34,7 @@ $(document).ready(function(){
 	setSubZindex();
 	
 	
-	
+	clickImp();
 	production_mondiale();
 	//data_production();
 	//import_export();
@@ -388,3 +388,30 @@ function checkPage(){
 		setTimeout(lesPlus, 500)
 	}
 }
+
+function clickImp(){
+
+	$('.prod-button').click(function(){
+		var index = $(this).index();
+
+		if(index==0){
+			$("#marche").delay(500).fadeIn(500);
+			$("#import").fadeOut(500);
+			$("#export").fadeOut(500);
+		}else if(index==1){
+			$("#import").delay(500).fadeIn(500);
+			$("#marche").fadeOut(500);
+			$("#export").fadeOut(500);
+			setTimeout(import1, 500)
+		}else if(index==2){
+			$("#export").delay(500).fadeIn(500);
+			$("#import").fadeOut(500);
+			$("#marche").fadeOut(500);
+			setTimeout(import2, 500)
+		}return false;		
+	});
+}
+
+
+
+
