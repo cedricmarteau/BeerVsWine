@@ -329,8 +329,8 @@ function best_consom(){
 	paper_best_consom = new Raphael(document.getElementById("best_consom"), paper_best_consom_width, paper_best_consom_height),
 	tab_fromage_beer = new Array(),
 	tab_fromage_wine = new Array(),
-	centre_fromage_beer = "200 200",
-	centre_fromage_wine = "550 200",
+	centre_fromage_beer = "500 200",
+	centre_fromage_wine = "150 200",
 	rayon = 100,
 	size_beer = 150,
 	size_wine = 45,
@@ -343,11 +343,13 @@ function best_consom(){
 	for (var i=0;i<10;i++){
 		var paper_best_consom_beer_path = paper_best_consom.path("M"+centre_fromage_beer+"l"+(rayon*size_beer)/data_beer_best_consum[i]+" "+(L_cote_oppose_little*size_beer)/data_beer_best_consum[i]+"l"+0+" "+(-L_cote_oppose_big*size_beer)/data_beer_best_consum[i]+"L"+centre_fromage_beer);
 		var paper_best_consom_wine_path = paper_best_consom.path("M"+centre_fromage_wine+"l"+(rayon*size_wine)/data_wine_best_consum[i]+" "+(L_cote_oppose_little*size_wine)/data_wine_best_consum[i]+"l"+0+" "+(-L_cote_oppose_big*size_wine)/data_wine_best_consum[i]+"L"+centre_fromage_wine);
+
 		console.log(paper_best_consom_beer_path)
 		paper_best_consom_beer_path.id = i;
 		paper_best_consom_wine_path.id = i+10;
 
 		console.log(paper_best_consom_beer_path.id);
+
 		tab_fromage_beer.push(paper_best_consom_beer_path);
 		tab_fromage_wine.push(paper_best_consom_wine_path);
 
@@ -364,11 +366,96 @@ function best_consom(){
 	}
 	for (var i=0;i<10;i++){
 		var deg=i*35.8;
-		tab_fromage_beer[i].animate({transform:"r"+deg+" 200 200"},1500, 'easeInCirc');
-		tab_fromage_wine[i].animate({transform:"r"+deg+" 550 200"},1500, 'easeInCirc');
+		tab_fromage_beer[i].animate({transform:"r"+deg+" 500 200"},1500, 'easeInCirc');
+		tab_fromage_wine[i].animate({transform:"r"+deg+" 150 200"},1500, 'easeInCirc');
 	}
 
-	
+	$("#best_consom svg path").hover(function(){
+		console.log($(this).index());
+		var txt_country;
+		$(this).attr({
+			"fill":"#C5C5C5"
+		});
+		switch ($(this).index()){
+			case 2:
+				txt_country = "<span class='numero'>10. </span><span class='country'>Slovaquie</span><span class='number'> (88,4)</span>";
+			break;
+			case 3:
+				txt_country = "<span class='numero'>10. </span><span class='country'>Espagne</span><span class='number'> (34,66)</span>";
+			break;
+			case 4:
+				txt_country = "<span class='numero'>9. </span><span class='country'>Australie</span><span class='number'> (91,5)</span>";
+			break;
+			case 5:
+				txt_country = "<span class='numero'>9. </span><span class='country'>Suisse</span><span class='number'> (39,87)</span>";
+			break;
+			case 6:
+				txt_country = "<span class='numero'>8. </span><span class='country'>Danemark</span><span class='number'> (96,2)</span>";
+			break;
+			case 7:
+				txt_country = "<span class='numero'>8. </span><span class='country'>Croatie</span><span class='number'> (42,27)</span>";
+			break;
+			case 8:
+				txt_country = "<span class='numero'>7. </span><span class='country'>Belgique</span><span class='number'> (96,2)</span>";
+			break;
+			case 9:
+				txt_country = "<span class='numero'>7. </span><span class='country'>Slovénie</span><span class='number'> (43,77)</span>";
+			break;
+			case 10:
+				txt_country = "<span class='numero'>6. </span><span class='country'>Royaume-Uni</span><span class='number'> (101,5)</span>";
+			break;
+			case 11:
+				txt_country = "<span class='numero'>6. </span><span class='country'>Portugal</span><span class='number'> (46,67)</span>";
+			break;
+			case 12:
+				txt_country = "<span class='numero'>5. </span><span class='country'>Luxembourg</span><span class='number'> (101,6)</span>";
+			break;
+			case 13:
+				txt_country = "<span class='numero'>5. </span><span class='country'>Italie</span><span class='number'> (48,16)</span>";
+			break;
+			case 14:
+				txt_country = "<span class='numero'>4. </span><span class='country'>Autriche</span><span class='number'> (110,6)</span>";
+			break;
+			case 15:
+				txt_country = "<span class='numero'>4. </span><span class='country'>Luxembourg</span><span class='number'> (52,70)</span>";
+			break;
+			case 16:
+				txt_country = "<span class='numero'>3. </span><span class='country'>Irlande</span><span class='number'> (141,2)</span>";
+			break;
+			case 17:
+				txt_country = "<span class='numero'>3. </span><span class='country'>France</span><span class='number'> (55,85)</span>";
+			break;
+			case 18:
+				txt_country = "<span class='numero'>2. </span><span class='country'>République Tchèque</span><span class='number'> (157)</span>";
+			break;
+			case 19:
+				txt_country = "<span class='numero'>2. </span><span class='country'>Andorre</span><span class='number'> (60,13)</span>";
+			break;
+			case 20:
+				txt_country = "<span class='numero'>1. </span><span class='country'>Allemagne</span><span class='number'> (161,5)</span>";
+			break;
+			case 21:
+				txt_country = "<span class='numero'>1. </span><span class='country'>Vatican</span><span class='number'> (62,2)</span>";
+			break;
+		}
+		$("#best_consom_current").html(txt_country);
+		$("#best_consom_current").fadeIn(500);
+	},
+	function(){
+		$("#best_consom_current").hide();
+		$("#best_consom_current").html("");
+		if ($(this).index()%2==0){
+			$(this).attr({
+				"fill":"#FCD014"
+			});
+		}
+		else{
+			$(this).attr({
+				"fill":"#8F0F0B"
+			});
+		}
+	});
+
 }
 
 function carbon(){
@@ -729,19 +816,19 @@ function nuage_tag(){
         $('#nuageDeTag p#nuageLine4').animate({marginLeft:-40}, 500);
         $('#nuageDeTag p#nuageLine5').animate({marginLeft:32}, 500);
         
-        $('#nuageDeTag p a').click(function(){
+        $('#nuageDeTag p a').hover(function(){
  			nuageName=$(this).attr('name');
  			nuageText=nuageName.substring(9,11);
  			nuageType=nuageName.substring(12,15);
  			
  			if (nuageType=='vin') {
- 				$('#nuageIconVin').animate({left:0});
- 				$('#nuageIconBiere').animate({right:45});
- 				$('#nuageTexte').animate({'border-color':'#8e0f0a'});
+ 				$('#nuageIconVin').stop(true,false).animate({left:0});
+ 				$('#nuageIconBiere').stop(true,false).animate({right:45});
+ 				$('#nuageTexte').stop(true,false).animate({'border-color':'#8e0f0a'});
  			} else {
- 				$('#nuageIconVin').animate({left:45});
- 				$('#nuageIconBiere').animate({right:0});
- 				$('#nuageTexte').animate({'border-color':'#fad947'});
+ 				$('#nuageIconVin').stop(true,false).animate({left:45});
+ 				$('#nuageIconBiere').stop(true,false).animate({right:0});
+ 				$('#nuageTexte').stop(true,false).animate({'border-color':'#fad947'});
  			}
  			$('#nuageTexte').html(nuageTextVal[nuageText-1]);
  			return false;

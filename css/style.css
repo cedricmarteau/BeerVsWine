@@ -513,6 +513,24 @@
 	width:400px;
 	right:0px;
 }
+
+.prod-buttons{
+	position: relative;
+	top: 50%;
+	margin-top: 55px;
+	margin-left: -220px;
+	left: 50%;
+}
+
+.prod-button{
+	background:#393939;
+	color: white;
+	padding: 5px 20px;
+	margin-right: 5px;
+	text-decoration: none;
+	font-family: "NovecentowideBold";
+}
+
 /*------------------------------------*\
 	$PART 2 (cedric & hugo)
 \*------------------------------------*/
@@ -528,10 +546,18 @@
 	width: 600px;
 	position: relative;
 	left: -19px;
+	display:none;
 }
 #plus_consom ul li {
 	float: left;
 	margin-right: 27px;
+}
+#avion {
+	height: 52px;
+	width: 363px;
+	background: url('../img/5_avionLiqueur.png');
+	position: relative;
+	margin: 0 auto;
 }
 #plus_consom ul#plus_consomPourcentage {
 	height: 300px;
@@ -547,6 +573,38 @@
 	width:700px;
 	margin:100px auto;
 	position:relative;
+}
+#best_consom_france {
+	width: 196px;
+	height: 62px;
+	background: url('../img/7_france.png');
+	position: absolute;
+	bottom: 80px;
+	right: 80px;
+	display:none;
+}
+#best_consom_current{
+	width:350px;
+	height:50px;
+	background-color:#f1f1f1;
+	position:absolute;
+	top:400px;
+	left:160px;
+	border:1px solid #e0e0e0;
+	padding-top:24px;
+	text-align:center;
+	display:none;
+}
+#best_consom_current span.numero{
+	font-family: 'NovecentowideBookRegular';
+}
+#best_consom_current span.country{
+	font-family: 'NovecentowideBold';
+	color:black;
+}
+#best_consom_current span.number{
+	font-family: 'NovecentowideLight';
+	color:black;
 }
 #death{
 	width:550px;
