@@ -316,7 +316,6 @@ function more_consume(){
 
 //les plus gros consommateur
 function best_consom(){
-	console.log("coucou");
 	//ORDRE DÉCROISSANT
 	var data_beer_best_consum = new Array(161.5,157,141.2,110.6,101.6,101.5,96.2,96.2,91.5,88.4),
 	data_wine_best_consum = new Array(62.2,60.13,55.85,52.70,48.16,46.67,43.77,42.27,39.87,34.66),
