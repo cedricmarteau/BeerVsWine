@@ -734,9 +734,15 @@ function litre_eau(){
 var listeGrape = $('#raisin ul li').not('.litreTxt');
 var listeCereales =$('#cereales ul li').not('.litreTxt');
 
+
+
+
+var litreGrape = $('#raisin ul .litreTxt');
+var litreCereales = $('#cereales ul .litreTxt');
+
 //listeGrape.css({'background-image':'none'});
 //listeCereales.css({'background-image':'none'});
-$('#litreEau #raisin, #litreEau #cereales').css({margin-top:1000});
+$('#litreEau #raisin, #litreEau #cereales').css({'margin-top':1000});
 
 listeGrape.css({'background-size':0});
 listeCereales.css({'background-size':0});
